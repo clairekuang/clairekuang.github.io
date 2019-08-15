@@ -74,6 +74,7 @@ nav {
     top: 12em;
     cursor: crosshair;
     padding:0 !important;
+    text-align: right;
 }
 
 #sidenav .nav-item-lg, 
