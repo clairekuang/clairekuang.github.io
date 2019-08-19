@@ -131,6 +131,7 @@ nav {
     max-width: 100%;
     padding-top:0.7em;
     font-size: small;
+    text-align: justify;
 }
 
 
@@ -158,9 +159,8 @@ nav {
 }
 
 #body_title{
-    font-size: large;
+    font-size: small;
     font-weight: bold;
-    letter-spacing: 0.1rem;
 }
 
 .carousel{
