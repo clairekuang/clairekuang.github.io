@@ -130,70 +130,8 @@ nav {
 #content_body{
     max-width: 100%;
     padding-top:0.7em;
+    font-size: medium;
 }
-
-#cardnav_container {
-    padding: 0rem;
-    padding-top: 0rem;
-    padding-bottom: 4em;
-}
-
-.card {
-    border-radius: 0.1em;
-    height: 12rem;
-    cursor: crosshair;
-    text-align: center;
-    border-style:solid;
-}
-
-.card-img {
-    visibility: hidden;
-    opacity: 0;
-    border-radius: 0;
-    height: 100%;
-    object-fit:cover;
-}
-.card-img-overlay{
-    letter-spacing: 0.1rem;
-    text-align: left;
-    padding:0.1em;
-}
-
-.card:hover .card-img {
-    visibility: visible;
-    filter: grayscale(100%);
-    opacity: 10;
-    transition: all 0.5s ease;
-}
-
-.card:hover .card-img-overlay {
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.5s ease;
-}
-
-.card-title {
-    color: #000000;
-    cursor: crosshair;
-    font-size: smaller;
-    font-weight: bold;
-    writing-mode:vertical-rl;
-}
-
-.card-title:hover{
-    color: rgba(0, 0, 0, 0.20);
-    text-decoration:none;
-    transition: all 0.2s ease;
-}
-
-.card-text{
-    font-size: 10px;
-    font-weight: bold;
-    bottom: 0rem;
-    position:absolute;
-    margin:0;
-}
-
 
 
 #main_title{
@@ -215,6 +153,12 @@ nav {
 
 #project_title{
     font-size: larger;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+
+#body_title{
+    font-size: large;
     font-weight: bold;
     letter-spacing: 0.1rem;
 }
