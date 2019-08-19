@@ -80,6 +80,7 @@ nav {
 #sidenav .nav-item-lg, 
 #sidenav .nav-item-md,
 #sidenav .nav-item-sm{
+    height: 0.9rem;
 }
 
 #sidenav .nav-item-lg{
