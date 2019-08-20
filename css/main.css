@@ -153,12 +153,18 @@ nav {
 }
 
 #project_title{
+    font-size: x-large;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+
+#body_title_major{
     font-size: larger;
     font-weight: bold;
     letter-spacing: 0.1rem;
 }
-
-#body_title{
+#body_title_minor{
     font-size: small;
     font-weight: bold;
 }
