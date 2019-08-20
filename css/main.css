@@ -80,7 +80,6 @@ nav {
 #sidenav .nav-item-lg, 
 #sidenav .nav-item-md,
 #sidenav .nav-item-sm{
-    height: 0.9rem;
 }
 
 #sidenav .nav-item-lg{
@@ -207,6 +206,7 @@ nav {
 #quote_text{
     font-family: 'Space Mono', monospace, 'Courier New',Arial;
     font-size: medium;
+    text-align: center;
 }
 
 
