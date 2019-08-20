@@ -182,6 +182,7 @@ nav {
     transition: -webkit-transform 1s ease;
     transition: transform 1s ease;
     transition: transform 1s ease, -webkit-transform 1s ease;
+    height: 100vh;
 }
 
 .carousel-control-prev, .carousel-control-next{
