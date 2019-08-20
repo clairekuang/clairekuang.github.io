@@ -205,8 +205,10 @@ nav {
 }
 #quote_text{
     font-family: 'Space Mono', monospace, 'Courier New',Arial;
-    font-size: medium;
+    font-size: small;
     text-align: center;
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 
 
