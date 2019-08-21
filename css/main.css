@@ -201,6 +201,7 @@ nav {
   left:0;
   right: 0;
   bottom: 0;
+  vertical-align: center;
 }
 .carousel-item:hover .carousel-caption{
   opacity:1;
