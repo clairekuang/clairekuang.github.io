@@ -191,9 +191,6 @@ nav {
     padding-bottom:2em;
 }
 
-.carousel-inner{
-}
-
 .carousel-inner .carousel-item {
     transition: -webkit-transform 1s ease;
     transition: transform 1s ease;
@@ -210,13 +207,11 @@ nav {
   opacity:0;
   color: white;
   font-size: small;
-  transition:500ms ease-in-out;
-  background-color: black;
-  max-height: 1.8rem;
-  padding: 0;
-  left:0;
-  right: 0;
+  transition:400ms ease-in-out;
   transform: translateY(-50%);
+  height: 100%;
+  width: 100%;
+  background-color: black;
   bottom: 0;
   top: 50%;
 }
