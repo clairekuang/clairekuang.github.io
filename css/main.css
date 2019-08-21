@@ -159,6 +159,8 @@ nav {
     font-size: x-large;
     font-weight: lighter;
     letter-spacing: 0.1rem;
+    text-align: left;
+    padding-bottom: 2rem;
 }
 
 #body_title_major{
