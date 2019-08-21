@@ -1,6 +1,6 @@
 var d = new Date();
 document.getElementById("year").innerHTML = d.getFullYear();
-document.getElementById("time").innerHTML = d.getHours().concat(":",d.getMinutes());
+document.getElementById("time").innerHTML = d.getHours() + ":" + d.getMinutes());
 
 $(function () {
     $('.navbar-link').on('click', function (e) {
