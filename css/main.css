@@ -222,7 +222,9 @@ nav {
     font-size: small;
     transition:200ms ease-in-out;
     transform: translateY(-50%);
-    height: 1.8rem;
+    height: 0.9rem;
+    padding: 0;
+    margin:0;
     background-color: black;
     top: 50%;
 }
