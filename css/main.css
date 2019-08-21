@@ -166,6 +166,7 @@ nav {
 #body_title_major{
     font-size: larger;
     font-weight: bold;
+    text-align: left;
     letter-spacing: 0.1rem;
 }
 #body_title_minor{
