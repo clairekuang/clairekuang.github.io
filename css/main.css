@@ -127,6 +127,7 @@ nav {
     font-size: x-small;
 }
 
+
 #content_body{
     max-width: 100%;
     padding-top:0.7em;
@@ -157,6 +158,11 @@ nav {
     font-weight: bold;
     letter-spacing: 0.1rem;
     text-align: center;
+}
+
+#project_info{
+    font-size: large;
+    letter-spacing: 0.1rem;
 }
 
 #body_title_major{
