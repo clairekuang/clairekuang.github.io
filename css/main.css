@@ -85,19 +85,21 @@ nav {
 
 #sidenav .nav-item-lg{
     font-size: x-small;
+    color: black;
     letter-spacing: 0.1rem;
 }
 #sidenav .nav-item-md{
     font-size: x-small;
+    color: rgba(0, 0, 0, 0.20);
     letter-spacing: 0.1rem;
 }
 #sidenav .nav-item-sm{
     font-size: x-small;
+    color: rgba(0, 0, 0, 0.20);
     letter-spacing: 0.1rem;
 }
 #sidenav .nav-link{
     cursor: crosshair;
-    color: rgba(0, 0, 0, 0.20);
     padding:0;
     margin:0;
 }
