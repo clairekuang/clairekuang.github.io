@@ -22,7 +22,7 @@ body {
 /*--- navigation bars ---*/
 
 nav {
-    background-image: linear-gradient(white, white, #ffffffad, transparent);
+    background-image: linear-gradient(white, #ffffffad, transparent);
     cursor: crosshair;
     height: 6rem;
     padding:0 !important;
