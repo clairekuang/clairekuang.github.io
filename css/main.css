@@ -200,8 +200,9 @@ nav {
   padding: 0;
   left:0;
   right: 0;
+  transform: translateY(-50%);
   bottom: 0;
-  vertical-align: center;
+  top: 50%;
 }
 .carousel-item:hover .carousel-caption{
   opacity:1;
