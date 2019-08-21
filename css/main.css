@@ -176,8 +176,8 @@ nav {
 }
 
 .carousel-inner{
-    vertical-align: center;
 }
+
 .carousel-inner .carousel-item {
     transition: -webkit-transform 1s ease;
     transition: transform 1s ease;
@@ -193,7 +193,7 @@ nav {
 .carousel-caption{
   opacity:0;
   color: white;
-  font-size: x-small;
+  font-size: small;
   transition:500ms ease-in-out;
   background-color: black;
   max-height: 1.8rem;
