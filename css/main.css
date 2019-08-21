@@ -198,6 +198,9 @@ nav {
   background-color: black;
   max-height: 0.9rem;
   padding: 0;
+  left:0;
+  right: 0;
+  bottom: 0;
 }
 .carousel-item:hover .carousel-caption{
   opacity:1;
