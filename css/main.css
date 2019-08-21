@@ -102,7 +102,7 @@ nav {
     cursor: crosshair;
     padding:0;
     margin:0;
-    text-decoration: none;
+    color: rgba(0, 0, 0, 0.20);
 }
 
 #sidenav .nav-link.active,
