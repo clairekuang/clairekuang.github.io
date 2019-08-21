@@ -203,20 +203,34 @@ nav {
     filter: alpha(opacity=0); /* IE support */
 }
 
+.carousel-overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .2s ease;
+    background-color: white;
+}
+
 .carousel-caption{
-  opacity:0;
-  color: white;
-  font-size: small;
-  transition:400ms ease-in-out;
-  transform: translateY(-50%);
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  bottom: 0;
-  top: 50%;
+    opacity:0;
+    color: white;
+    font-size: small;
+    transition:200ms ease-in-out;
+    transform: translateY(-50%);
+    height: 1.8rem;
+    background-color: black;
+    top: 50%;
 }
 .carousel-item:hover .carousel-caption{
-  opacity:1;
+    opacity:1;
+}
+.carousel-item:hover .carousel-overlay{
+    opacity:0.8;
 }
 
 #divider_project{
