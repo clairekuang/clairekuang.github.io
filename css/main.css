@@ -176,7 +176,7 @@ nav {
 }
 
 .carousel-inner{
-
+    vertical-align: center;
 }
 .carousel-inner .carousel-item {
     transition: -webkit-transform 1s ease;
