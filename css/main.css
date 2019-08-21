@@ -175,8 +175,11 @@ nav {
 }
 
 .table{
-    font-size: medium;
+    font-size: small;
     letter-spacing: 0.1rem;
+}
+.table th{
+    width: 4rem;
 }
 
 .carousel{
