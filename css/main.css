@@ -161,11 +161,6 @@ nav {
     letter-spacing: 0.1rem;
 }
 
-.table{
-    font-size: medium;
-    letter-spacing: 0.1rem;
-}
-
 #body_title_major{
     font-size: larger;
     font-weight: bold;
@@ -174,6 +169,11 @@ nav {
 #body_title_minor{
     font-size: small;
     font-weight: bold;
+}
+
+.table{
+    font-size: medium;
+    letter-spacing: 0.1rem;
 }
 
 .carousel{
