@@ -203,19 +203,6 @@ nav {
     filter: alpha(opacity=0); /* IE support */
 }
 
-.carousel-overlay{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .2s ease;
-    background-color: white;
-}
-
 .carousel-caption{
     opacity:0;
     color: white;
@@ -231,8 +218,8 @@ nav {
 .carousel-item:hover .carousel-caption{
     opacity:1;
 }
-.carousel-item:hover .carousel-overlay{
-    opacity:0.8;
+.carousel-item:hover img{
+    opacity:0.2;
 }
 
 #divider_project{
