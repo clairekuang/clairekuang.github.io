@@ -84,22 +84,20 @@ nav {
 #sidenav .nav-item-md,
 #sidenav .nav-item-sm{
     line-height: 0.9rem;
+    letter-spacing: 0.1rem;
 }
 
 #sidenav .nav-item-lg{
     font-size: x-small;
     color: black;
-    letter-spacing: 0.1rem;
 }
 #sidenav .nav-item-md{
     font-size: x-small;
     color: rgba(0, 0, 0, 0.20);
-    letter-spacing: 0.1rem;
 }
 #sidenav .nav-item-sm{
     font-size: x-small;
     color: rgba(0, 0, 0, 0.20);
-    letter-spacing: 0.1rem;
 }
 #sidenav .nav-link{
     cursor: crosshair;
@@ -117,8 +115,8 @@ nav {
     transition: all 0.2s ease;
     cursor:crosshair;
     font-size:15px;
-    font-weight:600;
-    letter-spacing:0;
+    font-weight:400;
+    letter-spacing:0.1rem;
 }
 
 #sideinfo{
