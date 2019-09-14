@@ -186,6 +186,11 @@ nav {
     width: 4rem;
 }
 
+#caret{
+    font-weight: 600;
+    text-align: right;
+}
+
 .carousel{
     cursor: crosshair;
     padding-top:1em;
