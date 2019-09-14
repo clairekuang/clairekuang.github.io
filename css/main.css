@@ -223,9 +223,10 @@ nav {
     opacity:0.2;
 }
 
-#divider_project{
+#divider_top{
 }
-#divider_section{
+#divider_bottom{
+    border: 0.2rem solid black;
 }
 #divider_main{
 }
