@@ -231,7 +231,7 @@ nav {
 #divider_top{
 }
 #divider_bottom{
-    border: 0.2rem solid black;
+    border: 0.1rem solid black;
 }
 #divider_main{
 }
@@ -245,7 +245,10 @@ nav {
 .tab{
     padding-left: 1.5rem;
 }
-
+.no-padding{
+    padding-left: 0rem;
+    padding-right:0rem;
+}
 
 
 
