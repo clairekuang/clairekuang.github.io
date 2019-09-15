@@ -1,4 +1,4 @@
-﻿---
+---
 # This is a YAML comment. You need a YAML front matter section
 # like this to enable Liquid templating for this file.
 ---
@@ -36,72 +36,60 @@
 <body data-spy="scroll" data-target="#sidenav" data-offset="15">
 
   <div id='mobile-root'>
-
-    <div class="container-fluid mt-2">
-      <div class='row'>
-        <span class="col">
-            <a href="#" class="navbar-link">C L R</a>
-        </span>
-        <span class="col text-align-right">
-            <a href="#" class="navbar-link">K N G</a>
-        </span>
-      </div>
-    </div>
-
-    <div class="container-fluid h-10" id="content">
-      <div class="p-0 col">
-          <hr class="navbar-hr mt-1">
-      </div>
-    </div>
-
-    <main class="shadow-sm mobile-main">
-        <div class="row">
-            <div class="col">
-
-                <span class="anchor" id="sec1"></span>
-                <p id="main_title"></p>
-                <p>
-                    Projects have no end. They are methodologies from the moment of their inception, little potentials of energy with the capacity to *do work*, path-dependant vectors of intent and implementation.
-                    This compedium is an archive of projects that bring together context, research, form, and effect as a synthetic narrative - drawing tools and technologies as needed,
-                    irreverent to discipline, exuberantly wip.
-                </p>
-                <br>
-
-                <span class="anchor" id="sec1a"></span>
-                <p id="section_title">ARCHITECTURE</p>
-                <br>
+    <nav class="navbar sticky-top" id="topnav">
+        <div class="container-fluid mt-2">
+            <div class="navbar-header-right col">
+                <a href="#topnav" class="navbar-link">C L R</a>
+            </div>
+            <div class="navbar-header-left col">
+                <a href="#topnav" class="navbar-link">K N G</a>
             </div>
         </div>
 
-        <!-- PROJECT: STADIUM WASTE ------------------------------------------------------------------>
+        <div class="container-fluid h-10" id="content">
+          <div class="p-0 col">
+              <hr class="navbar-hr mt-1">
+          </div>
+        </div>
+    </nav>
+
+    <main class="mobile-main">
+
+        <span class="anchor" id="work"></span>
+        <p id="main_title">WORK</p>
+        <p>
+            Projects have no end. They are methodologies from the moment of their inception, little potentials of energy with the capacity to *do work*, path-dependant vectors of intent and implementation.
+            This compedium is an archive of projects that bring together context, research, form, and effect as a synthetic narrative - drawing tools and technologies as needed,
+            irreverent to discipline, exuberantly wip.
+        </p>
+        <br>
+
+        <!-- ARCHITECTURE ------------------------------------------------------------------>
+
+        <span class="anchor" id="work_architecture"></span>
+        <p id="section_title">ARCHITECTURE</p>
+        <br>
 
         {% for project in site.projects %}
-          {% if project.slug == 'stadium-selvedged' %}
-            {{ project.content }}
-          {% endif %}
-        {% endfor %}
+            {% if project.id_section == 'work' %}
+                {% if project.id_category == 'architecture' %}
+                    <hr id="divider_project">
+                    <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
+                    <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
 
-
-        <!-- PROJECT: DOPIUM TILES ------------------------------------------------------------------>
-
-        {% for project in site.projects %}
-          {% if project.slug == 'dopium-tiles' %}
-
-            <hr id="divider_project">
-            <span class="anchor" id="sec1a_{{ project.sec1a_id }}"></span>
-            <p id="project_title">{{ project.title }}</>
-
-            <table class="table table-borderless table-sm" id="project_info">
-                <tbody>
-                    <tr><th scope="row">TYPE</th><td>{{ project.type }}</td></tr>
-                    <tr><th scope="row">YEAR</th><td>{{ project.year }}</td></tr>
-                    <tr><th scope="row">FOR</th><td>{{ project.for }}</td></tr>
-                    <tr><th scope="row">SITE</th><td>{{ project.site }}</td></tr>
-                    <tr><th scope="row">TEAM</th><td>{{ project.team }}</td></tr>
-                </tbody>
-            </table>
-
-          {% endif %}
+                    <table class="table table-borderless table-sm" id="project_info">
+                        <tbody>
+                            <tr><th scope="row">TYPE</th><td>{{ project.type }}</td></tr>
+                            <tr><th scope="row">YEAR</th><td>{{ project.year }}</td></tr>
+                            <tr><th scope="row">FOR</th><td>{{ project.for }}</td></tr>
+                            <tr><th scope="row">SITE</th><td>{{ project.site }}</td></tr>
+                            <tr><th scope="row">TEAM</th><td>{{ project.team }}</td></tr>
+                        </tbody>
+                    </table>
+                    <hr id="divider_project">
+                    {{ project.content }}
+                {% endif %}
+            {% endif %}
         {% endfor %}
 
     </main>
@@ -116,13 +104,13 @@
         <!-- Top nav -->
         <nav class="navbar sticky-top navbar-inverse" id="topnav">
             <div class="navbar-header-left col-md-2">
-                <a href="#" class="navbar-link">C L R</a>
+                <a href="#work" class="navbar-link">C L R</a>
             </div>
             <div class="col-sm-12 col-md-8 p-0">
                 <hr class="navbar-hr">
             </div>
             <div class="navbar-header-right col-md-2">
-                <a href="#" class="navbar-link">K N G</a>
+                <a href="#work" class="navbar-link">K N G</a>
             </div>
         </nav>
 
@@ -195,10 +183,6 @@
                             {% endif %}
                         {% endfor %}
 
-                        <br>
-                        <hr id="divider_section">
-                        <br>
-
                         <!-- GRAPHIC ------------------------------------------------------------------>
 
                         <span class="anchor" id="work_graphic"></span>
@@ -268,8 +252,6 @@
                             Hi, I'm Claire.
                         </p>
                         <br>
-                        <hr id="divider_main">
-                        <br>
 
                         <!-- PROSE ------------------------------------------------------------------>
 
@@ -278,8 +260,6 @@
                         <p>
                             Some words.
                         </p>
-                        <br>
-                        <hr id="divider_main">
                         <br>
 
                         <!-- PUBLICATION ------------------------------------------------------------------>

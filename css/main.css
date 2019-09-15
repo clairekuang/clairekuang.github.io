@@ -1,10 +1,10 @@
-@media all and (max-width: 899px) {
+@media all and (max-width: 799px) {
   #desktop-root {
     display: none;
   }
 }
 
-@media all and (min-width: 900px) {
+@media all and (min-width: 800px) {
   #mobile-root {
     display: none;
   }
@@ -200,7 +200,6 @@ nav {
     letter-spacing: 0.1rem;
 }
 #body_title_minor{
-    font-size: small;
     font-weight: bold;
 }
 
@@ -230,23 +229,23 @@ nav {
     filter: alpha(opacity=0); /* IE support */
 }
 
-.carousel-caption{
-    opacity:0;
+.carousel-caption {
+    opacity: 0;
     color: white;
-    font-size: small;
-    transition:200ms ease-in-out;
-    transform: translateY(-50%);
-    height: 0.9rem;
-    left:0;
+    font-size: x-small;
+    transition: 200ms ease-in-out;
+    height: 1.8rem;
+    left: 0;
     right: 0;
     background-color: black;
-    top: 50%;
+    bottom: 0;
+    padding: 0;
+    letter-spacing: 0.1em;
 }
 .carousel-item:hover .carousel-caption{
     opacity:1;
 }
 .carousel-item:hover img{
-    opacity:0.2;
 }
 
 #divider_project{
