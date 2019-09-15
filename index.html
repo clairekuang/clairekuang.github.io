@@ -1,4 +1,4 @@
----
+﻿---
 # This is a YAML comment. You need a YAML front matter section
 # like this to enable Liquid templating for this file.
 ---
@@ -190,35 +190,27 @@
                         <p id="section_title">ARCHITECTURE</p>
                         <br>
 
-                        <!-- PROJECT: STADIUM WASTE ------------------------------------------------------------------>
-
+                        <!-- ARCHITECTURE ------------------------------------------------------------------>
                         {% for project in site.projects %}
-                          {% if project.slug == 'stadium-selvedged' %}
-                            {{ project.content }}
-                          {% endif %}
-                        {% endfor %}
+                            {% if project.id_section == 'work' %}
+                                {% if project.id_category == 'architecture' %}
+                                    <hr id="divider_project">
+                                    <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
+                                    <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p/>
 
-
-                        <!-- PROJECT: DOPIUM TILES ------------------------------------------------------------------>
-
-                        {% for project in site.projects %}
-                          {% if project.slug == 'dopium-tiles' %}
-
-                            <hr id="divider_project">
-                            <span class="anchor" id="sec1a_{{ project.sec1a_id }}"></span>
-                            <p id="project_title">{{ project.title }}</>
-
-                            <table class="table table-borderless table-sm" id="project_info">
-                                <tbody>
-                                    <tr><th scope="row">TYPE</th><td>{{ project.type }}</td></tr>
-                                    <tr><th scope="row">YEAR</th><td>{{ project.year }}</td></tr>
-                                    <tr><th scope="row">FOR</th><td>{{ project.for }}</td></tr>
-                                    <tr><th scope="row">SITE</th><td>{{ project.site }}</td></tr>
-                                    <tr><th scope="row">TEAM</th><td>{{ project.team }}</td></tr>
-                                </tbody>
-                            </table>
-
-                          {% endif %}
+                                    <table class="table table-borderless table-sm" id="project_info">
+                                        <tbody>
+                                            <tr><th scope="row">TYPE</th><td>{{ project.type }}</td></tr>
+                                            <tr><th scope="row">YEAR</th><td>{{ project.year }}</td></tr>
+                                            <tr><th scope="row">FOR</th><td>{{ project.for }}</td></tr>
+                                            <tr><th scope="row">SITE</th><td>{{ project.site }}</td></tr>
+                                            <tr><th scope="row">TEAM</th><td>{{ project.team }}</td></tr>
+                                        </tbody>
+                                    </table>
+                                    <hr id="divider_project">
+                                    {{ project.content }}
+                                {% endif %}
+                            {% endif %}
                         {% endfor %}
 
 
