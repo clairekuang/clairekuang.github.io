@@ -189,6 +189,7 @@ nav {
 #caret{
     font-weight: 600;
     text-align: right;
+    vertical-align: bottom;
 }
 
 .carousel{
@@ -231,7 +232,7 @@ nav {
 #divider_top{
 }
 #divider_bottom{
-    border: 0.1rem solid black;
+    border: 0.05rem solid black;
 }
 #divider_main{
 }
