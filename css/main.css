@@ -1,3 +1,29 @@
+@media all and (max-width: 899px) {
+  #desktop-root {
+    display: none;
+  }
+}
+
+@media all and (min-width: 900px) {
+  #mobile-root {
+    display: none;
+  }
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.mobile-main {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+
 body, html {
     height:auto;
     min-height:100%;
@@ -30,7 +56,7 @@ nav {
     height: 6rem;
     padding:0 !important;
     margin:0;
-    
+
 }
 .navbar{
     vertical-align:bottom;
@@ -80,7 +106,7 @@ nav {
     text-align: right;
 }
 
-#sidenav .nav-item-lg, 
+#sidenav .nav-item-lg,
 #sidenav .nav-item-md,
 #sidenav .nav-item-sm{
     line-height: 0.9rem;
@@ -120,12 +146,12 @@ nav {
 }
 
 #sideinfo{
-    top:12em;   
+    top:12em;
     letter-spacing: 0.1rem;
 }
 #sideinfo .nav-item-md {
     font-size: small;
-    font-weight:800;   
+    font-weight:800;
 }
 #sideinfo .nav-item-sm{
     font-size: x-small;
@@ -186,12 +212,6 @@ nav {
     width: 4rem;
 }
 
-#caret{
-    font-weight: 600;
-    text-align: right;
-    vertical-align: bottom;
-}
-
 .carousel{
     cursor: crosshair;
     padding-top:1em;
@@ -229,10 +249,9 @@ nav {
     opacity:0.2;
 }
 
-#divider_top{
+#divider_project{
 }
-#divider_bottom{
-    border: 0.05rem solid black;
+#divider_section{
 }
 #divider_main{
 }
@@ -246,10 +265,7 @@ nav {
 .tab{
     padding-left: 1.5rem;
 }
-.no-padding{
-    padding-left: 0rem;
-    padding-right:0rem;
-}
+
 
 
 
