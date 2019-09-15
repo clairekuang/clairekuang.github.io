@@ -132,40 +132,21 @@
             <aside class="col-md-2">
                 <div class="sticky-top" id="sidenav">
                     <ul class="nav flex-md-column flex-row justify-content-between">
-                        <li class="nav-item-lg"><a href="#sec1" class="nav-link active">/WORK</a>
+                        <li class="nav-item-lg"><a href="#work" class="nav-link active">/WORK</a>
                             <ul class="nav flex-md-column hidden-sm-down">
-                                <li class="nav-item-md"><a href="#sec1a" class="nav-link">/ARCH</a>
-                                    <ul class="nav flex-md-column hidden-sm-down">
-                                        <li class="nav-item-sm"><a href="#sec1a_waste" class="nav-link">/stadium</a></li>
-                                        <li class="nav-item-sm"><a href="#sec1a_dopium" class="nav-link">/tiles</a></li>
-                                        <li class="nav-item-sm"><a href="#sec1a_nuclear" class="nav-link">/nuclear</a></li>
-                                        <li class="nav-item-sm"><a href="#sec1a_thesis" class="nav-link">/thesis</a></li>
-                                        <li class="nav-item-sm"><a href="#sec1a_terraform" class="nav-link">/theater</a></li>
-                                        <li class="nav-item-sm"><a href="#sec1a_thermal" class="nav-link">/thermal</a></li>
-                                        <li class="nav-item-sm"><a href="#sec1a_hyperconvergence" class="nav-link">/transit</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item-md"><a href="#sec1b" class="nav-link">/GRAPHIC</a>
-                                    <ul class="nav flex-md-column hidden-sm-down">
-                                        <li class="nav-item-sm"><a href="#sec1b_tbi" class="nav-link">/muaythai</a></li>
-                                        <li class="nav-item-sm"><a href="#sec1b_art" class="nav-link">/art</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item-md"><a href="#sec1c" class="nav-link">/PRODUCT</a></li>
+                                <li class="nav-item-md"><a href="#work_architecture" class="nav-link">/ARCH</a></li>
+                                <li class="nav-item-md"><a href="#work_graphic" class="nav-link">/GRAPHIC</a></li>
+                                <li class="nav-item-md"><a href="#work_product" class="nav-link">/PRODUCT</a></li>
                             </ul>
                         </li>
                         <li class="nav-item-lg">
-                            <a href="#sec2" class="nav-link">/ABOUT</a>
+                            <a href="#about" class="nav-link">/ABOUT</a>
                         </li>
                         <li class="nav-item-lg">
-                            <a href="#sec3" class="nav-link">/PROSE</a>
+                            <a href="#prose" class="nav-link">/PROSE</a>
                             <ul class="nav flex-md-column hidden-sm-down">
-                                <li class="nav-item-md"><a href="#sec3a" class="nav-link">/PUB</a>
-                                    <ul class="nav flex-md-column hidden-sm-down">
-                                        <li class="nav-item-sm"><a href="#sec3a_palladio" class="nav-link">/palladio</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item-md"><a href="#sec3b" class="nav-link">/BLOG</a></li>
+                                <li class="nav-item-md"><a href="#prose_pub" class="nav-link">/PUB</a></li>
+                                <li class="nav-item-md"><a href="#prose_blog" class="nav-link">/BLOG</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -177,8 +158,8 @@
                 <div class="row">
                     <div class="col" id="content_body">
 
-                        <span class="anchor" id="sec1"></span>
-                        <p id="main_title"></p>
+                        <span class="anchor" id="work"></span>
+                        <p id="main_title">WORK</p>
                         <p>
                             Projects have no end. They are methodologies from the moment of their inception, little potentials of energy with the capacity to *do work*, path-dependant vectors of intent and implementation.
                             This compedium is an archive of projects that bring together context, research, form, and effect as a synthetic narrative - drawing tools and technologies as needed,
@@ -186,11 +167,12 @@
                         </p>
                         <br>
 
-                        <span class="anchor" id="sec1a"></span>
+                        <!-- ARCHITECTURE ------------------------------------------------------------------>
+
+                        <span class="anchor" id="work_architecture"></span>
                         <p id="section_title">ARCHITECTURE</p>
                         <br>
-
-                        <!-- ARCHITECTURE ------------------------------------------------------------------>
+                        
                         {% for project in site.projects %}
                             {% if project.id_section == 'work' %}
                                 {% if project.id_category == 'architecture' %}
@@ -213,802 +195,74 @@
                             {% endif %}
                         {% endfor %}
 
-
-                        <!-- PROJECT: NUCLEAR WASTE ------------------------------------------------------------------>
-
-                        <hr id="divider_project">
-                        <span class="anchor" id="sec1a_nuclear"></span>
-                        <p id="project_title">MÉLANGERIE: Glimpses from the anthropocene, and other views.</p>
-                        <table class="table table-borderless table-sm" id="project_info">
-                            <tbody>
-                                <tr><th scope="row">TYPE</th><td>competition</td></tr>
-                                <tr><th scope="row">YEAR</th><td>2018</td></tr>
-                                <tr><th scope="row">FOR</th><td>arch out loud</td></tr>
-                                <tr><th scope="row">SITE</th><td>new mexico</td></tr>
-                                <tr><th scope="row">TEAM</th><td>olivia heung</td></tr>
-                            </tbody>
-                        </table>
-                        <hr id="divider_project">
-
-                        <div class="carousel" data-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img class="d-block w-100" src="/images/work/architecture/nuclear/POSTER.jpg">
-                                    <div class="carousel-overlay">
-                                        <div class="carousel-caption"><p>Competition submission.</p></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <p id="quote_text">"...With recognition of the protean nature of meaning-making; that the message of “waste”,
-                            “warning”, “storage”, and “communication” are all approached through a perambulating gestalt
-                            birthed through the loose affinities between objects both monumental and mundane. These objects and
-                            their assemblage, drawing gravitas from their multiplicity and material immunity from their functional
-                            obsolescence, are simultaneously the natural detritus of civilizations past and the nascent typologies
-                            of those yet to come. These follies! They are the quivering sextants by which we will navigate the ebbs
-                            and flows of the nuclear in our collective history..."
-                        </p>
-
-                        <p id="body_title_major">1</p>
-                        <p id="body_title_major">NUCLEAR WASTE: BRIEF</p>
-                        <p>
-                            Since the Cold War, one of the most challenging and urgent tasks facing governments around the world
-                            has been the disposal of transuranic nuclear waste. As a byproduct from nuclear weaponry production,
-                            transuranic waste is not only harmful, but also boasts a formidable decay process lasting thousands
-                            of years. To address this issue, millions of barrels of highly radioactive waste have been buried in
-                            repositories deep beneath the earth's surface. One such disposal site is the Waste Isolation Pilot
-                            Plant (WIPP) in New Mexico, United States. To ensure public safety, it is imperative that the site
-                            remain undisturbed for the duration of the waste's decay process.<br><br>
-
-                            CHALLENGE: design a marker or marker system to deter inadvertent human intrusion into the Waste
-                            Isolation Pilot Plant. The marker should exist as a means of passive institutional control of the site
-                            for the duration of 10,000 years, following the closure and deactivation of the WIPP. The purpose of
-                            the marker is to communicate with future generations that transuranic waste is buried within a
-                            repository at the facility, located 2,150 feet beneath its surface, and should remain isolated until
-                            the risks posed by its release have been sufficiently diminished.
-                        </p>
-
-                        <div class="carousel slide carousel-fade" id="carousel_nuclear_objects" data-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img class="d-block w-100" src="/images/work/architecture/nuclear/objects.jpg" alt="slide">
-                                    <div class="carousel-overlay">
-                                        <div class="carousel-caption"><p>A semantic approach to "warning" through a library of objects.</p></div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="/images/work/architecture/nuclear/desert_objects.jpg" alt="slide">
-                                    <div class="carousel-overlay">
-                                        <div class="carousel-caption"><p>Object library on site, New Mexico.</p></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class="carousel-control-prev" href="#carousel_nuclear_objects" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carousel_nuclear_objects" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-
-                        <p id="body_title_major">2</p>
-                        <p id="body_title_major">PROPOSAL</p>
-                        <p id="quote_text">
-                            "We don’t want to conquer space at all. We want to expand Earth endlessly.
-                            We don’t want other worlds; we want a mirror."<br>- Dr. Snaut, Solaris<br><br>
-
-                            "A few hundred years hence, in this same place, another traveler, as despairing as myself, will mourn
-                            the disappearance of what I might have seen, but failed to see."<br>- Levi Strauss, Tristes Tropiques<br><br>
-
-                            "Always new products - the other, invisible side of capitalism is waste. Tremendous amounts of waste.
-                            We shouldn’t react to these heaps of waste by somehow trying to get rid of it; maybe the first thing
-                            to do is to accept this waste, to accept that there are things out there which serve nothing. To break
-                            out of this eternal cycle of functioning."<br>- Slavoj Zizek, Pervert’s Guide to Ideology<br><br>
-
-                            "The library will endure; it is the universe. As for us, everything has not been
-                            written; we are not turning into phantoms."<br>- Jorge Luis Borges, The Library of Babel
-                        </p>
-
-                        <p id="body_title_minor">2.01<span class="tab">Meaning-making and the Warning Object</p>
-                        <p>
-                            PLACEHOLDER TEXT
-                        </p>
-
-                        <p id="body_title_minor">2.02<span class="tab">A Language of Wasteful Assembly</p>
-                        <p>
-                            PLACEHOLDER TEXT
-                        </p>
-                        <p id="body_title_minor">2.03<span class="tab">10,000 year archive</p>
-                        <p>
-                            PLACEHOLDER TEXT
-                        </p>
-
-                        <div class="carousel slide carousel-fade" id="carousel_nuclear_views" data-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img class="d-block w-100" src="/images/work/architecture/nuclear/view_highway.jpg" alt="slide">
-                                    <div class="carousel-overlay">
-                                        <div class="carousel-caption"><p>Scene: transit cautions.</p></div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="/images/work/architecture/nuclear/view_plane.jpg" alt="slide">
-                                    <div class="carousel-overlay">
-                                        <div class="carousel-caption"><p>Scene: transport cautions.</p></div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="/images/work/architecture/nuclear/view_tower.jpg" alt="slide">
-                                    <div class="carousel-overlay">
-                                        <div class="carousel-caption"><p>Scene: transmission cautions.</p></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class="carousel-control-prev" href="#carousel_nuclear_views" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carousel_nuclear_views" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-
-                        <!-- PROJECT: THESIS ------------------------------------------------------------------>
-
-                        <hr id="divider_project">
-                        <span class="anchor" id="sec1a_thesis"></span>
-                        <p id="project_title">TERRA [IN]FIRMA: An architecture of extraction.</p>
-                        <table class="table table-borderless table-sm" id="project_info">
-                            <tbody>
-                                <tr><th scope="row">TYPE</th><td>thesis</td></tr>
-                                <tr><th scope="row">YEAR</th><td>2017</td></tr>
-                                <tr><th scope="row">FOR</th><td>m.arch I</td></tr>
-                                <tr><th scope="row">SITE</th><td>johannesburg</td></tr>
-                                <tr><th scope="row">ADVIS</th><td>andrew witt</td></tr>
-                            </tbody>
-                        </table>
-                        <hr id="divider_project">
-
-                        <div class="carousel" data-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img class="d-block w-100" src="/images/work/architecture/thesis/model_main.jpg">
-                                </div>
-                            </div>
-                        </div>
-
-                        <p id="body_title_major">1</p>
-                        <p id="body_title_major">CAPITAL, COMMODITY, AND INFRASTRUCTURE</p>
-                        <p>
-                            The narrative of post-industrial capital, in so far as it is capable of transforming at scale the
-                            material landscape of wealth into self- reinforcing structures of organization and power, is reaching
-                            a critical point with the advent of modern urbanization. As succinctly surmised by Mark Weiser in his
-                            1991 essay in Scientific American, “the most profound technologies are those that disappear...they
-                            weave themselves into the fabric of everyday life until they are indistinguishable from it”.
-                            Contemporary infrastructures in this sense are radically reshaping the processes, politics, and
-                            aesthetics of commodification and commodity fetishization that have been the hallmark of capital
-                            accumulation in the 20th century. In looking at the material foundation of capital and currency
-                            following the industrial revolution, this thesis nosedives into the relationship between power, capital,
-                            and the built environment through a case study of the global dynamics surrounding the implementation of
-                            the gold standard in the early 1800’s, and the unprecedented metamorphosis of Johannesburg’s urban
-                            landscape that resulted in the following century.
-                        </p>
-
-                        <p id="body_title_minor">1.01<span class="tab">Value, in perpetuity</p>
-                        <p>
-                            To situate the terms ‘capital’, ‘commodity’, and ‘infrastructure’ within a Marxist framework, capital
-                            is defined as the accumulation of wealth specifically through the process of circulation - a dynamic
-                            driven by the difference between a commodity’s use value and its exchange value. The capitalist then
-                            understands this value as being in constant motion, where profit is generated through perpetual
-                            reinvestment and consequent augmentation of exchange value. The nature of this value-added exchange is
-                            then contextualized through how one chooses to define the term ‘commodity’; and indeed, the chasm
-                            between commodity as it first appears in Das Kapital and as it is currently understood in the global
-                            markets is quite extensive. To Marx, commodity was “an object outside us, a thing that by its
-                            properties satisfies human wants of some sort or another”, and where “the nature of such wants, whether,
-                            for instance, they spring from the stomach or from fancy, makes no difference...neither are we here
-                            concerned to know how the object satisfies these wants, whether directly as means of subsistence, or
-                            indirectly as means of production”. This definition is metaphysical in disposition, and is concerned
-                            less with the tangible qualifications by which a specific externality is commodified than it is with
-                            the understanding that commodification is a process implicitly tied to human desire. As such, desire
-                            being a fickle beast, the commodity is monadic as a unit endowed with perceptual virtue, and it is this
-                            appended quality that gains in value through transformations of exchange by social and political forces.
-                        </p>
-                        <p id="body_title_minor">1.02<span class="tab">Consumptive futures</p>
-                        <p>
-                            Contemporary economics, however, defines the commodities trade far more tangibly: such objects are
-                            typically uniform in pricing across many markets, are used in the production of othergoods, and can be
-                            extracted or grown and traded in sufficiently high quantities. These traits allow them to support
-                            extremely liquid markets in which futures and options are often sold to protect both producers and
-                            consumers against fluctuations in price. In this context, the commodity necessarily exists on a global
-                            scale, and its value in trade is defined not by a consistent growth in exchange value but rather by the
-                            ease with which they can be converted into money through their use in other, more refined products.
-                            Thus cocoa, copper, wheat, oil, and coal qualify whereas diamonds, due to their inconsistencies in
-                            quality, and natural gas, due to its predisposition for price determination through long term regional
-                            contracts, do not. The modern commodity exists in material form only briefly; its primary purpose is to
-                            be liquidated as quickly as possible for as much as possible. The selling of futures - the functional
-                            equivalent of the Marxist exchange value - is now complete in its disembodiment from the physical
-                            realities of the object itself, acting as a stand-in independent from the actual volume of material
-                            being extracted or produced. Where the Marxist perspective portrays the commodity as an object with
-                            appended metaphysical value, in perpetual circulation, the economics of today suggest they are transient
-                            one-way pipelines from production at scale to diversified, globalized consumption.
-                        </p>
-
-                        <div class="carousel slide carousel-fade" id="carousel_thesis_historical" data-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img class="d-block w-100" src="/images/work/architecture/thesis/infrastructure_aqueduct.jpg" alt="slide">
-                                    <div class="carousel-overlay">
-                                        <div class="carousel-caption"><p>Shadows cast by a 1st c. Roman aqueduct in Plaza Azuguejo, Segovia.</p></div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="/images/work/architecture/thesis/infrastructure_facility.jpg" alt="slide">
-                                    <div class="carousel-overlay">
-                                        <div class="carousel-caption"><p>R. C. Harris Water Treatment Plant interior in Toronto, 1941.</p></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class="carousel-control-prev" href="#carousel_thesis_historical" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carousel_thesis_historical" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-
-                        <p id="body_title_minor">1.03<span class="tab">Material mediators</p>
-                        <p>
-                            In this discourse, the term ‘infrastructure’ exists purely in relation to the flows that enable capital
-                            accumulation through the production and consumption of commodities. Maria Kaika and Erik Swyngedouw
-                            identify technological networks as the “material mediators between nature and the city; they carry the
-                            flow and process of transformation of one into the other”. The process of assigning market relations to
-                            socially metabolized goods is fundamentally dependent on the process of fetishization, which in the
-                            Marxist sense is the quantification of the qualitative that allows for abstraction to take over. The
-                            fetishized commodity supplies its own ideology in the market, and allows for augmentations of its
-                            exchange value without revealing the socioenvironmental circumstances of its production.
-                        </p>
-
-                        <p id="body_title_minor">1.04<span class="tab">First monumental, then mundane</p>
-                        <p>
-                            Commodity fetishism in the modern era merged economics, politics, and culture to materially
-                            enact an ideology of progress, resulting in behemoth infrastructures which served as monuments
-                            to engineering and technological progress. In the span of a decade from 1904-1914, the
-                            construction of the Panama Canal resulted in the excavation of more than 130 million cubic meters
-                            of earth. The Great Depression gave birth to the Hoover Dam, impounding Lake Mead for
-                            hydroelectric power and containing more than 3.3 million cubic meters of concrete. These
-                            megastructures operated at a scale unfathomable to the human body, iconic in both size and impact.
-                            With the abandonment of this techno-optimist ideology following the abysmal living conditions
-                            characteristic of post-industrial cities and the mechanical destruction of the two world wars,
-                            came the erasure of urban networks from visible, physical space; a transition from the monumental
-                            to the mundane. Contemporary urban infrastructures are invisible: pipes, cables, electronic waves
-                            that sever the connection between the social transformation of nature and the process of
-                            urbanization. In this sense, physical infrastructures are the residue, the material byproducts of
-                            the process of capitalism, viewed only as instruments in the service of additional value
-                            extraction, and can be extended to include the material city itself - and embedded in this
-                            material manifestation are power dynamics which facilitate the flow of capital, often in service
-                            of those with purchasing wealth. In our globalized economy, these flows transcend geographic and
-                            political boundaries, directionally fixed from sites of extraction to territories of mass consumption.
-                        </p>
-
-                        <div class="carousel slide carousel-fade" id="carousel_thesis_infrastructure" data-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img class="d-block w-100" src="/images/work/architecture/thesis/HOOVER DAM_1.jpg" alt="slide">
-                                    <div class="carousel-overlay">
-                                        <div class="carousel-caption"><p>Summer vacationer in front of the Hoover Dam, 1957.</p></div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="/images/work/architecture/thesis/PANAMA CANAL_01.jpg" alt="slide">
-                                    <div class="carousel-overlay">
-                                        <div class="carousel-caption"><p>Worker standing in a Panama Canal lock, 1912.</p></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class="carousel-control-prev" href="#carousel_thesis_infrastructure" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carousel_thesis_infrastructure" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-
-                        <p id="body_title_minor">1.05<span class="tab">Infrastructure in motion</p>
-                        <p>
-                            Here we stumble upon a fundamental paradox of capital as it relates to infrastructure: how does one
-                            reconcile the dynamism of capital in perpetual motion and fluctuation with infrastructur that is
-                            static and immobile in space? One could argue that this tension manifests as the creative destruction
-                            of the built environment and ceaseless restructuring of scale economies, characteristic of the
-                            cityscape in advanced capitalism. Instability, in the urban context, thus occurs when a paradigm shift
-                            in capital flow commands a radical restructuring of the physical infrastructures that must adjust to
-                            enable its realization. From this several questions arise: how does the erratic flow of capital affect
-                            the colonization of nature? How can one intervene in the static, built environment to influence these
-                            flows, either to stabilize or stimulate its corresponding capitalist system? How will infrastructure’s
-                            legacy manifest itself both materially and aesthetically upon future cityscapes?<br><br>
-
-                            Identifying infrastructures as being primary, secondary, or tertiary respective to its corresponding
-                            role in extraction, commodification, and information distribution, then commodification with the
-                            emergence of late capitalism shows tertiary infrastructures with ever increasing scale and scope,
-                            inversely related to their presence in physical space. The long timescales and inertia of built
-                            infrastructure, when contrasted with the immediacy and rapid evolution of digital information and
-                            boom/bust cycles poses significant point of investigation for this project. In looking at the
-                            post-industrial evolution of currency from the gold standard to the digital, we can perhaps draw some
-                            conclusions about how modern societies can develop resiliency in the face of rapid capital flows as we
-                            mature through the age of information.
-                        </p>
-                        <p id="body_title_minor">1.06<span class="tab">The Gold Standard</p>
-                        <p>
-                            Arguably the most classically transformative paradigm shift in the history of currency, the
-                            establishment of a formal gold standard among the major trading nations during the 19th century reveal
-                            the scale and scope to which capital flows can reshape the urban and its subsidiary landscape. Gold has
-                            existed as a form of currency since as early as 610BC, but it wasn’t until the era of colonization and
-                            rapidly expanding global markets that the  metal became incongruously cumbersome to transport across
-                            vast distances. Where before the value of the gold coin was embedded in the material of the coin
-                            itself, the introduction of the gold standard allowed for a more efficient representation of value - in
-                            this case, paper currency - that was still fixed upon some definite quantity of gold.<br><br>
-
-                            This new mode of representation not only facilitated the global trade by establishing trust between
-                            governments which could redeem any amount of paper money for its value in gold, but it also kickstarted
-                            a global feedback loop between gold mines, gold markets, and government. Burgeoning multinational trade
-                            heightened demand for gold to back the standards in the US and Europe, especially gold which could be
-                            mined as cheaply as possible to maximize the profits of colonizing nations. In turn, as their wealth
-                            grew so too did the volume of trade, propelling the demand for gold ever higher. Britain was the first
-                            to adopt a gold specie standard in 1821, followed by the United States and Germany in 1873.
-                        </p>
-
-                        <p id="body_title_minor">1.07<span class="tab">Critical instabilities</p>
-                        <p>
-                            This system, however, proved unstable as each injection of new gold into these economies also meant a
-                            drop in the value of gold and their corresponding currencies. Instability reached critical thresholds
-                            with the advent of the first world war, when the standard was suspended to enable bulk printing of
-                            paper currency to fund military involvement - instigating a period of hyperinflation as the value of
-                            currency was no longer stabilized to a regulated material form. The standard failed once again during
-                            the Great Depression, as investors began trading in currencies which subsequently raised the value of
-                            gold and promoted widespread hoarding during the fallout of trust in American banking institutions
-                            following the stock market crash. An equally powerful counterswing instigated by Roosevelt, in an
-                            attempt to stymy depletion, then resulted in the largest global consolidation of gold stock in the
-                            Federal Reserve. Because of this majority share, the US dollar had become the de facto world currency
-                            by the 1944 Bretton Woods Agreement, which fixed all exchange values in terms of gold.<br><br>
-
-                            This marked the beginning of a new dynamic in gold’s role as a commodity: where before its use value
-                            lay in the ease with which it could be liquidated (exchanged for cash), this function has now been
-                            replaced by cash itself. Instead of stockpiling gold, other countries began stockpiling the US dollar,
-                            thus turning a paper currency into a commodity, where its value is not fixed to some quantifiable
-                            material but rather to the scale and scope in which it is used. Though the gold standard officially
-                            ended on August 15, 1971 when the ballooning value of the US dollar due to its role as the linchpin
-                            of the world economy could no longer be backed by its gold reserves, and the Fed could no longer
-                            redeem dollars with gold, the metal continues to embody an asset of real value in the global social
-                            conscience, as exemplified in its purchase during periods of recession and inflation.
-                        </p>
-
-                        <p id="body_title_major">2</p>
-                        <p id="body_title_major">CITY OF GOLD</p>
-                        <p>
-                            The ramifications of a globalized gold market as geopolitical infrastructure at the source of extraction
-                            and production are profound. A fascinating dive into the gold supply chain during the first four decades
-                            of the 20th century pinpoint the Transvaal region of South Africa as the supplier of 35% of the world’s
-                            gold production, and the approximately 50,000 tons of gold extracted since the end of the 19th century
-                            account for almost half of all gold ever mined through the course of human history. The transformations
-                            in this area, in particular the rapid conversion of a primarily agrarian society into the largest and
-                            richest metropolis of South Africa and the violence exacted upon its land and people, are inextricably
-                            tied to the politics behind the establishment and subsequent turbulences of the gold standard.
-                        </p>
-
-                        <p id="body_title_minor">2.01<span class="tab">As Above, So Below</p>
-                        <p>
-                            In the summer of 1886, prospectors struck gold on a small farm called Langlaate. This was the
-                            Witwatersrand Reef, which extends east-west for 400 kilometers and runs for some 5,000 meters below
-                            ground. Soon prospectors and migrant workers came and set up small mining camps wherever gold was
-                            struck, and Langlaate merged with clusters of other camps to form what is now the city of Johannesburg.
-                            Growth was explosive: in the year following discovery, the Reef in its entirety was estimated to
-                            contain some 7,000 people, less than half of which lived in Johannesburg itself. Not four years later,
-                            Johannesburg’s population had multiplied ten-fold, and by 1891 approximately 102,000 people resided in
-                            the city. The circumstances of Johannesburg’s formation, and the exponential growth that followed, is
-                            written permanently into the urban fabric. Previous gold discoveries in the Transvaal were all alluvial
-                            and thus transient in nature, and so the original subdivision of land in Johannesburg’s first camp
-                            clusters were closely spaced, typical of 19th century mine camp planning. By the time it became known
-                            that the Reef ran both deep and wide, the burgeoning class of migrant workers had already drawn lawyers,
-                            shopkeepers, and traders that converted the camps into more permanent buildings, crystallizing the
-                            original partition scheme into what is now Johannesburg’s central business district.<br><br>
-
-                            Transportation and other infrastructures materialized quickly within this period, with piped water,
-                            electricity, and telephones appearing in the first two years, and South Africa’s first railway system
-                            inaugurated by the beginning of 1890. Initially servicing the predominant east-west run of the Reef,
-                            these infrastructures soon had to negotiate the mining waste dumps, sometimes deposited just meters
-                            away from the mine entrances due to the initial ad hoc zoning restrictions, that resulted from a shift
-                            into deep-level mining after surface outcrops ran low. The problem of waste was further exacerbated by
-                            the low grade ore that characterized much of the Witwatersrand Reef, with some companies producing up to
-                            200,000 times as much waste as gold: an issue that only worsened as time progressed and deeper
-                            excavations were made to reach new deposits.
-                        </p>
-
-                        <div class="carousel slide carousel-fade" id="carousel_thesis_satellite" data-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img class="d-block w-100" src="/images/work/architecture/thesis/JOBURG_SAT.jpg" alt="slide">
-                                    <div class="carousel-overlay">
-                                        <div class="carousel-caption"><p>Satellite image of Johannesburg (2017). East-West mining belt.</p></div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="/images/work/architecture/thesis/JOBURG_SAT_NEG.jpg" alt="slide">
-                                    <div class="carousel-overlay">
-                                        <div class="carousel-caption"><p>Image negative shows mining waste deposits in deep blue.</p></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class="carousel-control-prev" href="#carousel_thesis_satellite" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carousel_thesis_satellite" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-
-                        <p id="body_title_minor">2.02<span class="tab">Landscapes of waste</p>
-                        <p>
-                            Today, south African mining companies remove up to 7,500 tons of earth to produce one standard gold
-                            bar’s worth of product. Put into perspective, given that Johannesburg roughly produced a hypothetical
-                            40% of the gold in the US reserve at its peak, the equivalent waste mound would cover the entire
-                            footprint of Central Park with the height of One World Trade Center, four times over. As railway and
-                            automobile infrastructures continued to mature over the next few decades, connecting the sites of gold
-                            extraction with the major ports of South Africa for export, the tight weave of transit networks and
-                            waste formed a permanent and prominent belt along the east-west axis of the city and its subjugate
-                            landscape, splitting it into two distinct, unequal halves.<br><br>
-
-                            The material residue of gold mining in Johannesburg in turn shaped the geospatial division of
-                            socio-economic class, as delineated through the restructuring of power during the Second Boer War in
-                            1899 and the apartheid era politics that followed. At the crux of these political upheavals was a
-                            fundamental economic problem: how to make the low grade ore profitable? Deep-level mining required
-                            advanced knowledge and expensive machinery, which shifted the landscape of extraction from small-scale
-                            manual panning by opportunists at the onset to large-scale mining operations often owned by wealthy
-                            corporations abroad. As the extent of Witwatersrand Reef became clear, so too did political tensions
-                            over who would gain control of the lucrative resource, especially with the adoption of the gold
-                            standard. Established by the Boers after Great Britain annexed their Cape Colony during the Napoleonic
-                            Wars, the Transvaal and Orange Free State initially drew many foreigners to its borders with the
-                            discovery of diamonds at Kimberley in 1866. Soon after the discovery of gold in 1886, the Boers
-                            understood that they lacked both the manpower and the industrial expertise to develop the resource,
-                            and so reluctantly allowed the immigration of foreigners, called uitlanders, to the Transvaal. Many of
-                            these immigrants were English-speaking men from Britain, and soon their population challenged and
-                            potentially exceeded that of the original Boer settlers, which precipitated tensions between the two
-                            groups. In part driven by expansionist ideology, a notable proponent of which was mining magnate and
-                            early gold investor Cecil Rhodes, as well as attempts to obtain full voting rights for the uitlanders,
-                            the British attempted to raid the city in 1895 and finally gained control of the Transvaal and its
-                            allied Orange Free State in 1902.
-                        </p>
-
-                        <div class="carousel slide carousel-fade" id="carousel_thesis_mounds" data-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img class="d-block w-100" src="/images/work/architecture/thesis/NEW YORK.jpg" alt="slide">
-                                    <div class="carousel-overlay">
-                                        <div class="carousel-caption"><p>Manhattan, during the mining boom in Johannesburg.</p></div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="/images/work/architecture/thesis/NEW YORK_mound.jpg" alt="slide">
-                                    <div class="carousel-overlay">
-                                        <div class="carousel-caption"><p>Waste mound if deposited in Manhattan, proportional to gold in the US Federal Reserve mined from Johannesburg.</p></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class="carousel-control-prev" href="#carousel_thesis_mounds" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carousel_thesis_mounds" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-
-                        <p id="body_title_minor">2.03<span class="tab">Labor politics</p>
-                        <p>
-                            With political ownership of Johannesburg’s gold established, it became clear that a profitable
-                            enterprise would not have been possible without an abundance of cheap, unskilled labor from
-                            disenfranchised migrant workers. The gold standard meant that pricing was internationally controlled,
-                            and so any increases in operational costs could not be passed down to consumers through price
-                            increases. The United States and other major European powers were major gold importers, and it was
-                            also in their best interests to keep the price of gold low; thus, maintaining a constant supply of
-                            cheap labor became a primary focus for both the Boer and British governments as well as the mine
-                            owners. The following decades oversaw the political, social, and economic control of a huge
-                            population of black Africans for this singular purpose. Through governmental and white acquisition of
-                            land, harsh property taxes, and militaristic destabilization of neighboring African nations, the
-                            development of the mining industry destroyed independent farming as a way of life and completely
-                            reconfigured the socioeconomic structures of South Africa. A host of governmental policies spanning
-                            the first four decades of the 20th century, ranging from the criminalization of job desertion and the
-                            issuance of black passes to municipal segregation and the prohibition of blacks from buying or renting
-                            land outside of designated zones, were put in place to prevent upward mobility and to promote
-                            unemployment among the native African communities.<br><br>
-
-                            These policies also, by necessity due to the growing ratio of poor black laborers to white owners and
-                            officials that by 1913 already more than doubled, created a distinct spatial separation of the groups
-                            by discouraging interracial interaction outside of the mines themselves - a spatial pattern strongly
-                            reinforced during the Apartheid era that followed. By the 1930’s, various black-only townships were
-                            established on cheap land as a result of forced reallocation. Until that point, the lack of adequate
-                            housing for Johannesburg’s vast working class resulted primarily in underserved, mixed-race
-                            shantytowns near the city center that have been earmarked for removal. The Great Depression then
-                            sparked a period of brief economic expansion, when the price of gold shot up due to the increase of
-                            global demand with the abandonment of the gold standard, providing the South African government with
-                            the funds necessary to separate and reallocate entire populations of black laborers. The largest
-                            resettlement became what is today the township of Soweto, located just south of the central business
-                            district, downwind from the massive mine dumps that divided the city. Here, land was cheap due to the
-                            lack of transportation infrastructure, and as a result of the environmental hazards of living near
-                            toxic waste dumps.<br><br>
-
-                            The next decades of Apartheid reinforced this pattern of isolating the wealthy, predominantly white
-                            community into well serviced and well developed urban areas upwind of the waste belt, and relegating
-                            the poor, black working class to sprawling shantytowns south - sometimes on top of the mounds
-                            themselves. And just as racial segregation was territorialized within the urban and periurban areas,
-                            the separation between urban and rural also became incredibly pronounced: stripping agricultural land
-                            of its male workers and leaving their families to be supported by low mine wages in effect created a
-                            dynamic where mine profits are maximized by policies that caused long term rural underdevelopment and
-                            poverty still in existence today.
-                        </p>
-
-                        <p id="body_title_minor">2.04<span class="tab">Material erasure</p>
-                        <p>
-                            South Africa’s economy, created from and dependent upon its gold mines, is now suffering from exhausted
-                            deposits, increasingly expensive excavations, and extreme groundwater and air pollution from the
-                            resulting waste. The large mining monopolies of the 20th century have dissolved into smaller South
-                            African enterprises that, with new and more advanced refinement technology, have begun to re-mine the
-                            waste dumps which contain small particulate gold unsuccessfully harvested in the century prior. Where
-                            the original commodification process left distinct spatial geographies as delineated by these waste
-                            dumps, their removal will instigate new dynamics within the urban and periurban fabric. Without process
-                            regulation, all of the generated wealth will continue to flow into global markets while the original
-                            mounds will be processed outside of the city and dumped in the periurban territory south of the low
-                            income communities. Due to the waste belt’s proximity to the central business district, and with the
-                            removal of waste leading to more favorable living conditions, the real estate value of the land will
-                            rapidly increase and the nearby communities will gentrify. This land will most likely be developed into
-                            higher income housing, and with the absence of biohazard waste to keep landvalue low, new urban lines
-                            will be drawn as the previous poor communities who lived on and around the mounds will eventually
-                            relocate even further outside the city to south of the new waste mounds.<br><br>
-
-                            Here is an opportunity for policy regulation and the built environment to respond to such a large
-                            scale re-extraction of natural resources: by fixing the waste in place and rehabilitating it, this
-                            power dynamic would be stabilized to create value for the poor communities while providing a buffer
-                            for the rich, thus generating a more even distribution of wealth between the two communities while
-                            maintaining urban densities. Thus the lesson from Johannesburg is through the material regulation of
-                            extractive processes to fix them in place, which would reduce the turbulence of the existing
-                            socioeconomic geography. By keeping the waste dumps where they are, but allowing for in situ
-                            infrastructural construction within them, the waste belt would be less of a wall and more of a
-                            mediator between the existing communities. The original infrastructural problem was a direct result
-                            of Johannesburg’s rapid materialization, at enormous scales due to global demand for gold. To avoid
-                            this mistake again, one must phase the remining process and allow it to happen heterogeneously
-                            through space and time.
-                        </p>
-
-                        <div class="carousel slide carousel-fade" id="carousel_thesis_joburg" data-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img class="d-block w-100" src="/images/work/architecture/thesis/JOBURG_IMG_1.jpg" alt="slide">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="/images/work/architecture/thesis/JOBURG_IMG_2.png" alt="slide">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="/images/work/architecture/thesis/JOBURG_IMG_3.png" alt="slide">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="/images/work/architecture/thesis/JOBURG_IMG_4.jpg" alt="slide">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="/images/work/architecture/thesis/JOBURG_IMG_5.jpg" alt="slide">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="/images/work/architecture/thesis/JOBURG_IMG_6.png" alt="slide">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="/images/work/architecture/thesis/JOBURG_IMG_7.png" alt="slide">
-                                </div>
-                            </div>
-                            <a class="carousel-control-prev" href="#carousel_thesis_joburg" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carousel_thesis_joburg" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-
-                        <p id="body_title_minor">2.05<span class="tab">Resilient futures</p>
-                        <p>
-                            The instability of the gold standard is at its core based on the nature of commodification, where the
-                            separation of use value and exchange value enables a flip flopping between their relative strengths.
-                            The emergence of a gold standard thus coincided with the carving of new geographies of power, and each
-                            subsequent turbulence in value reverberated down its infrastructural pipelines to its territories of
-                            extraction and production. To effect change and to build resiliency into existing infrastructures, one
-                            must regulate the process by which material extraction proceeds into capital.<br><br>
-
-                            What can we learn from the infrastructural instabilities in Johannesburg as a result of the capital
-                            flow during the gold standard? In order to prevent the ad hoc rapid remining and large-scale
-                            redevelopment processes from destabilizing the socioeconomic structure of the city, one potential
-                            solution is to allow for the phasing of remining to occur concurrently with development at various
-                            stages over time, while also regulating the process to happen heterogenously in space. The era of
-                            centralized infrastructure is coming to an end; material stability must begin to rely on the
-                            redundancies of distributed systems to survive our faster future.
-                        </p>
-
-                        <p id="body_title_major">3</p>
-                        <p id="body_title_major">A MANIFESTO</p>
-                        <p id="quote_text">
-                            “Isaura, city of the thousand wells, is said to rise over a deep, subterranean lake. On all sides,
-                            wherever the inhabitants dig long vertical holes in the ground, they succeed in drawing up water,
-                            as far as the city extends, and no farther. Its green border repeats the dark outline of the buried
-                            lake; an invisible landscape conditions the visible one; everything that moves in the sunlight is
-                            driven by the lapping wave enclosed beneath the rock’s calcareous sky.”
-                            <br>- Italo Calvino, Invisible Cities
-                        </p>
-                        <p>
-                            As systems-based thinking gradually reforms the domain of technical knowledge in the 21st century,
-                            architects largely continue to abstract the building as an object unto itself: distinct from and not
-                            beholden to the processes, materials, people, and consumptive forces with which every built structure
-                            is in dialogue. This erasure of material memory leads to an accumulation of infrastructural residue
-                            as old systems pass into obsolescence and extractive violence upon the landscape begins anew, leaving
-                            behind an unintentional city and blind inhabitants.<br><br>
-
-                            Birthed upon gold reefs, their mined detritus monumental within the urban fabric, Johannesburg is
-                            perfectly situated to negotiate processes of extraction with those of construction as these artificial
-                            mountains are now being hydrologically excavated for redevelopment. This project is a functional
-                            choreography of the regimens found in everyday life with the infrastructure of resource production -
-                            of water and gold - upon which these rituals are built, in an attempt to materialize through
-                            architectural agency the conditions of extraction that are typically unseen.
-                        </p>
-
-                        <!-- PROJECT: THEATER TERRAFORM ------------------------------------------------------------------>
-
-                        <hr id="divider_project">
-                        <span class="anchor" id="sec1a_terraform"></span>
-                        <p id="project_title">TERRAFORM</p>
-                        <p>
-                            PBR narwhal sustainable mixtape swag wolf squid tote bag plus and them then Helvetica cray plaid, vegan brunch Banksy leggings +1 direct trade. Wayfarers codeply PBR selfies. Banh mi McSweeney's
-                            Shoreditch selfies, forage fingerstache food truck occupy YOLO Pitchfork fixie MDO of twitter fame iPhone fanny pack art party Portland.
-                        </p>
-
-                        <!-- PROJECT: THERMAL ALLOMETRY ------------------------------------------------------------------>
-
-                        <hr id="divider_project">
-                        <span class="anchor" id="sec1a_thermal"></span>
-                        <p id="project_title">THERMAL</p>
-                        <p>
-                            PBR narwhal sustainable mixtape swag wolf squid tote bag plus and them then Helvetica cray plaid, vegan brunch Banksy leggings +1 direct trade. Wayfarers codeply PBR selfies. Banh mi McSweeney's
-                            Shoreditch selfies, forage fingerstache food truck occupy YOLO Pitchfork fixie MDO of twitter fame iPhone fanny pack art party Portland.
-                        </p>
-
-                        <!-- PROJECT: HYPERCONVERGENCE ------------------------------------------------------------------>
-
-                        <hr id="divider_project">
-                        <span class="anchor" id="sec1a_hyperconvergence"></span>
-                        <p id="project_title">HYPERCONVERGENCE</p>
-                        <p>
-                            PBR narwhal sustainable mixtape swag wolf squid tote bag plus and them then Helvetica cray plaid, vegan brunch Banksy leggings +1 direct trade. Wayfarers codeply PBR selfies. Banh mi McSweeney's
-                            Shoreditch selfies, forage fingerstache food truck occupy YOLO Pitchfork fixie MDO of twitter fame iPhone fanny pack art party Portland.
-                        </p>
-
-
                         <br>
                         <hr id="divider_section">
                         <br>
-                        <span class="anchor" id="sec1b"></span>
+
+                        <!-- GRAPHIC ------------------------------------------------------------------>
+
+                        <span class="anchor" id="work_graphic"></span>
                         <p id="section_title">GRAPHIC</p>
                         <br>
-
-                        <!-- PROJECT: TBI BRANDING ------------------------------------------------------------------>
-
-                        <hr id="divider_project">
-                        <span class="anchor" id="sec1b_tbi"></span>
-                        <p id="project_title">TBI: Identity for a muay thai gym.</p>
-                        <table class="table table-borderless table-sm" id="project_info">
-                            <tbody>
-                                <tr><th scope="row">TYPE</th><td>branding</td></tr>
-                                <tr><th scope="row">YEAR</th><td>2019</td></tr>
-                                <tr><th scope="row">FOR</th><td>thai boxing institute</td></tr>
-                                <tr><th scope="row">SITE</th><td>los angeles</td></tr>
-                            </tbody>
-                        </table>
-                        <hr id="divider_project">
-
-                        <div class="carousel slide carousel-fade" id="carousel_tbi_logo" data-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img class="d-block w-100" src="/images/work/graphic/brand/LOGO_1.jpg" alt="slide">
-                                    <div class="carousel-overlay">
-                                        <div class="carousel-caption"><p>TBI logo: the handwrap.</p></div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="/images/work/graphic/brand/LOGO_3.jpg" alt="slide">
-                                    <div class="carousel-overlay">
-                                        <div class="carousel-caption"><p>TBI logo: the handwrap.</p></div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="/images/work/graphic/brand/LOGO_CONSTRUCTION.jpg" alt="slide">
-                                    <div class="carousel-overlay">
-                                        <div class="carousel-caption"><p>Logo construction.</p></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class="carousel-control-prev" href="#carousel_tbi_logo" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carousel_tbi_logo" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-
-                        <p id="body_title_minor">1.01<span class="tab">A conversation with coach Vik</p>
-                        <p>
-                            PLACEHOLDER TEXT: talk about gym identity and history, philosphy of muay thai and teaching, technique
-                            over power, inspiration from old school muay thai graphic design, influence of punk rock resourcefulness
-                            and the flow state of music (rhythm). "figuring things out": approachable, but professional.
-                        </p>
-                        <p id="body_title_minor">1.02<span class="tab">The Ring and the Wrap</p>
-                        <p>
-                            PLACEHOLDER TEXT: Avoiding the most commonly associated symbol of boxing - the boxing glove, and the typical aggressive colors
-                            of competitive gyms (violent red, black, blue). Instead, focused on the dualisms of martial arts: precision, technique, and science of fighting represented through an axonometric, dissected boxing
-                            ring. Ritual, rhythm, and flow represented by the handwrap. Muted solids and vared color scheme with captures the makeshift do-it-yourself attitude while
-                            remaining grounded and professional.
-                        </p>
-
-                        <div class="carousel slide carousel-fade" id="carousel_tbi_patch" data-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img class="d-block w-100" src="/images/work/graphic/brand/PATCH_1.jpg" alt="slide">
-                                    <div class="carousel-overlay">
-                                        <div class="carousel-caption"><p>TBI patch: the boxing ring.</p></div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="/images/work/graphic/brand/PATCH_2.jpg" alt="slide">
-                                    <div class="carousel-overlay">
-                                        <div class="carousel-caption"><p>TBI patch: the boxing ring.</p></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class="carousel-control-prev" href="#carousel_tbi_patch" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carousel_tbi_patch" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-
+                        
+                        {% for project in site.projects %}
+                            {% if project.id_section == 'work' %}
+                                {% if project.id_category == 'graphic' %}
+                                    <hr id="divider_project">
+                                    <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
+                                    <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
+                                    <table class="table table-borderless table-sm" id="project_info">
+                                        <tbody>
+                                            <tr><th scope="row">TYPE</th><td>{{ project.type }}</td></tr>
+                                            <tr><th scope="row">YEAR</th><td>{{ project.year }}</td></tr>
+                                            <tr><th scope="row">FOR</th><td>{{ project.for }}</td></tr>
+                                            <tr><th scope="row">SITE</th><td>{{ project.site }}</td></tr>
+                                        </tbody>
+                                    </table>
+                                    <hr id="divider_project">
+                                    {{ project.content }}
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                        
                         <br>
                         <hr id="divider_section">
                         <br>
-                        <span class="anchor" id="sec1c"></span>
+
+                        <!-- PRODUCT ------------------------------------------------------------------>
+
+                        <span class="anchor" id="work_product"></span>
                         <p id="section_title">PRODUCT</p>
-                        <p>
-                            Helvetica cray plaid, vegan brunch Banksy leggings +1 direct trade. Wayfarers codeply PBR selfies. Banh mi McSweeney's
-                            Shoreditch selfies, forage fingerstache food truck occupy YOLO Pitchfork fixie iPhone fanny pack art party Portland.
-                            PBR narwhal sustainable mixtape swag wolf squid tote bag. Godard sustainable you probably haven't heard of them, vegan farm-to-table Williamsburg slow-carb readymade disrupt deep v. Meggings seitan Wes Anderson semiotics, cliche American Apparel whatever. Helvetica cray plaid, vegan brunch Banksy leggings +1 direct trade. Wayfarers codeply PBR selfies.
-                        </p>
+                        <br>
+                        
+                        {% for project in site.projects %}
+                            {% if project.id_section == 'work' %}
+                                {% if project.id_category == 'product' %}
+                                    <hr id="divider_project">
+                                    <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
+                                    <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
+                                    <table class="table table-borderless table-sm" id="project_info">
+                                        <tbody>
+                                            <tr><th scope="row">TYPE</th><td>{{ project.type }}</td></tr>
+                                            <tr><th scope="row">YEAR</th><td>{{ project.year }}</td></tr>
+                                            <tr><th scope="row">FOR</th><td>{{ project.for }}</td></tr>
+                                            <tr><th scope="row">SITE</th><td>{{ project.site }}</td></tr>
+                                            <tr><th scope="row">TEAM</th><td>{{ project.team }}</td></tr>
+                                        </tbody>
+                                    </table>
+                                    <hr id="divider_project">
+                                    {{ project.content }}
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
 
                         <br>
                         <hr id="divider_main">
                         <br>
-                        <span class="anchor" id="sec2"></span>
+                        <span class="anchor" id="about"></span>
                         <p id="main_title">ABOUT</p>
                         <p>
-                            Ethical Kickstarter PBR asymmetrical lo-fi. Dreamcatcher street art Carles, stumptown gluten-free Kickstarter artisan Wes Anderson wolf pug. Godard sustainable you probably haven't heard of them, vegan farm-to-table Williamsburg
-                            slow-carb readymade disrupt deep v. Meggings seitan Wes Anderson semiotics, cliche American Apparel whatever. Helvetica cray plaid, vegan brunch Banksy leggings +1 direct trade. Wayfarers codeply PBR selfies. Banh mi McSweeney's
-                            Shoreditch selfies, forage fingerstache food truck occupy YOLO Pitchfork fixie iPhone fanny pack art party Portland.
+                            Hi, I'm Claire.
                         </p>
                         <br>
                         <hr id="divider_main">
