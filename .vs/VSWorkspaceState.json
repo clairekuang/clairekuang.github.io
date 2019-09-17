@@ -1,6 +1,14 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\css",
+    "\\images",
+    "\\images\\about",
+    "\\images\\prose",
+    "\\images\\work",
+    "\\js",
+    "\\_projects"
   ],
+  "SelectedNode": "\\_projects\\dopium-tiles.html",
   "PreviewInSolutionExplorer": false
 }
