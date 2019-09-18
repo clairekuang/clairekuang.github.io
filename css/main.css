@@ -74,6 +74,7 @@ nav {
     height: 0.9em;
     background-color:black;
     margin-bottom: 0.4em;
+    box-shadow: 1px 2px 6px 0 rgba(0,0,0,.2);
 }
 .navbar-link {
     color: #000000;
@@ -99,6 +100,36 @@ nav {
   visibility: hidden;
 }
 
+#togglenav .nav-item-lg,
+#togglenav .nav-item-sm{
+    line-height: 0.9em;
+    letter-spacing: 0.1rem;
+    font-size: x-small;
+    color: black;
+}
+
+#togglenav .nav-link{
+    cursor: crosshair;
+    padding:0.9em;
+    margin:0;
+    color: black;
+}
+
+#togglenav .nav-link.active,
+#togglenav .nav-link:focus,
+#togglenav .nav-link:hover{
+    color: white;
+    background-color:black;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor:crosshair;
+    font-size:15px;
+    font-weight:400;
+    letter-spacing:0.1rem;
+}
+
+
+
 #sidenav{
     top: 12em;
     cursor: crosshair;
@@ -107,22 +138,16 @@ nav {
 }
 
 #sidenav .nav-item-lg,
-#sidenav .nav-item-md,
 #sidenav .nav-item-sm{
     line-height: 0.9rem;
     letter-spacing: 0.1rem;
+    font-size: x-small;
 }
 
 #sidenav .nav-item-lg{
-    font-size: x-small;
     color: black;
 }
-#sidenav .nav-item-md{
-    font-size: x-small;
-    color: rgba(0, 0, 0, 0.20);
-}
 #sidenav .nav-item-sm{
-    font-size: x-small;
     color: rgba(0, 0, 0, 0.20);
 }
 #sidenav .nav-link{
@@ -145,6 +170,7 @@ nav {
     letter-spacing:0.1rem;
 }
 
+
 #sideinfo{
     top:12em;
     letter-spacing: 0.1rem;
@@ -160,9 +186,17 @@ nav {
 #togglenav {
     padding-left: 0;
     list-style: none;
-    background-color: black;
+    background-color: rgba(255, 255, 255, 0.90);
     text-align: center;
     color: white;
+    margin: 0;
+    height: 20em;
+}
+
+#navbarToggle {
+    width: 100%;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 
@@ -291,6 +325,7 @@ nav {
 .project{
 
 }
+
 
 
 
