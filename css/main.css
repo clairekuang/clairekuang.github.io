@@ -56,7 +56,6 @@ nav {
     height: 6rem;
     padding:0 !important;
     margin:0;
-
 }
 .navbar{
     vertical-align:bottom;
@@ -104,8 +103,9 @@ nav {
 #togglenav .nav-item-sm{
     line-height: 0.9em;
     letter-spacing: 0.1rem;
-    font-size: x-small;
+    font-size: small;
     color: black;
+    font-weight: bolder;
 }
 
 #togglenav .nav-link{
@@ -128,6 +128,10 @@ nav {
     letter-spacing:0.1rem;
 }
 
+#togglenav ul{
+    display: block;
+}
+
 
 
 #sidenav{
@@ -142,19 +146,14 @@ nav {
     line-height: 0.9rem;
     letter-spacing: 0.1rem;
     font-size: x-small;
-}
-
-#sidenav .nav-item-lg{
     color: black;
 }
-#sidenav .nav-item-sm{
-    color: rgba(0, 0, 0, 0.20);
-}
+
 #sidenav .nav-link{
     cursor: crosshair;
     padding:0;
     margin:0;
-    color: rgba(0, 0, 0, 0.20);
+    color: black;
 }
 
 #sidenav .nav-link.active,
@@ -190,7 +189,6 @@ nav {
     text-align: center;
     color: white;
     margin: 0;
-    height: 20em;
 }
 
 #navbarToggle {
