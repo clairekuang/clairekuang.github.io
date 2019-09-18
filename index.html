@@ -1,4 +1,4 @@
----
+﻿---
 # This is a YAML comment. You need a YAML front matter section
 # like this to enable Liquid templating for this file.
 ---
@@ -48,7 +48,7 @@
 
         <div class="container-fluid" id="content">
           <div class="p-0 col">
-              <hr class="navbar-hr mt-1" data-toggle="collapse" data-target="#navbarToggle" aria-controls="#sidenav" aria-expanded="false" aria-label="Toggle navigation">
+              <hr class="navbar-hr mt-1" data-toggle="collapse" data-target="#navbarToggle" aria-controls="#navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
           </div>
         </div>
 
@@ -100,21 +100,23 @@
         {% for project in site.projects %}
             {% if project.id_section == 'work' %}
                 {% if project.id_category == 'architecture' %}
-                    <hr id="divider_project">
-                    <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
-                    <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
+                    <div class="project no-margin">
+                        <hr id="divider_project">
+                        <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
+                        <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
 
-                    <table class="table table-borderless table-sm" id="project_info">
-                        <tbody>
-                            <tr><th scope="row">TYPE</th><td>{{ project.type }}</td></tr>
-                            <tr><th scope="row">YEAR</th><td>{{ project.year }}</td></tr>
-                            <tr><th scope="row">FOR</th><td>{{ project.for }}</td></tr>
-                            <tr><th scope="row">SITE</th><td>{{ project.site }}</td></tr>
-                            <tr><th scope="row">TEAM</th><td>{{ project.team }}</td></tr>
-                        </tbody>
-                    </table>
-                    <hr id="divider_project">
-                    {{ project.content }}
+                        <table class="table table-borderless table-sm" id="project_info">
+                            <tbody>
+                                <tr><th scope="row">TYPE</th><td>{{ project.type }}</td></tr>
+                                <tr><th scope="row">YEAR</th><td>{{ project.year }}</td></tr>
+                                <tr><th scope="row">FOR</th><td>{{ project.for }}</td></tr>
+                                <tr><th scope="row">SITE</th><td>{{ project.site }}</td></tr>
+                                <tr><th scope="row">TEAM</th><td>{{ project.team }}</td></tr>
+                            </tbody>
+                        </table>
+                        <hr id="divider_project">
+                        {{ project.content }}
+                    </div>
                 {% endif %}
             {% endif %}
         {% endfor %}
@@ -191,28 +193,26 @@
                         {% for project in site.projects %}
                             {% if project.id_section == 'work' %}
                                 {% if project.id_category == 'architecture' %}
-                                    <hr id="divider_project">
+                                    <hr id="divider_top">
                                     <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
                                     <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p/>
-                                    <div class="row">
-                                        <div class="col-md-10 no-margin">
-                                            <table class="table table-borderless table-sm" id="project_info">
-                                                <tbody>
-                                                    <tr><th scope="row">TYPE</th><td>{{ project.type }}</td></tr>
-                                                    <tr><th scope="row">YEAR</th><td>{{ project.year }}</td></tr>
-                                                    <tr><th scope="row">FOR</th><td>{{ project.for }}</td></tr>
-                                                    <tr><th scope="row">SITE</th><td>{{ project.site }}</td></tr>
-                                                    <tr><th scope="row">TEAM</th><td>{{ project.team }}</td></tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <div class="col-md-2 no-margin">
-                                            <a href=""></a>
-                                        </div>
-                                    </div>
+
+                                    <table class="table table-borderless table-sm" id="project_info">
+                                        <tbody>
+                                            <tr><th scope="row">TYPE</th><td>{{ project.type }}</td></tr>
+                                            <tr><th scope="row">YEAR</th><td>{{ project.year }}</td></tr>
+                                            <tr><th scope="row">FOR</th><td>{{ project.for }}</td></tr>
+                                            <tr><th scope="row">SITE</th><td>{{ project.site }}</td></tr>
+                                            <tr><th scope="row">TEAM</th><td>{{ project.team }}</td></tr>
+                                        </tbody>
+                                    </table>
                                     
-                                    <hr id="divider_project">
-                                    {{ project.content }}
+                                    <div class="no-margin collapse" id="archToggle">
+                                        {{ project.content }}
+                                    </div>
+
+                                    <hr id="divider_bottom" data-toggle="collapse" data-target="#archToggle" aria-controls="#archToggle" aria-expanded="false" aria-label="Toggle content">
+                                    
                                 {% endif %}
                             {% endif %}
                         {% endfor %}
@@ -226,9 +226,10 @@
                         {% for project in site.projects %}
                             {% if project.id_section == 'work' %}
                                 {% if project.id_category == 'graphic' %}
-                                    <hr id="divider_project">
+                                    <hr id="divider_top">
                                     <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
                                     <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
+
                                     <table class="table table-borderless table-sm" id="project_info">
                                         <tbody>
                                             <tr><th scope="row">TYPE</th><td>{{ project.type }}</td></tr>
@@ -237,14 +238,18 @@
                                             <tr><th scope="row">SITE</th><td>{{ project.site }}</td></tr>
                                         </tbody>
                                     </table>
-                                    <hr id="divider_project">
-                                    {{ project.content }}
+
+                                    <div class="no-margin collapse" id="graphicToggle">
+                                        {{ project.content }}
+                                    </div>
+
+                                    <hr id="divider_bottom" data-toggle="collapse" data-target="#graphicToggle" aria-controls="#graphicToggle" aria-expanded="false" aria-label="Toggle content">
                                 {% endif %}
                             {% endif %}
                         {% endfor %}
                         
                         <br>
-                        <hr id="divider_section">
+                        <hr id="divider_main">
                         <br>
 
                         <!-- PRODUCT ------------------------------------------------------------------>
@@ -256,7 +261,7 @@
                         {% for project in site.projects %}
                             {% if project.id_section == 'work' %}
                                 {% if project.id_category == 'product' %}
-                                    <hr id="divider_project">
+                                    <hr id="divider_top">
                                     <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
                                     <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
                                     <table class="table table-borderless table-sm" id="project_info">
@@ -268,8 +273,12 @@
                                             <tr><th scope="row">TEAM</th><td>{{ project.team }}</td></tr>
                                         </tbody>
                                     </table>
-                                    <hr id="divider_project">
-                                    {{ project.content }}
+
+                                    <div class="no-margin collapse" id="productToggle">
+                                        {{ project.content }}
+                                    </div>
+
+                                    <hr id="divider_bottom" data-toggle="collapse" data-target="#productToggle" aria-controls="#productToggle" aria-expanded="false" aria-label="Toggle content">
                                 {% endif %}
                             {% endif %}
                         {% endfor %}
@@ -305,7 +314,7 @@
                         {% for project in site.projects %}
                             {% if project.id_section == 'prose' %}
                                 {% if project.id_category == 'publication' %}
-                                    <hr id="divider_project">
+                                    <hr id="divider_top">
                                     <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
                                     <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
 
@@ -317,14 +326,17 @@
                                             <tr><th scope="row">SITE</th><td>{{ project.site }}</td></tr>
                                         </tbody>
                                     </table>
-                                    <hr id="divider_project">
-                                    {{ project.content }}
+                                    <div class="no-margin collapse" id="pubToggle">
+                                        {{ project.content }}
+                                    </div>
+
+                                    <hr id="divider_bottom" data-toggle="collapse" data-target="#pubToggle" aria-controls="#pubToggle" aria-expanded="false" aria-label="Toggle content">
                                 {% endif %}
                             {% endif %}
                         {% endfor %}
 
                         <br>
-                        <hr id="divider_section">
+                        <hr id="divider_main">
                         <br>
 
                     </div>
