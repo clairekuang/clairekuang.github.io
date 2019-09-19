@@ -116,8 +116,7 @@ nav {
 }
 
 #togglenav .nav-link.active,
-#togglenav .nav-link:focus,
-#togglenav .nav-link:hover{
+#togglenav .nav-link:focus{
     color: white;
     background-color:black;
     text-decoration: none;
@@ -183,18 +182,18 @@ nav {
 }
 
 #togglenav {
-    padding-left: 0;
+    padding: 5px;
     list-style: none;
     background-color: rgba(255, 255, 255, 0.90);
-    text-align: center;
+    text-align: left;
     color: white;
     margin: 0;
 }
 
 #navbarToggle {
-    width: 100%;
     margin-left: 2rem;
     margin-right: 2rem;
+    width: 30%;
 }
 
 
