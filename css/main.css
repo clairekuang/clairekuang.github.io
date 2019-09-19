@@ -293,19 +293,16 @@ nav {
     opacity: 1;
 }
 
-.carousel-item:hover img {
-}
-
 #divider_top {
+    background-color: black;
+    height: 2px;
+    border:0;
 }
 
 #divider_bottom {
     height: 0.9em;
-    background-color: lightgray;
+    background-color: black;
     border:0;
-}
-
-#divider_main{
 }
 
 #quote_text{
@@ -319,9 +316,6 @@ nav {
     padding-left: 1.5rem;
 }
 
-.project{
-
-}
 
 
 
