@@ -318,6 +318,16 @@
                         {% for project in site.projects %}
                         {% if project.id_section == 'work' %}
                         {% if project.id_category == 'architecture' %}
+
+                        <div class="carousel collapse" data-ride="carousel" id="images_{{project.id_project}}">
+                            <div class="carousel-inner">
+
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="{{image.link}}">
+                                </div>
+
+                            </div>
+                        </div>
                                     
                         <hr id="divider_top">
                         <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
@@ -332,22 +342,15 @@
                                 <tr><th scope="row">TEAM</th><td>{{ project.team }}</td></tr>
                             </tbody>
                         </table>
-
-                        <div class="carousel collapse" data-ride="carousel" id="images_{{project.id_project}}">
-                            <div class="carousel-inner">
-                                {% for image in project.images}
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="{{image.link}}">
-                                </div>
-                                {% endfor %}
-                            </div>
-                        </div>
                                     
                         <div class="no-margin collapse" id="content_{{project.id_project}}">
+                            <br>
                             {{ project.content }}
                         </div>
 
-                        <hr id="divider_bottom" data-toggle="collapse" data-target="#images_{{project.id_project}}" aria-controls="images_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content">
+                        <p id="collapse_arrow" data-toggle="collapse" data-target="#content_{{project.id_project}}" aria-controls="content_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content"></p>
+
+                        <hr id="divider_bottom">
                         <br>
 
                         {% endif %}

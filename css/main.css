@@ -138,12 +138,12 @@ nav {
     cursor: crosshair;
     padding:0 !important;
     text-align: right;
+    letter-spacing: 0.1rem;
 }
 
 #sidenav .nav-item-lg,
 #sidenav .nav-item-sm{
     line-height: 0.9rem;
-    letter-spacing: 0.1rem;
     font-size: x-small;
     color: black;
 }
@@ -158,14 +158,9 @@ nav {
 #sidenav .nav-link.active,
 #sidenav .nav-link:focus,
 #sidenav .nav-link:hover{
-    color: white;
-    background-color:black;
-    text-decoration: none;
     transition: all 0.2s ease;
-    cursor:crosshair;
-    font-size:15px;
-    font-weight:400;
-    letter-spacing:0.1rem;
+    font-size: small;
+    font-weight:800;
 }
 
 
@@ -250,6 +245,7 @@ nav {
 .table{
     font-size: small;
     letter-spacing: 0.1rem;
+    margin-bottom: 2rem;
 }
 
 .table th{
@@ -300,7 +296,7 @@ nav {
 }
 
 #divider_bottom {
-    height: 0.9em;
+    height: 2px;
     background-color: black;
     border:0;
 }
@@ -314,6 +310,22 @@ nav {
 }
 .tab{
     padding-left: 1.5rem;
+}
+#collapse_arrow{
+    font-size: large;
+}
+
+#collapse_arrow.collapsed:before
+{
+    content:'+ more' ;
+    font-style: italic;
+    font-size: 18px;
+}
+#collapse_arrow:before
+{
+    content:'- less' ;
+    font-style: italic;
+    font-size: 18px;
 }
 
 
