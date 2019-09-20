@@ -321,11 +321,11 @@
 
                         <div class="carousel collapse" data-ride="carousel" id="images_{{project.id_project}}">
                             <div class="carousel-inner">
-
+                                {% for image in project.images %}
                                 <div class="carousel-item">
                                     <img class="d-block w-100" src="{{image.link}}">
                                 </div>
-
+                                {% endfor %}
                             </div>
                         </div>
                                     
@@ -342,13 +342,13 @@
                                 <tr><th scope="row">TEAM</th><td>{{ project.team }}</td></tr>
                             </tbody>
                         </table>
+
+                        <p id="collapse_arrow" data-toggle="collapse" data-target="#content_{{project.id_project}}" aria-controls="content_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content"></p>
                                     
                         <div class="no-margin collapse" id="content_{{project.id_project}}">
                             <br>
                             {{ project.content }}
                         </div>
-
-                        <p id="collapse_arrow" data-toggle="collapse" data-target="#content_{{project.id_project}}" aria-controls="content_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content"></p>
 
                         <hr id="divider_bottom">
                         <br>
