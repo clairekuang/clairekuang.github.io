@@ -43,8 +43,8 @@ document.getElementById("time").innerHTML = d.getHours() + ":" + d.getMinutes() 
     { selector: '#work_architecture', text: 'Architecture', },
     { selector: '#work_graphic',      text: 'Graphic',      },
     { selector: '#work_product',      text: 'Product',      },
-    { selector: '#prose',             text: 'Prose',        },
     { selector: '#prose_publication', text: 'Publication',  },
+    { selector: '#prose_blog',        text: 'Blog',         },
   ];
 
   // Requires jQuery, expects it defined as $.

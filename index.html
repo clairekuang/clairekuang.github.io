@@ -100,7 +100,7 @@
         {% for project in site.projects %}
         {% if project.id_section == 'work' %}
         {% if project.id_category == 'architecture' %}
-        <hr id="divider_top">
+        <hr id="divider">
         <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
         <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
 
@@ -118,7 +118,7 @@
             {{ project.content }}
         </div>
 
-        <hr id="divider_bottom" data-toggle="collapse" data-target="#toggle_{{project.id_project}}" aria-controls="toggle_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content">
+        <hr id="divider" data-toggle="collapse" data-target="#toggle_{{project.id_project}}" aria-controls="toggle_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content">
 
         {% endif %}
         {% endif %}
@@ -133,7 +133,7 @@
         {% for project in site.projects %}
         {% if project.id_section == 'work' %}
         {% if project.id_category == 'graphic' %}
-        <hr id="divider_top">
+        <hr id="divider">
         <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
         <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
 
@@ -150,13 +150,13 @@
             {{ project.content }}
         </div>
 
-        <hr id="divider_bottom" data-toggle="collapse" data-target="#toggle_{{project.id_project}}" aria-controls="toggle_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content">
+        <hr id="divider" data-toggle="collapse" data-target="#toggle_{{project.id_project}}" aria-controls="toggle_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content">
         {% endif %}
         {% endif %}
         {% endfor %}
 
         <br>
-        <hr id="divider_main">
+        <hr id="divider">
         <br>
 
         <!-- PRODUCT ------------------------------------------------------------------>
@@ -168,7 +168,7 @@
         {% for project in site.projects %}
         {% if project.id_section == 'work' %}
         {% if project.id_category == 'product' %}
-        <hr id="divider_top">
+        <hr id="divider">
         <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
         <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
         <table class="table table-borderless table-sm" id="project_info">
@@ -185,7 +185,7 @@
             {{ project.content }}
         </div>
 
-        <hr id="divider_bottom" data-toggle="collapse" data-target="#toggle_{{project.id_project}}" aria-controls="toggle_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content">
+        <hr id="divider" data-toggle="collapse" data-target="#toggle_{{project.id_project}}" aria-controls="toggle_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content">
         {% endif %}
         {% endif %}
         {% endfor %}
@@ -221,7 +221,7 @@
         {% for project in site.projects %}
         {% if project.id_section == 'prose' %}
         {% if project.id_category == 'publication' %}
-        <hr id="divider_top">
+        <hr id="divider">
         <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
         <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
 
@@ -237,13 +237,13 @@
             {{ project.content }}
         </div>
 
-        <hr id="divider_bottom" data-toggle="collapse" data-target="#toggle_{{project.id_project}}" aria-controls="toggle_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content">
+        <hr id="divider" data-toggle="collapse" data-target="#toggle_{{project.id_project}}" aria-controls="toggle_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content">
         {% endif %}
         {% endif %}
         {% endfor %}
 
         <br>
-        <hr id="divider_main">
+        <hr id="divider">
         <br>
 
     </main>
@@ -274,23 +274,9 @@
             <aside class="col-md-2">
                 <div class="sticky-top" id="sidenav">
                     <ul class="nav flex-md-column flex-row justify-content-between">
-                        <li class="nav-item-lg"><a href="#work" class="nav-link active">/WORK</a>
-                            <ul class="nav flex-md-column hidden-sm-down">
-                                <li class="nav-item-sm"><a href="#work_architecture" class="nav-link">/ARCH</a></li>
-                                <li class="nav-item-sm"><a href="#work_graphic" class="nav-link">/GRAPHIC</a></li>
-                                <li class="nav-item-sm"><a href="#work_product" class="nav-link">/PRODUCT</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item-lg">
-                            <a href="#about" class="nav-link">/ABOUT</a>
-                        </li>
-                        <li class="nav-item-lg">
-                            <a href="#prose" class="nav-link">/PROSE</a>
-                            <ul class="nav flex-md-column hidden-sm-down">
-                                <li class="nav-item-sm"><a href="#prose_publication" class="nav-link">/PUB</a></li>
-                                <li class="nav-item-sm"><a href="#prose_blog" class="nav-link">/BLOG</a></li>
-                            </ul>
-                        </li>
+                        <li class="nav-item"><a href="#work" class="nav-link active">/WORK</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link">/ABOUT</a></li>
+                        <li class="nav-item"><a href="#prose" class="nav-link">/PROSE</a></li>
                     </ul>
 
                     <div id='scroll-varied-section-description'>
@@ -332,7 +318,7 @@
                             </div>
                         </div>
 
-                        <hr id="divider_top">
+                        <hr id="divider">
                         <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
                         <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p/>
 
@@ -353,7 +339,7 @@
                             {{ project.content }}
                         </div>
 
-                        <hr id="divider_bottom">
+                        <hr id="divider">
                         <br>
 
                         {% endif %}
@@ -368,28 +354,44 @@
                         <br>
 
                         {% for project in site.projects %}
-                            {% if project.id_section == 'work' %}
-                                {% if project.id_category == 'graphic' %}
-                                    <hr id="divider_top">
-                                    <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
-                                    <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
+                        {% if project.id_section == 'work' %}
+                        {% if project.id_category == 'graphic' %}
 
-                                    <table class="table table-borderless table-sm" id="project_info">
-                                        <tbody>
-                                            <tr><th scope="row">TYPE</th><td>{{ project.type }}</td></tr>
-                                            <tr><th scope="row">YEAR</th><td>{{ project.year }}</td></tr>
-                                            <tr><th scope="row">FOR</th><td>{{ project.for }}</td></tr>
-                                            <tr><th scope="row">SITE</th><td>{{ project.site }}</td></tr>
-                                        </tbody>
-                                    </table>
+                        <div class="carousel collapse" data-ride="carousel" id="images_{{project.id_project}}">
+                            <div class="carousel-inner">
+                                {% for image in project.images %}
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="{{image.link}}">
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
 
-                                    <div class="no-margin collapse" id="toggle_{{project.id_project}}">
-                                        {{ project.content }}
-                                    </div>
+                        <hr id="divider">
+                        <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
+                        <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
 
-                                    <hr id="divider_bottom" data-toggle="collapse" data-target="#toggle_{{project.id_project}}" aria-controls="toggle_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content">
-                                {% endif %}
-                            {% endif %}
+                        <table class="table table-borderless table-sm" id="project_info">
+                            <tbody>
+                                <tr><th scope="row">TYPE</th><td>{{ project.type }}</td></tr>
+                                <tr><th scope="row">YEAR</th><td>{{ project.year }}</td></tr>
+                                <tr><th scope="row">FOR</th><td>{{ project.for }}</td></tr>
+                                <tr><th scope="row">SITE</th><td>{{ project.site }}</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p id="collapse_arrow" data-toggle="collapse" data-target="#content_{{project.id_project}}" aria-controls="content_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content"></p>
+
+                        <div class="no-margin collapse" id="content_{{project.id_project}}">
+                            <br>
+                            {{ project.content }}
+                        </div>
+
+                        <hr id="divider">
+                        <br>
+
+                        {% endif %}
+                        {% endif %}
                         {% endfor %}
 
                         <!-- PRODUCT ------------------------------------------------------------------>
@@ -400,33 +402,46 @@
                         <br>
 
                         {% for project in site.projects %}
-                            {% if project.id_section == 'work' %}
-                                {% if project.id_category == 'product' %}
-                                    <hr id="divider_top">
-                                    <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
-                                    <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
-                                    <table class="table table-borderless table-sm" id="project_info">
-                                        <tbody>
-                                            <tr><th scope="row">TYPE</th><td>{{ project.type }}</td></tr>
-                                            <tr><th scope="row">YEAR</th><td>{{ project.year }}</td></tr>
-                                            <tr><th scope="row">FOR</th><td>{{ project.for }}</td></tr>
-                                            <tr><th scope="row">SITE</th><td>{{ project.site }}</td></tr>
-                                            <tr><th scope="row">TEAM</th><td>{{ project.team }}</td></tr>
-                                        </tbody>
-                                    </table>
+                        {% if project.id_section == 'work' %}
+                        {% if project.id_category == 'product' %}
 
-                                    <div class="no-margin collapse" id="toggle_{{project.id_project}}">
-                                        {{ project.content }}
-                                    </div>
+                        <div class="carousel collapse" data-ride="carousel" id="images_{{project.id_project}}">
+                            <div class="carousel-inner">
+                                {% for image in project.images %}
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="{{image.link}}">
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
 
-                                    <hr id="divider_bottom" data-toggle="collapse" data-target="#toggle_{{project.id_project}}" aria-controls="toggle_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content">
-                                {% endif %}
-                            {% endif %}
+                        <hr id="divider">
+                        <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
+                        <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
+
+                        <table class="table table-borderless table-sm" id="project_info">
+                            <tbody>
+                                <tr><th scope="row">TYPE</th><td>{{ project.type }}</td></tr>
+                                <tr><th scope="row">YEAR</th><td>{{ project.year }}</td></tr>
+                                <tr><th scope="row">FOR</th><td>{{ project.for }}</td></tr>
+                                <tr><th scope="row">SITE</th><td>{{ project.site }}</td></tr>
+                                <tr><th scope="row">TEAM</th><td>{{ project.team }}</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p id="collapse_arrow" data-toggle="collapse" data-target="#content_{{project.id_project}}" aria-controls="content_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content"></p>
+
+                        <div class="no-margin collapse" id="content_{{project.id_project}}">
+                            <br>
+                            {{ project.content }}
+                        </div>
+
+                        <hr id="divider">
+                        <br>
+
+                        {% endif %}
+                        {% endif %}
                         {% endfor %}
-
-                        <br>
-                        <hr id="divider_main">
-                        <br>
 
                         <!-- ABOUT ------------------------------------------------------------------>
 
@@ -453,32 +468,93 @@
                         <br>
 
                         {% for project in site.projects %}
-                            {% if project.id_section == 'prose' %}
-                                {% if project.id_category == 'publication' %}
-                                    <hr id="divider_top">
-                                    <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
-                                    <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
+                        {% if project.id_section == 'prose' %}
+                        {% if project.id_category == 'publication' %}
 
-                                    <table class="table table-borderless table-sm" id="project_info">
-                                        <tbody>
-                                            <tr><th scope="row">TYPE</th><td>{{ project.type }}</td></tr>
-                                            <tr><th scope="row">YEAR</th><td>{{ project.year }}</td></tr>
-                                            <tr><th scope="row">FOR</th><td>{{ project.for }}</td></tr>
-                                            <tr><th scope="row">SITE</th><td>{{ project.site }}</td></tr>
-                                        </tbody>
-                                    </table>
-                                    <div class="no-margin collapse" id="toggle_{{project.id_project}}">
-                                        {{ project.content }}
-                                    </div>
+                        <div class="carousel collapse" data-ride="carousel" id="images_{{project.id_project}}">
+                            <div class="carousel-inner">
+                                {% for image in project.images %}
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="{{image.link}}">
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
 
-                                    <hr id="divider_bottom" data-toggle="collapse" data-target="#toggle_{{project.id_project}}" aria-controls="toggle_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content">
-                                {% endif %}
-                            {% endif %}
+                        <hr id="divider">
+                        <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
+                        <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
+
+                        <table class="table table-borderless table-sm" id="project_info">
+                            <tbody>
+                                <tr><th scope="row">TYPE</th><td>{{ project.type }}</td></tr>
+                                <tr><th scope="row">YEAR</th><td>{{ project.year }}</td></tr>
+                                <tr><th scope="row">FOR</th><td>{{ project.for }}</td></tr>
+                                <tr><th scope="row">SITE</th><td>{{ project.site }}</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p id="collapse_arrow" data-toggle="collapse" data-target="#content_{{project.id_project}}" aria-controls="content_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content"></p>
+
+                        <div class="no-margin collapse" id="content_{{project.id_project}}">
+                            <br>
+                            {{ project.content }}
+                        </div>
+
+                        <hr id="divider">
+                        <br>
+
+                        {% endif %}
+                        {% endif %}
                         {% endfor %}
 
+                        <!-- BLOG ------------------------------------------------------------------>
+
                         <br>
-                        <hr id="divider_main">
+                        <span class="anchor" id="prose_blog"></span>
+                        <p id="section_title">BLOG</p>
                         <br>
+
+                        {% for project in site.projects %}
+                        {% if project.id_section == 'prose' %}
+                        {% if project.id_category == 'blog' %}
+
+                        <div class="carousel collapse" data-ride="carousel" id="images_{{project.id_project}}">
+                            <div class="carousel-inner">
+                                {% for image in project.images %}
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="{{image.link}}">
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <hr id="divider">
+                        <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
+                        <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
+
+                        <table class="table table-borderless table-sm" id="project_info">
+                            <tbody>
+                                <tr><th scope="row">TYPE</th><td>{{ project.type }}</td></tr>
+                                <tr><th scope="row">YEAR</th><td>{{ project.year }}</td></tr>
+                                <tr><th scope="row">FOR</th><td>{{ project.for }}</td></tr>
+                                <tr><th scope="row">SITE</th><td>{{ project.site }}</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p id="collapse_arrow" data-toggle="collapse" data-target="#content_{{project.id_project}}" aria-controls="content_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content"></p>
+
+                        <div class="no-margin collapse" id="content_{{project.id_project}}">
+                            <br>
+                            {{ project.content }}
+                        </div>
+
+                        <hr id="divider">
+                        <br>
+
+                        {% endif %}
+                        {% endif %}
+                        {% endfor %}
 
                     </div>
                 </div>
@@ -487,7 +563,7 @@
             <!--Side info-->
             <aside class="col-md-2">
                 <div class="sticky-top" id="sideinfo">
-                    <ul class="nav flex-md-column flex-row justify-content-between" id="sideinfo_items">
+                    <ul class="nav flex-md-column flex-row justify-content-between">
                         <li class="nav-item-md" id="year"></li>
                         <li class="nav-item-sm" id="time"></li>
                         <li class="nav-item-sm"> los angeles </li>

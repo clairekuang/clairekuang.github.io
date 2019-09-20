@@ -141,13 +141,11 @@ nav {
 #sidenav{
     top: 12em;
     cursor: crosshair;
-    padding:0 !important;
     text-align: right;
     letter-spacing: 0.1rem;
 }
 
-#sidenav .nav-item-lg,
-#sidenav .nav-item-sm{
+#sidenav .nav-item{
     line-height: 0.9rem;
     font-size: x-small;
     color: black;
@@ -168,9 +166,12 @@ nav {
     font-weight:800;
 }
 
+#scroll-varied-section-description {
+    padding-top: 6rem;
+}
 
-#sideinfo{
-    top:12em;
+#sideinfo {
+    top: 12em;
     letter-spacing: 0.1rem;
 }
 #sideinfo .nav-item-md {
@@ -294,16 +295,10 @@ nav {
     opacity: 1;
 }
 
-#divider_top {
+#divider {
     background-color: black;
     height: 2px;
-    border:0;
-}
-
-#divider_bottom {
-    height: 2px;
-    background-color: black;
-    border:0;
+    border: 0;
 }
 
 #quote_text{
