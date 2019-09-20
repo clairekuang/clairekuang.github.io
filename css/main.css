@@ -311,17 +311,19 @@ nav {
 .tab{
     padding-left: 1.5rem;
 }
-#collapse_arrow{
+
+.collapse_arrow {
     font-size: large;
 }
 
-#collapse_arrow.collapsed:before
+.collapse_arrow.collapsed:before
 {
     content:'+ more' ;
     font-style: italic;
     font-size: 18px;
 }
-#collapse_arrow:before
+
+.collapse_arrow:before
 {
     content:'- less' ;
     font-style: italic;
