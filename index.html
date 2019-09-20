@@ -56,21 +56,21 @@
             <div class="col no-margin">
                 <ul id="togglenav">
                     <li class="nav-item-lg">
-                        <a href="#work" class="nav-link active">/WORK</a>
+                        <a href="#work_mobile" class="nav-link active">/WORK</a>
                         <ul class="nav flex-md-column hidden-sm-down">
-                            <li class="nav-item-sm"><a href="#work_architecture" class="nav-link">/ARCH</a></li>
-                            <li class="nav-item-sm"><a href="#work_graphic" class="nav-link">/GRAPHIC</a></li>
-                            <li class="nav-item-sm"><a href="#work_product" class="nav-link">/PRODUCT</a></li>
+                            <li class="nav-item-sm"><a href="#work_architecture_mobile" class="nav-link">/ARCH</a></li>
+                            <li class="nav-item-sm"><a href="#work_graphic_mobile" class="nav-link">/GRAPHIC</a></li>
+                            <li class="nav-item-sm"><a href="#work_product_mobile" class="nav-link">/PRODUCT</a></li>
                         </ul>
                     </li>
                     <li class="nav-item-lg">
-                        <a href="#about" class="nav-link">/ABOUT</a>
+                        <a href="#about_mobile" class="nav-link">/ABOUT</a>
                     </li>
                     <li class="nav-item-lg">
-                        <a href="#prose" class="nav-link">/PROSE</a>
+                        <a href="#prose_mobile" class="nav-link">/PROSE</a>
                         <ul class="nav flex-md-column hidden-sm-down">
-                            <li class="nav-item-sm"><a href="#prose_pub" class="nav-link">/PUB</a></li>
-                            <li class="nav-item-sm"><a href="#prose_blog" class="nav-link">/BLOG</a></li>
+                            <li class="nav-item-sm"><a href="#prose_publication_mobile" class="nav-link">/PUB</a></li>
+                            <li class="nav-item-sm"><a href="#prose_blog_mobile" class="nav-link">/BLOG</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -78,11 +78,11 @@
         </div>
 
     </nav>
-    
+
 
     <main class="mobile-main">
 
-        <span class="anchor" id="work"></span>
+        <span class="anchor" id="work_mobile"></span>
         <p id="main_title">WORK</p>
         <p>
             Projects have no end. They are methodologies from the moment of their inception, little potentials of energy with the capacity to *do work*, path-dependant vectors of intent and implementation.
@@ -93,7 +93,7 @@
 
         <!-- ARCHITECTURE ------------------------------------------------------------------>
 
-        <span class="anchor" id="work_architecture"></span>
+        <span class="anchor" id="work_architecture_mobile"></span>
         <p id="section_title">ARCHITECTURE</p>
         <br>
 
@@ -126,7 +126,7 @@
 
         <!-- GRAPHIC ------------------------------------------------------------------>
 
-        <span class="anchor" id="work_graphic"></span>
+        <span class="anchor" id="work_graphic_mobile"></span>
         <p id="section_title">GRAPHIC</p>
         <br>
 
@@ -161,7 +161,7 @@
 
         <!-- PRODUCT ------------------------------------------------------------------>
 
-        <span class="anchor" id="work_product"></span>
+        <span class="anchor" id="work_product_mobile"></span>
         <p id="section_title">PRODUCT</p>
         <br>
 
@@ -196,7 +196,7 @@
 
         <!-- ABOUT ------------------------------------------------------------------>
 
-        <span class="anchor" id="about"></span>
+        <span class="anchor" id="about_mobile"></span>
         <p id="main_title">ABOUT</p>
         <p>
             Hi, I'm Claire.
@@ -205,7 +205,7 @@
 
         <!-- PROSE ------------------------------------------------------------------>
 
-        <span class="anchor" id="prose"></span>
+        <span class="anchor" id="prose_mobile"></span>
         <p id="main_title">PROSE</p>
         <p>
             Some words.
@@ -214,7 +214,7 @@
 
         <!-- PUBLICATION ------------------------------------------------------------------>
 
-        <span class="anchor" id="prose_publication"></span>
+        <span class="anchor" id="prose_publication_mobile"></span>
         <p id="section_title">PUBLICATION</p>
         <br>
 
@@ -287,7 +287,7 @@
                         <li class="nav-item-lg">
                             <a href="#prose" class="nav-link">/PROSE</a>
                             <ul class="nav flex-md-column hidden-sm-down">
-                                <li class="nav-item-sm"><a href="#prose_pub" class="nav-link">/PUB</a></li>
+                                <li class="nav-item-sm"><a href="#prose_publication" class="nav-link">/PUB</a></li>
                                 <li class="nav-item-sm"><a href="#prose_blog" class="nav-link">/BLOG</a></li>
                             </ul>
                         </li>
@@ -309,7 +309,7 @@
                         </p>
 
                         <!-- ARCHITECTURE ------------------------------------------------------------------>
-                        
+
                         <br>
                         <span class="anchor" id="work_architecture"></span>
                         <p id="section_title">ARCHITECTURE</p>
@@ -328,7 +328,7 @@
                                 {% endfor %}
                             </div>
                         </div>
-                                    
+
                         <hr id="divider_top">
                         <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
                         <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p/>
@@ -344,7 +344,7 @@
                         </table>
 
                         <p id="collapse_arrow" data-toggle="collapse" data-target="#content_{{project.id_project}}" aria-controls="content_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content"></p>
-                                    
+
                         <div class="no-margin collapse" id="content_{{project.id_project}}">
                             <br>
                             {{ project.content }}
@@ -363,7 +363,7 @@
                         <span class="anchor" id="work_graphic"></span>
                         <p id="section_title">GRAPHIC</p>
                         <br>
-                        
+
                         {% for project in site.projects %}
                             {% if project.id_section == 'work' %}
                                 {% if project.id_category == 'graphic' %}
@@ -395,7 +395,7 @@
                         <span class="anchor" id="work_product"></span>
                         <p id="section_title">PRODUCT</p>
                         <br>
-                        
+
                         {% for project in site.projects %}
                             {% if project.id_section == 'work' %}
                                 {% if project.id_category == 'product' %}
