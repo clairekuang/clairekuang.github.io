@@ -18,6 +18,11 @@
   text-align: right;
 }
 
+.scroll-varied-section-description {
+  font-weight: 600;
+  font-size: 20px;
+}
+
 .mobile-main {
   margin-left: 2rem;
   margin-right: 2rem;
