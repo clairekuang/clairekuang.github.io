@@ -57,7 +57,7 @@ body {
     justify-content: center;
 }
 
-#centerwidth{
+#nav-centerwidth, #main-centerwidth {
     max-width: 1000px;
     padding-left: 2.7rem;
     padding-right: 2.7rem;

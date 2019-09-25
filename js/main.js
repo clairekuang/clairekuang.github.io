@@ -35,6 +35,37 @@ document.getElementById("time").innerHTML = d.getHours() + ":" + d.getMinutes() 
 
 
 
+  // If on desktop, the user clicks outside the main content body (and isn't clicking a
+  // link in the left column), collapse all collapsible elements.
+  document.addEventListener('click', function (event) {
+    // For performance, re-queue this at the end of the JS event loop's
+    // current execution queue so it doesn't slow down rendering any immediate
+    // responses to the click.
+    setTimeout(function () {
+      var $target = $(event.target);
+
+      // Don't do anything if the user's using the mobile version. The
+      // 1000 here should be the same as the breakpoint defined in the
+      // @media queries in main.css.
+      if (window.innerWidth < 1000) { return; }
+
+      // Don't do anything if the click was in the main column.
+      if ($target.closest('#main-centerwidth').length !== 0) { return; }
+
+      // Don't do anything if the click was in the list of links in the left column.
+      if ($target.closest('#sidenav-link-list').length !== 0) { return; }
+
+      // For each element with data-toggle="collapse", get the target of that element
+      // and collapse it.
+      $('[data-toggle="collapse"]').each(function (index, elem) {
+        $($(elem).data('target')).collapse('hide');
+      });
+    });
+  });
+
+
+
+  // Begin code for changing the section text based on scroll.
 
   var elementToUpdateSelector = '#scroll-varied-section-description'
 
@@ -53,8 +84,8 @@ document.getElementById("time").innerHTML = d.getHours() + ":" + d.getMinutes() 
     var viewportHeight = window.innerHeight;
 
     scrollElementText.forEach(function (elem) {
-      var queryResult = $(elem.selector);
-      if (queryResult.length !== 1) {
+      var $queryResult = $(elem.selector);
+      if ($queryResult.length !== 1) {
         alert('Error: expected exactly 1 result for selector: ' + elem.selector);
       }
 
@@ -63,7 +94,7 @@ document.getElementById("time").innerHTML = d.getHours() + ":" + d.getMinutes() 
       //
       // The 75 is just a fudge factor to correct for the fact that the actual section
       // headings lie below the ID'd spans we're targeting.
-      elem.rangeStart = queryResult.offset().top - (viewportHeight / 2) + 70
+      elem.rangeStart = $queryResult.offset().top - (viewportHeight / 2) + 70
     });
 
     // Elements further down the page appear later in the array.
@@ -89,12 +120,12 @@ document.getElementById("time").innerHTML = d.getHours() + ":" + d.getMinutes() 
 
       if (last.rangeStart < currentScrollY && currentScrollY < elem.rangeStart) {
 
-        var target = $(elementToUpdateSelector)
-        if (target.length !== 1) {
+        var $target = $(elementToUpdateSelector)
+        if ($target.length !== 1) {
           alert('Error: expected exactly 1 result for selector: ' + elementToUpdateSelector);
         }
 
-        target.text(last.text);
+        $target.text(last.text);
         return true;
       }
 
