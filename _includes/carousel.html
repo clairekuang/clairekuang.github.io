@@ -1,6 +1,6 @@
 <!-- The project you pass must have a list of images defined. -->
 
-<div class="carousel slide" data-ride="carousel" data-interval=3000 id="images_{{project.id_project}}">
+<div class="carousel slide carousel-fade" data-ride="carousel" data-interval=1000 id="images_{{project.id_project}}">
     <div class="carousel-inner">
         {% for image in project.images %}
             {% if forloop.first %}

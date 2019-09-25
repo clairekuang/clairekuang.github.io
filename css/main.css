@@ -285,20 +285,32 @@ nav {
 
 .carousel{
     cursor: crosshair;
-    padding-top: 1em;
-    padding-bottom: 2em;
+    padding: 0;
 }
 
-.carousel-inner .carousel-item {
-    transition: -webkit-transform 1s ease;
-    transition: transform 1s ease;
-    transition: transform 1s ease, -webkit-transform 1s ease;
-}
+.carousel-fade {
+    .carousel-inner {
+        .carousel-item {
+            transition-property: opacity;
 
-.carousel-control-prev, .carousel-control-next {
-    cursor: crosshair;
-    opacity: 0;
-    filter: alpha(opacity=0); /* IE support */
+                       }
+        .carousel-item, 
+        active.left,
+        active.right {
+            opacity:0;
+        }
+
+        .active,
+        .next.left,
+        .prev.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .carousel-control {
+        z-index:2;
+    }
 }
 
 .carousel-caption {
@@ -323,6 +335,9 @@ nav {
     background-color: black;
     height: 2px;
     border: 0;
+    padding: 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 #quote_main{

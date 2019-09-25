@@ -93,6 +93,7 @@
 
         <!-- ARCHITECTURE ------------------------------------------------------------------>
 
+        <br>
         <span class="anchor" id="work_architecture_mobile"></span>
         <p id="section_title">ARCHITECTURE</p>
         <br>
@@ -117,11 +118,15 @@
             </tbody>
         </table>
 
-        <div class="no-margin collapse" id="toggle_{{project.id_project}}">
+        <p class="collapse_arrow collapsed" data-toggle="collapse" data-target="#content_{{project.id_project}}" aria-controls="content_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content"></p>
+
+        <div class="no-margin collapse" id="content_{{project.id_project}}">
+            <br>
             {{ project.content }}
         </div>
 
-        <hr id="divider" data-toggle="collapse" data-target="#toggle_{{project.id_project}}" aria-controls="toggle_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content">
+        <hr id="divider">
+        <br>
 
         {% endif %}
         {% endif %}
@@ -129,6 +134,7 @@
 
         <!-- GRAPHIC ------------------------------------------------------------------>
 
+        <br>
         <span class="anchor" id="work_graphic_mobile"></span>
         <p id="section_title">GRAPHIC</p>
         <br>
@@ -152,21 +158,23 @@
             </tbody>
         </table>
 
-        <div class="no-margin collapse" id="#toggle_{{project.id_project}}">
+        <p class="collapse_arrow collapsed" data-toggle="collapse" data-target="#content_{{project.id_project}}" aria-controls="content_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content"></p>
+
+        <div class="no-margin collapse" id="content_{{project.id_project}}">
+            <br>
             {{ project.content }}
         </div>
 
-        <hr id="divider" data-toggle="collapse" data-target="#toggle_{{project.id_project}}" aria-controls="toggle_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content">
+        <hr id="divider">
+        <br>
+
         {% endif %}
         {% endif %}
         {% endfor %}
 
-        <br>
-        <hr id="divider">
-        <br>
-
         <!-- PRODUCT ------------------------------------------------------------------>
 
+        <br>
         <span class="anchor" id="work_product_mobile"></span>
         <p id="section_title">PRODUCT</p>
         <br>
@@ -180,6 +188,7 @@
         <hr id="divider">
         <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
         <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
+
         <table class="table table-borderless table-sm" id="project_info">
             <tbody>
                 <tr><th scope="row">TYPE</th><td>{{ project.type }}</td></tr>
@@ -190,18 +199,19 @@
             </tbody>
         </table>
 
-        <div class="no-margin collapse" id="toggle_{{project.id_project}}">
+        <p class="collapse_arrow collapsed" data-toggle="collapse" data-target="#content_{{project.id_project}}" aria-controls="content_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content"></p>
+
+        <div class="no-margin collapse" id="content_{{project.id_project}}">
+            <br>
             {{ project.content }}
         </div>
 
-        <hr id="divider" data-toggle="collapse" data-target="#toggle_{{project.id_project}}" aria-controls="toggle_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content">
+        <hr id="divider">
+        <br>
+
         {% endif %}
         {% endif %}
         {% endfor %}
-
-        <br>
-        <hr id="divider_main">
-        <br>
 
         <!-- ABOUT ------------------------------------------------------------------>
 
@@ -223,6 +233,7 @@
 
         <!-- PUBLICATION ------------------------------------------------------------------>
 
+        <br>
         <span class="anchor" id="prose_publication_mobile"></span>
         <p id="section_title">PUBLICATION</p>
         <br>
@@ -243,20 +254,23 @@
                 <tr><th scope="row">YEAR</th><td>{{ project.year }}</td></tr>
                 <tr><th scope="row">FOR</th><td>{{ project.for }}</td></tr>
                 <tr><th scope="row">SITE</th><td>{{ project.site }}</td></tr>
+                <tr><th scope="row">TEAM</th><td>{{ project.team }}</td></tr>
             </tbody>
         </table>
-        <div class="no-margin collapse" id="toggle_{{project.id_project}}">
+
+        <p class="collapse_arrow collapsed" data-toggle="collapse" data-target="#content_{{project.id_project}}" aria-controls="content_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content"></p>
+
+        <div class="no-margin collapse" id="content_{{project.id_project}}">
+            <br>
             {{ project.content }}
         </div>
 
-        <hr id="divider" data-toggle="collapse" data-target="#toggle_{{project.id_project}}" aria-controls="toggle_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content">
+        <hr id="divider">
+        <br>
+
         {% endif %}
         {% endif %}
         {% endfor %}
-
-        <br>
-        <hr id="divider">
-        <br>
 
     </main>
 
@@ -338,7 +352,6 @@
                         <p class="collapse_arrow collapsed" data-toggle="collapse" data-target="#content_{{project.id_project}}" aria-controls="content_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content"></p>
 
                         <div class="no-margin collapse" id="content_{{project.id_project}}">
-                            <hr id="divider">
                             <br>
                             {{ project.content }}
                         </div>
@@ -451,6 +464,7 @@
 
                         <!-- PUBLICATION ------------------------------------------------------------------>
 
+                        <br>
                         <span class="anchor" id="prose_publication"></span>
                         <p id="section_title">PUBLICATION</p>
                         <br>

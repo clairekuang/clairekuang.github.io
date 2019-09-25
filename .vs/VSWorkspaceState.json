@@ -6,9 +6,11 @@
     "\\images\\about",
     "\\images\\prose",
     "\\images\\work",
+    "\\images\\work\\architecture",
+    "\\images\\work\\architecture\\dopium",
     "\\js",
-    "\\_projects"
+    "\\_includes"
   ],
-  "SelectedNode": "\\_projects\\dopium-tiles.html",
+  "SelectedNode": "\\_includes\\carousel.html",
   "PreviewInSolutionExplorer": false
 }
