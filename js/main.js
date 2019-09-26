@@ -1,9 +1,14 @@
-var d = new Date();
-document.getElementById("year").innerHTML = d.getFullYear();
-document.getElementById("time").innerHTML = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
-
 // Use an IIFE to avoid adding or affecting variables in the global scope.
 (function() {
+
+  var updateDateTime = function () {
+    var d = new Date();
+    document.getElementById("year").innerHTML = d.getFullYear();
+    document.getElementById("time").innerHTML = d.getHours() + ":" + d.getMinutes() + ":" + (("00" + d.getSeconds()).slice(-2));
+    setTimeout(updateDateTime, 1000);
+  }
+
+  updateDateTime();
 
   // From: https://pqina.nl/blog/applying-styles-based-on-the-user-scroll-position-with-smart-css/
   // This is not the original debounce code: I ran it through https://babeljs.io/repl for
