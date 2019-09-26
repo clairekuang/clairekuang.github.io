@@ -8,7 +8,9 @@
             {% else %}
                 <div class="carousel-item">
             {% endif %}
-                    <img class="d-block w-100" src="{{image.link}}">
+                  <div class='four-by-three-container'>
+                    <img class="fit-image-to-container" src="{{image.link}}">
+                  </div>
                 </div>
         {% endfor %}
     </div>

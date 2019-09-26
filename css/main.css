@@ -18,6 +18,22 @@
   text-align: right;
 }
 
+.four-by-three-container {
+  /* Any percent for padding is a percent of the width. So this gives a 4:3
+  aspect ratio. See https://css-tricks.com/aspect-ratio-boxes/ */
+  padding-top: 75%;
+  width: 100%;
+  position: relative;
+}
+
+.fit-image-to-container {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .scroll-varied-section-description {
   font-weight: 600;
   font-size: 20px;
@@ -294,7 +310,7 @@ nav {
             transition-property: opacity;
 
                        }
-        .carousel-item, 
+        .carousel-item,
         active.left,
         active.right {
             opacity:0;
