@@ -271,6 +271,8 @@ nav {
     letter-spacing: 0.1rem;
     text-align: left;
     margin-bottom: 2rem;
+    padding-top:3rem;
+    cursor: crosshair;
 }
 
 #body_title_major{
@@ -278,9 +280,11 @@ nav {
     font-weight: bold;
     text-align: left;
     letter-spacing: 0.1rem;
+    padding-top:1.2rem;
 }
 #body_title_minor{
     font-weight: bold;
+    padding-top: 1rem;
 }
 
 .no-margin{
@@ -301,10 +305,7 @@ nav {
 
 .carousel{
     cursor: crosshair;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 0;
-    padding-right:0;
+    padding-bottom:0.5rem;
 }
 
 .carousel-fade {

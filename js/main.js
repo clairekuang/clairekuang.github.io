@@ -76,11 +76,11 @@
 
   // Keys should be jQuery selectors. Values are the text to display.
   var scrollElementText = [
-    { selector: '#work_architecture', text: 'Architecture', },
-    { selector: '#work_graphic',      text: 'Graphic',      },
-    { selector: '#work_product',      text: 'Product',      },
-    { selector: '#prose_publication', text: 'Publication',  },
-    { selector: '#prose_blog',        text: 'Blog',         },
+    { selector: '#architecture',      text: 'Architecture', },
+    { selector: '#graphic',           text: 'Graphic',      },
+    { selector: '#product',           text: 'Product',      },
+    { selector: '#prose',             text: 'Prose',        },
+    { selector: '#about',             text: 'About',        },
   ];
 
   // Requires jQuery, expects it defined as $.

@@ -83,8 +83,8 @@
     <main class="mobile-main">
 
         <span class="anchor" id="work_mobile"></span>
-        <p id="main_title">WORK</p>
-        <p>
+        <p id="main_title"></p>
+        <p id="quote_text">
             Projects have no end. They are methodologies from the moment of their inception, little potentials of energy with the capacity to *do work*, path-dependant vectors of intent and implementation.
             This compedium is an archive of projects that bring together context, research, form, and effect as a synthetic narrative - drawing tools and technologies as needed,
             irreverent to discipline, exuberantly wip.
@@ -102,9 +102,10 @@
         {% if project.id_section == 'work' %}
         {% if project.id_category == 'architecture' %}
 
+        <hr id="divider">
+
         {% include carousel.html project=project %}
 
-        <hr id="divider">
         <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
         <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
 
@@ -300,9 +301,11 @@
             <aside class="col-md-2">
                 <div class="sticky-top" id="sidenav">
                     <ul id="sidenav-link-list" class="nav flex-md-column flex-row justify-content-between">
-                        <li class="nav-item"><a href="#work" class="nav-link active">/WORK</a></li>
-                        <li class="nav-item"><a href="#about" class="nav-link">/ABOUT</a></li>
+                        <li class="nav-item"><a href="#architecture" class="nav-link active">/ARCH</a></li>
+                        <li class="nav-item"><a href="#graphic" class="nav-link">/GRAPHIC</a></li>
+                        <li class="nav-item"><a href="#product" class="nav-link">/PRODUCT</a></li>
                         <li class="nav-item"><a href="#prose" class="nav-link">/PROSE</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link">/ABOUT</a></li>
                     </ul>
 
                     <div id='scroll-varied-section-description'>
@@ -325,17 +328,21 @@
                         <!-- ARCHITECTURE ------------------------------------------------------------------>
 
                         <br>
-                        <span class="anchor" id="work_architecture"></span>
+                        <span class="anchor" id="architecture"></span>
                         <p id="section_title">ARCHITECTURE</p>
                         <br>
 
-                        {% for project in site.projects %}
+                        {% assign projects = site.projects | sort: 'year' | reverse %}
+
+                        {% for project in projects %}
                         {% if project.id_section == 'work' %}
                         {% if project.id_category == 'architecture' %}
 
-                        {% include carousel.html project=project %}
 
                         <hr id="divider">
+
+                        {% include carousel.html project=project %}
+                        
                         <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
                         <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p/>
 
@@ -366,7 +373,7 @@
                         <!-- GRAPHIC ------------------------------------------------------------------>
 
                         <br>
-                        <span class="anchor" id="work_graphic"></span>
+                        <span class="anchor" id="graphic"></span>
                         <p id="section_title">GRAPHIC</p>
                         <br>
 
@@ -374,9 +381,10 @@
                         {% if project.id_section == 'work' %}
                         {% if project.id_category == 'graphic' %}
 
-                        {% include carousel.html project=project %}
-
                         <hr id="divider">
+
+                        {% include carousel.html project=project %}
+                        
                         <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
                         <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
 
@@ -406,7 +414,7 @@
                         <!-- PRODUCT ------------------------------------------------------------------>
 
                         <br>
-                        <span class="anchor" id="work_product"></span>
+                        <span class="anchor" id="product"></span>
                         <p id="section_title">PRODUCT</p>
                         <br>
 
@@ -414,9 +422,10 @@
                         {% if project.id_section == 'work' %}
                         {% if project.id_category == 'product' %}
 
+                        <hr id="divider">
+
                         {% include carousel.html project=project %}
 
-                        <hr id="divider">
                         <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
                         <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
 
@@ -444,6 +453,48 @@
                         {% endif %}
                         {% endfor %}
 
+                        <!-- PROSE ------------------------------------------------------------------>
+
+                        <br>
+                        <span class="anchor" id="prose"></span>
+                        <p id="section_title">PROSE</p>
+                        <br>
+
+                        {% for project in site.projects %}
+                        {% if project.id_section == 'prose' %}
+                        {% if project.id_category == 'publication' %}
+
+                        <hr id="divider">
+
+                        {% include carousel.html project=project %}
+
+                        <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
+                        <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
+
+                        <table class="table table-borderless table-sm" id="project_info">
+                            <tbody>
+                                <tr><th scope="row">TYPE</th><td>{{ project.type }}</td></tr>
+                                <tr><th scope="row">YEAR</th><td>{{ project.year }}</td></tr>
+                                <tr><th scope="row">FOR</th><td>{{ project.for }}</td></tr>
+                                <tr><th scope="row">SITE</th><td>{{ project.site }}</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p class="collapse_arrow collapsed" data-toggle="collapse" data-target="#content_{{project.id_project}}" aria-controls="content_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content"></p>
+
+                        <div class="no-margin collapse" id="content_{{project.id_project}}">
+                            <br>
+                            {{ project.content }}
+                        </div>
+
+                        <hr id="divider">
+                        <br>
+
+                        {% endif %}
+                        {% endif %}
+                        {% endfor %}
+
+
                         <!-- ABOUT ------------------------------------------------------------------>
 
                         <span class="anchor" id="about"></span>
@@ -452,95 +503,6 @@
                             Hi, I'm Claire.
                         </p>
                         <br>
-
-                        <!-- PROSE ------------------------------------------------------------------>
-
-                        <span class="anchor" id="prose"></span>
-                        <p id="main_title">PROSE</p>
-                        <p>
-                            Some words.
-                        </p>
-                        <br>
-
-                        <!-- PUBLICATION ------------------------------------------------------------------>
-
-                        <br>
-                        <span class="anchor" id="prose_publication"></span>
-                        <p id="section_title">PUBLICATION</p>
-                        <br>
-
-                        {% for project in site.projects %}
-                        {% if project.id_section == 'prose' %}
-                        {% if project.id_category == 'publication' %}
-
-                        {% include carousel.html project=project %}
-
-                        <hr id="divider">
-                        <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
-                        <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
-
-                        <table class="table table-borderless table-sm" id="project_info">
-                            <tbody>
-                                <tr><th scope="row">TYPE</th><td>{{ project.type }}</td></tr>
-                                <tr><th scope="row">YEAR</th><td>{{ project.year }}</td></tr>
-                                <tr><th scope="row">FOR</th><td>{{ project.for }}</td></tr>
-                                <tr><th scope="row">SITE</th><td>{{ project.site }}</td></tr>
-                            </tbody>
-                        </table>
-
-                        <p class="collapse_arrow collapsed" data-toggle="collapse" data-target="#content_{{project.id_project}}" aria-controls="content_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content"></p>
-
-                        <div class="no-margin collapse" id="content_{{project.id_project}}">
-                            <br>
-                            {{ project.content }}
-                        </div>
-
-                        <hr id="divider">
-                        <br>
-
-                        {% endif %}
-                        {% endif %}
-                        {% endfor %}
-
-                        <!-- BLOG ------------------------------------------------------------------>
-
-                        <br>
-                        <span class="anchor" id="prose_blog"></span>
-                        <p id="section_title">BLOG</p>
-                        <br>
-
-                        {% for project in site.projects %}
-                        {% if project.id_section == 'prose' %}
-                        {% if project.id_category == 'blog' %}
-
-                        {% include carousel.html project=project %}
-
-                        <hr id="divider">
-                        <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
-                        <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
-
-                        <table class="table table-borderless table-sm" id="project_info">
-                            <tbody>
-                                <tr><th scope="row">TYPE</th><td>{{ project.type }}</td></tr>
-                                <tr><th scope="row">YEAR</th><td>{{ project.year }}</td></tr>
-                                <tr><th scope="row">FOR</th><td>{{ project.for }}</td></tr>
-                                <tr><th scope="row">SITE</th><td>{{ project.site }}</td></tr>
-                            </tbody>
-                        </table>
-
-                        <p class="collapse_arrow collapsed" data-toggle="collapse" data-target="#content_{{project.id_project}}" aria-controls="content_{{project.id_project}}" aria-expanded="false" aria-label="Toggle content"></p>
-
-                        <div class="no-margin collapse" id="content_{{project.id_project}}">
-                            <br>
-                            {{ project.content }}
-                        </div>
-
-                        <hr id="divider">
-                        <br>
-
-                        {% endif %}
-                        {% endif %}
-                        {% endfor %}
 
                     </div>
                 </div>
