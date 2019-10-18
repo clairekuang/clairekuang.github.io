@@ -4,13 +4,12 @@
     "\\css",
     "\\images",
     "\\images\\about",
+    "\\images\\about\\bio",
+    "\\images\\about\\contact",
     "\\images\\prose",
     "\\images\\work",
     "\\images\\work\\architecture",
-    "\\images\\work\\architecture\\dopium",
-    "\\js",
-    "\\_includes"
+    "\\images\\work\\architecture\\nuclear"
   ],
-  "SelectedNode": "\\_includes\\carousel.html",
   "PreviewInSolutionExplorer": false
 }
