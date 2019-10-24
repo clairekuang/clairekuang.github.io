@@ -93,126 +93,30 @@
 
         <!-- ARCHITECTURE ------------------------------------------------------------------>
 
-        <br>
-        <span class="anchor" id="work_architecture_mobile"></span>
-        <p id="section_title">ARCHITECTURE</p>
-        <br>
+        {% include projects.html
+          mobile=true
+          section_id='work'
+          category_id='architecture'
+        %}
 
-        {% for project in site.projects %}
-        {% if project.id_section == 'work' %}
-        {% if project.id_category == 'architecture' %}
-
-        <hr id="divider">
-
-        {% include carousel.html project=project %}
-
-        <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
-        <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
-
-        <table class="table table-borderless table-sm" id="project_info">
-            <tbody>
-                <tr><th scope="row">TYPE</th><td>{{ project.type }}</td></tr>
-                <tr><th scope="row">YEAR</th><td>{{ project.year }}</td></tr>
-                <tr><th scope="row">FOR</th><td>{{ project.for }}</td></tr>
-                <tr><th scope="row">SITE</th><td>{{ project.site }}</td></tr>
-                <tr><th scope="row">TEAM</th><td>{{ project.team }}</td></tr>
-            </tbody>
-        </table>
-
-        {% include p_collapse.html project=project %}
-
-        <div class="no-margin collapse" id="content_{{project.id_project}}">
-            <br>
-            {{ project.content }}
-        </div>
-
-        <hr id="divider">
-        <br>
-
-        {% endif %}
-        {% endif %}
-        {% endfor %}
 
         <!-- GRAPHIC ------------------------------------------------------------------>
 
-        <br>
-        <span class="anchor" id="work_graphic_mobile"></span>
-        <p id="section_title">GRAPHIC</p>
-        <br>
+        {% include projects.html
+          mobile=true
+          section_id='work'
+          category_id='graphic'
+        %}
 
-        {% for project in site.projects %}
-        {% if project.id_section == 'work' %}
-        {% if project.id_category == 'graphic' %}
-
-        {% include carousel.html project=project %}
-
-        <hr id="divider">
-        <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
-        <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
-
-        <table class="table table-borderless table-sm" id="project_info">
-            <tbody>
-                <tr><th scope="row">TYPE</th><td>{{ project.type }}</td></tr>
-                <tr><th scope="row">YEAR</th><td>{{ project.year }}</td></tr>
-                <tr><th scope="row">FOR</th><td>{{ project.for }}</td></tr>
-                <tr><th scope="row">SITE</th><td>{{ project.site }}</td></tr>
-            </tbody>
-        </table>
-
-        {% include p_collapse.html project=project %}
-
-        <div class="no-margin collapse" id="content_{{project.id_project}}">
-            <br>
-            {{ project.content }}
-        </div>
-
-        <hr id="divider">
-        <br>
-
-        {% endif %}
-        {% endif %}
-        {% endfor %}
 
         <!-- PRODUCT ------------------------------------------------------------------>
 
-        <br>
-        <span class="anchor" id="work_product_mobile"></span>
-        <p id="section_title">PRODUCT</p>
-        <br>
+        {% include projects.html
+          mobile=true
+          section_id='work'
+          category_id='product'
+        %}
 
-        {% for project in site.projects %}
-        {% if project.id_section == 'work' %}
-        {% if project.id_category == 'product' %}
-
-        {% include carousel.html project=project %}
-
-        <hr id="divider">
-        <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
-        <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
-
-        <table class="table table-borderless table-sm" id="project_info">
-            <tbody>
-                <tr><th scope="row">TYPE</th><td>{{ project.type }}</td></tr>
-                <tr><th scope="row">YEAR</th><td>{{ project.year }}</td></tr>
-                <tr><th scope="row">FOR</th><td>{{ project.for }}</td></tr>
-                <tr><th scope="row">SITE</th><td>{{ project.site }}</td></tr>
-                <tr><th scope="row">TEAM</th><td>{{ project.team }}</td></tr>
-            </tbody>
-        </table>
-
-        {% include p_collapse.html project=project %}
-
-        <div class="no-margin collapse" id="content_{{project.id_project}}">
-            <br>
-            {{ project.content }}
-        </div>
-
-        <hr id="divider">
-        <br>
-
-        {% endif %}
-        {% endif %}
-        {% endfor %}
 
         <!-- ABOUT ------------------------------------------------------------------>
 
@@ -234,44 +138,11 @@
 
         <!-- PUBLICATION ------------------------------------------------------------------>
 
-        <br>
-        <span class="anchor" id="prose_publication_mobile"></span>
-        <p id="section_title">PUBLICATION</p>
-        <br>
-
-        {% for project in site.projects %}
-        {% if project.id_section == 'prose' %}
-        {% if project.id_category == 'publication' %}
-
-        {% include carousel.html project=project %}
-
-        <hr id="divider">
-        <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
-        <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
-
-        <table class="table table-borderless table-sm" id="project_info">
-            <tbody>
-                <tr><th scope="row">TYPE</th><td>{{ project.type }}</td></tr>
-                <tr><th scope="row">YEAR</th><td>{{ project.year }}</td></tr>
-                <tr><th scope="row">FOR</th><td>{{ project.for }}</td></tr>
-                <tr><th scope="row">SITE</th><td>{{ project.site }}</td></tr>
-                <tr><th scope="row">TEAM</th><td>{{ project.team }}</td></tr>
-            </tbody>
-        </table>
-
-        {% include p_collapse.html project=project %}
-
-        <div class="no-margin collapse" id="content_{{project.id_project}}">
-            <br>
-            {{ project.content }}
-        </div>
-
-        <hr id="divider">
-        <br>
-
-        {% endif %}
-        {% endif %}
-        {% endfor %}
+        {% include projects.html
+          mobile=true
+          section_id='prose'
+          category_id='publication'
+        %}
 
     </main>
 
@@ -327,172 +198,38 @@
 
                         <!-- ARCHITECTURE ------------------------------------------------------------------>
 
-                        <br>
-                        <span class="anchor" id="architecture"></span>
-                        <p id="section_title">ARCHITECTURE</p>
-                        <br>
+                        {% include projects.html
+                          mobile=false
+                          section_id='work'
+                          category_id='architecture'
+                        %}
 
-                        {% assign projects = site.projects | sort: 'year' | reverse %}
-
-                        {% for project in projects %}
-                        {% if project.id_section == 'work' %}
-                        {% if project.id_category == 'architecture' %}
-
-
-                        <hr id="divider">
-
-                        {% include carousel.html project=project %}
-
-                        <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
-                        <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p/>
-
-                        <table class="table table-borderless table-sm" id="project_info">
-                            <tbody>
-                                <tr><th scope="row">TYPE</th><td>{{ project.type }}</td></tr>
-                                <tr><th scope="row">YEAR</th><td>{{ project.year }}</td></tr>
-                                <tr><th scope="row">FOR</th><td>{{ project.for }}</td></tr>
-                                <tr><th scope="row">SITE</th><td>{{ project.site }}</td></tr>
-                                <tr><th scope="row">TEAM</th><td>{{ project.team }}</td></tr>
-                            </tbody>
-                        </table>
-
-                        {% include p_collapse.html project=project %}
-
-                        <div class="no-margin collapse" id="content_{{project.id_project}}">
-                            <br>
-                            {{ project.content }}
-                        </div>
-
-                        <hr id="divider">
-                        <br>
-
-                        {% endif %}
-                        {% endif %}
-                        {% endfor %}
 
                         <!-- GRAPHIC ------------------------------------------------------------------>
 
-                        <br>
-                        <span class="anchor" id="graphic"></span>
-                        <p id="section_title">GRAPHIC</p>
-                        <br>
+                        {% include projects.html
+                          mobile=false
+                          section_id='work'
+                          category_id='graphic'
+                        %}
 
-                        {% for project in site.projects %}
-                        {% if project.id_section == 'work' %}
-                        {% if project.id_category == 'graphic' %}
-
-                        <hr id="divider">
-
-                        {% include carousel.html project=project %}
-
-                        <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
-                        <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
-
-                        <table class="table table-borderless table-sm" id="project_info">
-                            <tbody>
-                                <tr><th scope="row">TYPE</th><td>{{ project.type }}</td></tr>
-                                <tr><th scope="row">YEAR</th><td>{{ project.year }}</td></tr>
-                                <tr><th scope="row">FOR</th><td>{{ project.for }}</td></tr>
-                                <tr><th scope="row">SITE</th><td>{{ project.site }}</td></tr>
-                            </tbody>
-                        </table>
-
-                        {% include p_collapse.html project=project %}
-
-                        <div class="no-margin collapse" id="content_{{project.id_project}}">
-                            <br>
-                            {{ project.content }}
-                        </div>
-
-                        <hr id="divider">
-                        <br>
-
-                        {% endif %}
-                        {% endif %}
-                        {% endfor %}
 
                         <!-- PRODUCT ------------------------------------------------------------------>
 
-                        <br>
-                        <span class="anchor" id="product"></span>
-                        <p id="section_title">PRODUCT</p>
-                        <br>
+                        {% include projects.html
+                          mobile=false
+                          section_id='work'
+                          category_id='product'
+                        %}
 
-                        {% for project in site.projects %}
-                        {% if project.id_section == 'work' %}
-                        {% if project.id_category == 'product' %}
-
-                        <hr id="divider">
-
-                        {% include carousel.html project=project %}
-
-                        <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
-                        <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
-
-                        <table class="table table-borderless table-sm" id="project_info">
-                            <tbody>
-                                <tr><th scope="row">TYPE</th><td>{{ project.type }}</td></tr>
-                                <tr><th scope="row">YEAR</th><td>{{ project.year }}</td></tr>
-                                <tr><th scope="row">FOR</th><td>{{ project.for }}</td></tr>
-                                <tr><th scope="row">SITE</th><td>{{ project.site }}</td></tr>
-                                <tr><th scope="row">TEAM</th><td>{{ project.team }}</td></tr>
-                            </tbody>
-                        </table>
-
-                        {% include p_collapse.html project=project %}
-
-                        <div class="no-margin collapse" id="content_{{project.id_project}}">
-                            <br>
-                            {{ project.content }}
-                        </div>
-
-                        <hr id="divider">
-                        <br>
-
-                        {% endif %}
-                        {% endif %}
-                        {% endfor %}
 
                         <!-- PROSE ------------------------------------------------------------------>
 
-                        <br>
-                        <span class="anchor" id="prose"></span>
-                        <p id="section_title">PROSE</p>
-                        <br>
-
-                        {% for project in site.projects %}
-                        {% if project.id_section == 'prose' %}
-                        {% if project.id_category == 'publication' %}
-
-                        <hr id="divider">
-
-                        {% include carousel.html project=project %}
-
-                        <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
-                        <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
-
-                        <table class="table table-borderless table-sm" id="project_info">
-                            <tbody>
-                                <tr><th scope="row">TYPE</th><td>{{ project.type }}</td></tr>
-                                <tr><th scope="row">YEAR</th><td>{{ project.year }}</td></tr>
-                                <tr><th scope="row">FOR</th><td>{{ project.for }}</td></tr>
-                                <tr><th scope="row">SITE</th><td>{{ project.site }}</td></tr>
-                            </tbody>
-                        </table>
-
-                        {% include p_collapse.html project=project %}
-
-                        <div class="no-margin collapse" id="content_{{project.id_project}}">
-                            <br>
-                            {{ project.content }}
-                        </div>
-
-                        <hr id="divider">
-                        <br>
-
-                        {% endif %}
-                        {% endif %}
-                        {% endfor %}
+                        {% include projects.html
+                          mobile=false
+                          section_id='prose'
+                          category_id='publication'
+                        %}
 
 
                         <!-- ABOUT ------------------------------------------------------------------>
