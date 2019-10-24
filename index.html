@@ -99,14 +99,14 @@
         <br>
 
         {% for project in site.projects %}
-        {% if project.id_section == 'work' %}
-        {% if project.id_category == 'architecture' %}
+        {% if project.section_id == 'work' %}
+        {% if project.category_id == 'architecture' %}
 
         <hr id="divider">
 
         {% include carousel.html project=project %}
 
-        <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
+        <span class="anchor" id="{{ project.section_id}}_{{project.category_id}}_{{project.id_project}}"></span>
         <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
 
         <table class="table table-borderless table-sm" id="project_info">
@@ -141,13 +141,13 @@
         <br>
 
         {% for project in site.projects %}
-        {% if project.id_section == 'work' %}
-        {% if project.id_category == 'graphic' %}
+        {% if project.section_id == 'work' %}
+        {% if project.category_id == 'graphic' %}
 
         {% include carousel.html project=project %}
 
         <hr id="divider">
-        <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
+        <span class="anchor" id="{{ project.section_id}}_{{project.category_id}}_{{project.id_project}}"></span>
         <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
 
         <table class="table table-borderless table-sm" id="project_info">
@@ -181,13 +181,13 @@
         <br>
 
         {% for project in site.projects %}
-        {% if project.id_section == 'work' %}
-        {% if project.id_category == 'product' %}
+        {% if project.section_id == 'work' %}
+        {% if project.category_id == 'product' %}
 
         {% include carousel.html project=project %}
 
         <hr id="divider">
-        <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
+        <span class="anchor" id="{{ project.section_id}}_{{project.category_id}}_{{project.id_project}}"></span>
         <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
 
         <table class="table table-borderless table-sm" id="project_info">
@@ -240,13 +240,13 @@
         <br>
 
         {% for project in site.projects %}
-        {% if project.id_section == 'prose' %}
-        {% if project.id_category == 'publication' %}
+        {% if project.section_id == 'prose' %}
+        {% if project.category_id == 'publication' %}
 
         {% include carousel.html project=project %}
 
         <hr id="divider">
-        <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
+        <span class="anchor" id="{{ project.section_id}}_{{project.category_id}}_{{project.id_project}}"></span>
         <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
 
         <table class="table table-borderless table-sm" id="project_info">
@@ -335,15 +335,15 @@
                         {% assign projects = site.projects | sort: 'year' | reverse %}
 
                         {% for project in projects %}
-                        {% if project.id_section == 'work' %}
-                        {% if project.id_category == 'architecture' %}
+                        {% if project.section_id == 'work' %}
+                        {% if project.category_id == 'architecture' %}
 
 
                         <hr id="divider">
 
                         {% include carousel.html project=project %}
 
-                        <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
+                        <span class="anchor" id="{{ project.section_id}}_{{project.category_id}}_{{project.id_project}}"></span>
                         <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p/>
 
                         <table class="table table-borderless table-sm" id="project_info">
@@ -378,14 +378,14 @@
                         <br>
 
                         {% for project in site.projects %}
-                        {% if project.id_section == 'work' %}
-                        {% if project.id_category == 'graphic' %}
+                        {% if project.section_id == 'work' %}
+                        {% if project.category_id == 'graphic' %}
 
                         <hr id="divider">
 
                         {% include carousel.html project=project %}
 
-                        <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
+                        <span class="anchor" id="{{ project.section_id}}_{{project.category_id}}_{{project.id_project}}"></span>
                         <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
 
                         <table class="table table-borderless table-sm" id="project_info">
@@ -419,14 +419,14 @@
                         <br>
 
                         {% for project in site.projects %}
-                        {% if project.id_section == 'work' %}
-                        {% if project.id_category == 'product' %}
+                        {% if project.section_id == 'work' %}
+                        {% if project.category_id == 'product' %}
 
                         <hr id="divider">
 
                         {% include carousel.html project=project %}
 
-                        <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
+                        <span class="anchor" id="{{ project.section_id}}_{{project.category_id}}_{{project.id_project}}"></span>
                         <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
 
                         <table class="table table-borderless table-sm" id="project_info">
@@ -461,14 +461,14 @@
                         <br>
 
                         {% for project in site.projects %}
-                        {% if project.id_section == 'prose' %}
-                        {% if project.id_category == 'publication' %}
+                        {% if project.section_id == 'prose' %}
+                        {% if project.category_id == 'publication' %}
 
                         <hr id="divider">
 
                         {% include carousel.html project=project %}
 
-                        <span class="anchor" id="{{ project.id_section}}_{{project.id_category}}_{{project.id_project}}"></span>
+                        <span class="anchor" id="{{ project.section_id}}_{{project.category_id}}_{{project.id_project}}"></span>
                         <p id="project_title">{{ project.title }}: {{ project.subtitle }}<p />
 
                         <table class="table table-borderless table-sm" id="project_info">
