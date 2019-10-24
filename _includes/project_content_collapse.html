@@ -5,14 +5,14 @@
 <p
   class="collapse_arrow collapsed"
   data-toggle="collapse"
-  data-target="#content_{{ include.project.id_project }}"
-  href="#content_{{ include.project.id_project }}"
-  aria-controls="content_{{ include.project.id_project }}"
+  data-target="#content_{{ include.project.project_id }}"
+  href="#content_{{ include.project.project_id }}"
+  aria-controls="content_{{ include.project.project_id }}"
   aria-expanded="false"
   aria-label="Toggle content"
 ></p>
 
-<div class="no-margin collapse" id="content_{{ include.project.id_project }}">
+<div class="no-margin collapse" id="content_{{ include.project.project_id }}">
     <br>
     {{ include.project.content }}
 </div>
