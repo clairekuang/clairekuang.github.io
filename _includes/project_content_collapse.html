@@ -1,0 +1,18 @@
+<!-- Note that the aria- attributes are for accessibility and use with assistive tools like screen readers. They do not affect what sighted users see when viewing the page normally. -->
+
+<!-- Based on https://stackoverflow.com/questions/19866172/bootstrap-3-accordion-collapse-does-not-work-on-iphone I think we need the values of the href attributes to match the data-target attribute values. -->
+
+<p
+  class="collapse_arrow collapsed"
+  data-toggle="collapse"
+  data-target="#content_{{ include.project.id_project }}"
+  href="#content_{{ include.project.id_project }}"
+  aria-controls="content_{{ include.project.id_project }}"
+  aria-expanded="false"
+  aria-label="Toggle content"
+></p>
+
+<div class="no-margin collapse" id="content_{{ include.project.id_project }}">
+    <br>
+    {{ include.project.content }}
+</div>
