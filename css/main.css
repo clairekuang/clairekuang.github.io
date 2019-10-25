@@ -256,7 +256,7 @@ nav {
     margin-bottom: 1rem;
 }
 
-#section_title{
+.section_title {
     font-size: xx-large;
     font-weight: 600;
     letter-spacing: 0.1rem;
@@ -265,7 +265,7 @@ nav {
     font-style:italic;
 }
 
-#project_title{
+.project_title {
     font-size: x-large;
     font-weight: lighter;
     letter-spacing: 0.1rem;
@@ -351,7 +351,7 @@ nav {
     opacity: 1;
 }
 
-#divider {
+.divider {
     background-color: black;
     height: 2px;
     border: 0;
