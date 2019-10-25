@@ -43,19 +43,31 @@
 {% endif %}
 
 
-<p id="section_title">{{ include.category_id | upcase }}</p>
+<p class="section_title">{{ include.category_id | upcase }}</p>
 <br>
 
 {% for project in projects %}
   {% if project.section_id == include.section_id and project.category_id == include.category_id %}
 
-    <hr id="divider">
+    <hr class="divider">
 
-    {% include carousel.html project=project %}
+    {% capture carousel_id %}{{ project.category_id }}_{{ project.project_id }}_carousel{% endcapture %}
+
+    <div id='{{ carousel_id }}' class='collapse'>
+      {% include carousel.html project=project %}
+    </div>
 
     <span class="anchor" id="{{ project.section_id }}_{{ project.category_id }}_{{ project.project_id }}"></span>
 
-    <p id="project_title">{{ project.title }}: {{ project.subtitle }}</p>
+    <p
+      class='project_title collapsed'
+      data-toggle='collapse'
+      data-target='#{{ carousel_id }}'
+      href='#{{ carousel_id }}'
+    >
+      {{ project.title }}: {{ project.subtitle }}
+    </p>
+
     <p/>
 
     <table class="table table-borderless table-sm" id="project_info">
@@ -72,7 +84,7 @@
 
     {% include project_content_collapse.html project=project %}
 
-    <hr id="divider">
+    <hr class="divider">
     <br>
 
   {% endif %}
