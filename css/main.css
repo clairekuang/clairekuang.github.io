@@ -271,8 +271,11 @@ nav {
     letter-spacing: 0.1rem;
     text-align: left;
     margin-bottom: 2rem;
-    padding-top:3rem;
     cursor: crosshair;
+}
+
+.project_title:hover {
+    text-decoration:line-through;
 }
 
 #body_title_major{
@@ -305,7 +308,7 @@ nav {
 
 .carousel{
     cursor: crosshair;
-    padding-bottom:0.5rem;
+    padding-bottom:3rem;
 }
 
 .carousel-fade {
