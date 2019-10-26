@@ -25,7 +25,7 @@
 
 {% if include.section_id == 'prose' %}
 
-  {% if mobile %}
+  {% if include.mobile %}
     <span class="anchor" id="prose_publication_mobile"></span>
   {% else %}
     <span class="anchor" id="prose"></span>
@@ -33,7 +33,7 @@
 
 {% else %}
 
-  {% if mobile %}
+  {% if include.mobile %}
     <!-- For consistency, should possibly refactor the mobile IDs to remove the work_ prefix. -->
     <span class="anchor" id="work_{{ include.category_id }}_mobile"></span>
   {% else %}
