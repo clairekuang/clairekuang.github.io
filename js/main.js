@@ -60,11 +60,7 @@
       // Don't do anything if the click was in the list of links in the left column.
       if ($target.closest('#sidenav-link-list').length !== 0) { return; }
 
-      // For each element with data-toggle="collapse", get the target of that element
-      // and collapse it.
-      $('[data-toggle="collapse"]').each(function (index, elem) {
-        $($(elem).data('target')).collapse('hide');
-      });
+      $('.collapse').collapse('hide');
     });
   });
 
