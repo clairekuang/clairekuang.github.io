@@ -1,10 +1,10 @@
-@media all and (max-width: 999px) {
+@media all and (max-width: 900px) {
   #desktop-root {
     display: none;
   }
 }
 
-@media all and (min-width: 1000px) {
+@media all and (min-width: 901px) {
   #mobile-root {
     display: none;
   }

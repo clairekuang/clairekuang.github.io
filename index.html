@@ -55,24 +55,11 @@
         <div class="collapse shadow-sm" id="navbarToggle">
             <div class="col no-margin">
                 <ul id="togglenav">
-                    <li class="nav-item-lg">
-                        <a href="#work_mobile" class="nav-link active">/WORK</a>
-                        <ul class="nav flex-md-column hidden-sm-down">
-                            <li class="nav-item-sm"><a href="#work_architecture_mobile" class="nav-link">/ARCH</a></li>
-                            <li class="nav-item-sm"><a href="#work_graphic_mobile" class="nav-link">/GRAPHIC</a></li>
-                            <li class="nav-item-sm"><a href="#work_product_mobile" class="nav-link">/PRODUCT</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item-lg">
-                        <a href="#about_mobile" class="nav-link">/ABOUT</a>
-                    </li>
-                    <li class="nav-item-lg">
-                        <a href="#prose_mobile" class="nav-link">/PROSE</a>
-                        <ul class="nav flex-md-column hidden-sm-down">
-                            <li class="nav-item-sm"><a href="#prose_publication_mobile" class="nav-link">/PUB</a></li>
-                            <li class="nav-item-sm"><a href="#prose_blog_mobile" class="nav-link">/BLOG</a></li>
-                        </ul>
-                    </li>
+                    <li class="nav-item-lg"><a href="#arch_mobile" class="nav-link active">ARCH</a></li>
+                    <li class="nav-item-lg"><a href="#graphic_mobile" class="nav-link">GRAPHIC</a></li>
+                    <li class="nav-item-lg"><a href="#product_mobile" class="nav-link">PRODUCT</a></li>
+                    <li class="nav-item-lg"><a href="#prose_mobile" class="nav-link">PROSE</a></li>
+                    <li class="nav-item-lg"><a href="#about_mobile" class="nav-link">ABOUT</a></li>
                 </ul>
             </div>
         </div>
@@ -91,7 +78,7 @@
         </p>
         <br>
 
-        <!-- ARCHITECTURE ------------------------------------------------------------------>
+        <!-- ARCHITECTURE ------------------------------------------------------------->
 
         {% include projects.html
           mobile=true
@@ -109,12 +96,19 @@
         %}
 
 
-        <!-- PRODUCT ------------------------------------------------------------------>
+        <!-- PRODUCT ----------------------------------------------------------------->
 
         {% include projects.html
           mobile=true
           section_id='work'
           category_id='product'
+        %}
+
+        <!-- PROSE ------------------------------------------------------------------->
+        {% include projects.html
+        mobile=true
+        section_id='work'
+        category_id='prose'
         %}
 
 
@@ -126,23 +120,6 @@
             Hi, I'm Claire.
         </p>
         <br>
-
-        <!-- PROSE ------------------------------------------------------------------>
-
-        <span class="anchor" id="prose_mobile"></span>
-        <p id="main_title">PROSE</p>
-        <p>
-            Some words.
-        </p>
-        <br>
-
-        <!-- PUBLICATION ------------------------------------------------------------------>
-
-        {% include projects.html
-          mobile=true
-          section_id='prose'
-          category_id='publication'
-        %}
 
     </main>
 
@@ -172,11 +149,11 @@
             <aside class="col-md-2">
                 <div class="sticky-top" id="sidenav">
                     <ul id="sidenav-link-list" class="nav flex-md-column flex-row justify-content-between">
-                        <li class="nav-item"><a href="#architecture" class="nav-link active">/ARCH</a></li>
-                        <li class="nav-item"><a href="#graphic" class="nav-link">/GRAPHIC</a></li>
-                        <li class="nav-item"><a href="#product" class="nav-link">/PRODUCT</a></li>
-                        <li class="nav-item"><a href="#prose" class="nav-link">/PROSE</a></li>
-                        <li class="nav-item"><a href="#about" class="nav-link">/ABOUT</a></li>
+                        <li class="nav-item"><a href="#architecture" class="nav-link active">ARCH</a></li>
+                        <li class="nav-item"><a href="#graphic" class="nav-link">GRAPHIC</a></li>
+                        <li class="nav-item"><a href="#product" class="nav-link">PRODUCT</a></li>
+                        <li class="nav-item"><a href="#prose" class="nav-link">PROSE</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link">ABOUT</a></li>
                     </ul>
 
                     <div id='scroll-varied-section-description'>
@@ -227,8 +204,8 @@
 
                         {% include projects.html
                           mobile=false
-                          section_id='prose'
-                          category_id='publication'
+                          section_id='work'
+                          category_id='prose'
                         %}
 
 

@@ -13,7 +13,7 @@
   %}
 {% endcomment %}
 
-{% if include.section_id == 'work' and include.category_id == 'architecture' %}
+{% if include.section_id == 'work' %}
   {% assign projects = site.projects | sort: 'year' | reverse %}
 {% else %}
   {% assign projects = site.projects %}
@@ -22,26 +22,12 @@
 
 <br>
 
-
-{% if include.section_id == 'prose' %}
-
-  {% if include.mobile %}
-    <span class="anchor" id="prose_publication_mobile"></span>
-  {% else %}
-    <span class="anchor" id="prose"></span>
-  {% endif %}
-
+{% if include.mobile %}
+<!-- For consistency, should possibly refactor the mobile IDs to remove the work_ prefix. -->
+<span class="anchor" id="{{ include.category_id }}_mobile"></span>
 {% else %}
-
-  {% if include.mobile %}
-    <!-- For consistency, should possibly refactor the mobile IDs to remove the work_ prefix. -->
-    <span class="anchor" id="work_{{ include.category_id }}_mobile"></span>
-  {% else %}
-    <span class="anchor" id="{{ include.category_id }}"></span>
-  {% endif %}
-
+<span class="anchor" id="{{ include.category_id }}"></span>
 {% endif %}
-
 
 <p class="section_title">{{ include.category_id | upcase }}</p>
 <br>
