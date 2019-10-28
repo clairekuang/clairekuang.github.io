@@ -69,33 +69,29 @@
   // Begin code for changing the section text based on scroll.
 
   var elementToUpdateSelector = '#scroll-varied-section-description'
+  var scrollElementText = null;
 
-  // Keys should be jQuery selectors. Values are the text to display.
-  var scrollElementText = [
-    { selector: '#architecture',      text: 'Architecture', },
-    { selector: '#graphic',           text: 'Graphic',      },
-    { selector: '#product',           text: 'Product',      },
-    { selector: '#prose',             text: 'Prose',        },
-    { selector: '#about',             text: 'About',        },
-  ];
-
-  // Requires jQuery, expects it defined as $.
+  // Requires jQuery, expects it to be defined as $.
   // Accesses elementToUpdateSelector and scrollElementsToText via closure.
   var onScroll = function () {
     var viewportHeight = window.innerHeight;
 
-    scrollElementText.forEach(function (elem) {
-      var $queryResult = $(elem.selector);
-      if ($queryResult.length !== 1) {
-        alert('Error: expected exactly 1 result for selector: ' + elem.selector);
-      }
+    if (scrollElementText === null) {
+      scrollElementText = $('.scroll-varied-sidebar-text').map(function (index, elem) {
+        return {
+          elem: elem,
+          text: $(elem).text().trim(),
+        };
+      }).toArray();
+    }
 
+    scrollElementText.forEach(function (elemObject) {
       // The range at which to start displaying the text is when the element is scrolled
       // to at least the midpoint of the page.
       //
       // The 75 is just a fudge factor to correct for the fact that the actual section
       // headings lie below the ID'd spans we're targeting.
-      elem.rangeStart = $queryResult.offset().top - (viewportHeight / 2) + 70
+      elemObject.rangeStart = $(elemObject.elem).offset().top - (viewportHeight / 2) + 70
     });
 
     // Elements further down the page appear later in the array.
@@ -104,7 +100,7 @@
     });
 
     var currentScrollY = window.scrollY;
-    scrollElementText[0].rangeStart = 0;
+    scrollElementText[0].rangeStart = -1;
 
     // Actually set the inner text of the target element based on the current
     // scroll position.
