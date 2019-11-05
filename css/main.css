@@ -137,12 +137,25 @@ nav {
     height: 4.5rem;
 }
 
+#togglenav {
+    padding: 5px;
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.80);
+    text-align: left;
+    color: white;
+    margin: 0;
+}
+
+#navbarToggle {
+    width: 100%;
+}
+
 #togglenav .nav-item-lg,
 #togglenav .nav-item-sm{
     line-height: 0.9em;
     letter-spacing: 0.1rem;
     font-size: small;
-    color: black;
+    color: white;
     font-weight: bolder;
 }
 
@@ -150,7 +163,7 @@ nav {
     cursor: crosshair;
     padding:0.9em;
     margin:0;
-    color: black;
+    color: white;
 }
 
 #togglenav .nav-link.active,
@@ -218,20 +231,7 @@ nav {
     font-size: x-small;
 }
 
-#togglenav {
-    padding: 5px;
-    list-style: none;
-    background-color: rgba(255, 255, 255, 0.90);
-    text-align: left;
-    color: white;
-    margin: 0;
-}
 
-#navbarToggle {
-    margin-left: 2rem;
-    margin-right: 2rem;
-    width: 30%;
-}
 
 
 /*--- body styling ---*/

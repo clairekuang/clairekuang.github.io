@@ -55,9 +55,9 @@
         <div class="collapse shadow-sm" id="navbarToggle">
             <div class="col no-margin">
                 <ul id="togglenav">
-                    <li class="nav-item-lg"><a href="#arch_mobile" class="nav-link active">ARCH</a></li>
+                    <li class="nav-item-lg"><a href="#product_mobile" class="nav-link active">PRODUCT</a></li>
+                    <li class="nav-item-lg"><a href="#arch_mobile" class="nav-link">ARCH</a></li>
                     <li class="nav-item-lg"><a href="#graphic_mobile" class="nav-link">GRAPHIC</a></li>
-                    <li class="nav-item-lg"><a href="#product_mobile" class="nav-link">PRODUCT</a></li>
                     <li class="nav-item-lg"><a href="#prose_mobile" class="nav-link">PROSE</a></li>
                     <li class="nav-item-lg"><a href="#about_mobile" class="nav-link">ABOUT</a></li>
                 </ul>
@@ -72,11 +72,17 @@
         <span class="anchor" id="work_mobile"></span>
         <p id="main_title"></p>
         <p id="quote_text">
-            Projects have no end. They are methodologies from the moment of their inception, little potentials of energy with the capacity to *do work*, path-dependant vectors of intent and implementation.
-            This compedium is an archive of projects that bring together context, research, form, and effect as a synthetic narrative - drawing tools and technologies as needed,
-            irreverent to discipline, exuberantly wip.
         </p>
         <br>
+
+        <!-- PRODUCT ----------------------------------------------------------------->
+
+        {% include projects.html
+        mobile=true
+        section_id='work'
+        category_id='product'
+        %}
+
 
         <!-- ARCHITECTURE ------------------------------------------------------------->
 
@@ -95,14 +101,6 @@
           category_id='graphic'
         %}
 
-
-        <!-- PRODUCT ----------------------------------------------------------------->
-
-        {% include projects.html
-          mobile=true
-          section_id='work'
-          category_id='product'
-        %}
 
         <!-- PROSE ------------------------------------------------------------------->
         {% include projects.html
@@ -149,9 +147,9 @@
             <aside class="col-md-2">
                 <div class="sticky-top" id="sidenav">
                     <ul id="sidenav-link-list" class="nav flex-md-column flex-row justify-content-between">
-                        <li class="nav-item"><a href="#architecture" class="nav-link active">ARCH</a></li>
+                        <li class="nav-item"><a href="#product" class="nav-link active">PRODUCT</a></li>
+                        <li class="nav-item"><a href="#architecture" class="nav-link">ARCH</a></li>
                         <li class="nav-item"><a href="#graphic" class="nav-link">GRAPHIC</a></li>
-                        <li class="nav-item"><a href="#product" class="nav-link">PRODUCT</a></li>
                         <li class="nav-item"><a href="#prose" class="nav-link">PROSE</a></li>
                         <li class="nav-item"><a href="#about" class="nav-link">ABOUT</a></li>
                     </ul>
@@ -167,13 +165,17 @@
                     <div class="col" id="content_body">
 
                         <span class="anchor" id="work"></span>
-                        <p id="quote_main">
-                            Projects have no end. They are methodologies from the moment of their inception, little potentials of energy with the capacity to *do work*, path-dependant vectors of intent and implementation.
-                            This compedium is an archive of projects that bring together context, research, form, and effect as a synthetic narrative - drawing tools and technologies as needed,
-                            irreverent to discipline, exuberantly wip.
-                        </p>
+                        
+                        <!-- PRODUCT ------------------------------------------------------------------->
 
-                        <!-- ARCHITECTURE ------------------------------------------------------------------>
+                        {% include projects.html
+                        mobile=false
+                        section_id='work'
+                        category_id='product'
+                        %}
+
+
+                        <!-- ARCHITECTURE -------------------------------------------------------------->
 
                         {% include projects.html
                           mobile=false
@@ -182,7 +184,7 @@
                         %}
 
 
-                        <!-- GRAPHIC ------------------------------------------------------------------>
+                        <!-- GRAPHIC ------------------------------------------------------------------->
 
                         {% include projects.html
                           mobile=false
@@ -190,17 +192,8 @@
                           category_id='graphic'
                         %}
 
-
-                        <!-- PRODUCT ------------------------------------------------------------------>
-
-                        {% include projects.html
-                          mobile=false
-                          section_id='work'
-                          category_id='product'
-                        %}
-
-
-                        <!-- PROSE ------------------------------------------------------------------>
+                        
+                        <!-- PROSE --------------------------------------------------------------------->
 
                         {% include projects.html
                           mobile=false
@@ -209,12 +202,17 @@
                         %}
 
 
-                        <!-- ABOUT ------------------------------------------------------------------>
+                        <!-- ABOUT -------------------------------------------------------------------->
 
                         <span class="anchor" id="about"></span>
                         <p id="main_title">ABOUT</p>
                         <p>
                             Hi, I'm Claire.
+                        </p>
+                        <p id="quote_main">
+                            Projects have no end. They are methodologies from the moment of their inception, little potentials of energy with the capacity to *do work*, path-dependant vectors of intent and implementation.
+                            This compedium is an archive of projects that bring together context, research, form, and effect as a synthetic narrative - drawing tools and technologies as needed,
+                            irreverent to discipline, exuberantly wip.
                         </p>
                         <br>
 
