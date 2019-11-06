@@ -13,11 +13,8 @@
   %}
 {% endcomment %}
 
-{% if include.section_id == 'work' %}
-  {% assign projects = site.projects | sort: 'year' | reverse %}
-{% else %}
-  {% assign projects = site.projects %}
-{% endif %}
+
+{% assign projects = site.projects | sort: 'year' | reverse %}
 
 <br>
 
@@ -30,11 +27,10 @@
 
 <p class="section_title">{{ include.category_id | upcase }}</p>
 <br>
+<hr class="divider">
 
 {% for project in projects %}
   {% if project.section_id == include.section_id and project.category_id == include.category_id %}
-
-    <hr class="divider">
 
     {% capture carousel_id %}{{ project.category_id }}_{{ project.project_id }}_carousel{% endcapture %}
 
@@ -77,7 +73,6 @@
     {% include project_content_collapse.html project=project %}
 
     <hr class="divider">
-    <br>
 
   {% endif %}
 {% endfor %}
