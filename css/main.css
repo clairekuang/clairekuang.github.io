@@ -135,8 +135,6 @@ nav {
 
 .anchor{
   display: block;
-  height: 6rem;
-  margin-top: -6rem;
   visibility: hidden;
 }
 
@@ -265,7 +263,7 @@ nav {
     font-weight: 600;
     letter-spacing: 0.1rem;
     vertical-align: bottom;
-    margin-bottom: -1rem;
+    padding: 3rem 0;
     font-style:italic;
 }
 

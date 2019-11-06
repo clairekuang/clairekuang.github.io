@@ -16,8 +16,6 @@
 
 {% assign projects = site.projects | sort: 'year' | reverse %}
 
-<br>
-
 {% if include.mobile %}
   <!-- For consistency, should possibly refactor the mobile IDs to remove the work_ prefix. -->
   <span class="anchor" id="{{ include.category_id }}_mobile"></span>
@@ -26,7 +24,7 @@
 {% endif %}
 
 <p class="section_title">{{ include.category_id | upcase }}</p>
-<br>
+
 <hr class="divider">
 
 {% for project in projects %}
