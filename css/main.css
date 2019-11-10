@@ -62,10 +62,10 @@ body {
 
 #content {
     margin:0;
-    padding:0;  
+    padding:0;
 }
 
-#content_main{
+#content_main {
     justify-content: center;
 }
 
@@ -79,7 +79,7 @@ body {
 
 /*--- navigation bars ---*/
 
-#topnav{
+#topnav {
     justify-content: center;
 }
 
@@ -90,23 +90,38 @@ nav {
     padding:0 !important;
     margin:0;
 }
-.navbar{
+
+.navbar {
     vertical-align:bottom;
     align-items:flex-end;
 }
-.navbar-header-left{
+
+.navbar-header-left {
     text-align:right;
     padding-left: 1.8rem;
     padding-right: 1.8rem;
 }
-.navbar-header-right{
+
+.navbar-header-right {
     text-align: left;
     padding-left: 1.8rem;
     padding-right: 1.8rem;
 }
 
 #nav-centerwidth {
-    background-color:transparent;
+    background-color: transparent;
+
+    /* Because of the existing col-sm-12 and col-md-8 classes on this
+       element, when the page width increases the columns will get
+       wider in proportion to the ratios in those styles.
+
+       To keep the top bar from getting wider (and thus putting any
+       remaining width increases into the other two columns) we just
+       limit the max width, and override the max-width style from the
+       col-sm-12 and col-md-8 classes. This width value is arbitrary
+       and can be changed.
+     */
+    max-width: 1200px;
 }
 
 .navbar-hr {
@@ -133,12 +148,12 @@ nav {
     text-decoration: none;
 }
 
-.anchor{
+.anchor {
   display: block;
   visibility: hidden;
 }
 
-#topnav_mobile{
+#topnav_mobile {
     height: 4.5rem;
 }
 

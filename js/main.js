@@ -108,7 +108,13 @@
     // Javascript doesn't have a built-in way to break out of loops early, so
     // do that in a hacky way by returning true from Array#some.
     var last = null;
-    scrollElementText.some(function (elem) {
+
+    // If we don't add this dummy element at the end, the text won't update on
+    // the last time through the loop, and won't work for the last project on
+    // the page.
+    (scrollElementText.concat({
+      rangeStart: Number.POSITIVE_INFINITY,
+    })).some(function (elem) {
       // On the first loop, just set up last as the first element:
       if (last === null) {
         last = elem;
