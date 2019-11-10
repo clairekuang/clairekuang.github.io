@@ -190,7 +190,7 @@ nav {
     color: white;
 }
 
-#togglenav .nav-link:focus{
+#togglenav .nav-link:focus {
     color: black;
     text-decoration: none;
     transition: all 0.2s ease;
@@ -210,19 +210,19 @@ nav {
     letter-spacing: 0.1rem;
 }
 
-#sidenav{
+#sidenav {
     top: 9em;
     cursor: crosshair;
     text-align: right;
 }
 
-#sidenav .nav-item{
+#sidenav .nav-item {
     line-height: 1rem;
     font-size: small;
     color: black;
 }
 
-#sidenav .nav-link{
+#sidenav .nav-link {
     cursor: crosshair;
     padding:0;
     margin:0;
@@ -231,7 +231,7 @@ nav {
 
 #sidenav .nav-link.active,
 #sidenav .nav-link:focus,
-#sidenav .nav-link:hover{
+#sidenav .nav-link:hover {
     transition: all 0.2s ease;
     font-size: small;
     font-weight:800;
@@ -249,7 +249,7 @@ nav {
     font-size: small;
     font-weight:800;
 }
-#sideinfo .nav-item-sm{
+#sideinfo .nav-item-sm {
     font-size: x-small;
 }
 
@@ -257,7 +257,7 @@ nav {
 
 
 /*--- body styling ---*/
-#content_body{
+#content_body {
     max-width: 100%;
     padding-top:0.7em;
     font-size: small;
@@ -265,7 +265,7 @@ nav {
 }
 
 
-#main_title{
+#main_title {
     font-size: 48px;
     font-weight: 100;
     letter-spacing: 0.2rem;
@@ -295,35 +295,35 @@ nav {
     text-decoration:line-through;
 }
 
-#body_title_major{
+#body_title_major {
     font-size: larger;
     font-weight: bold;
     text-align: left;
     letter-spacing: 0.1rem;
     padding-top:1.2rem;
 }
-#body_title_minor{
+#body_title_minor {
     font-weight: bold;
     padding-top: 1rem;
 }
 
-.no-margin{
+.no-margin {
     margin: 0 !important;
     padding: 0 !important;
 }
 
-.table{
+.table {
     font-size: small;
     letter-spacing: 0.1rem;
     margin-bottom: 2rem;
 }
 
-.table th{
+.table th {
     width: 4rem;
     padding-left: 0;
 }
 
-.carousel{
+.carousel {
     cursor: crosshair;
     padding-bottom:3rem;
 }
@@ -380,7 +380,7 @@ nav {
     margin-bottom: 2rem;
 }
 
-#quote_main{
+#quote_main {
     font-family: 'Space Mono', monospace, 'Courier New',Arial;
     font-size: medium;
     text-align: justify;
@@ -390,14 +390,14 @@ nav {
     padding-bottom: 4rem;
 }
 
-#quote_text{
+#quote_text {
     font-family: 'Space Mono', monospace, 'Courier New',Arial;
     font-size: small;
     text-align: center;
     margin-left: 5%;
     margin-right: 5%;
 }
-.tab{
+.tab {
     padding-left: 1.5rem;
 }
 
