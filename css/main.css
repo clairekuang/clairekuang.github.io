@@ -1,4 +1,4 @@
-@media all and (max-width: 900px) {
+﻿@media all and (max-width: 900px) {
   #desktop-root {
     display: none;
   }
@@ -74,7 +74,7 @@ body {
     top: -6rem;
     padding-left: 2.7rem;
     padding-right: 2.7rem;
-    background: linear-gradient(white, #fffef3);
+    background: linear-gradient(white, #FFFEF7);
 }
 
 /*--- navigation bars ---*/
@@ -404,6 +404,21 @@ nav {
     font-size: 18px;
 }
 
+.nav_arrow {
+    font-size: large;
+}
+
+.nav_arrow.collapsed:before {
+    content: '↓ next';
+    font-style: italic;
+    font-size: 18px;
+}
+
+.nav_arrow:before {
+    content: '↑ top';
+    font-style: italic;
+    font-size: 18px;
+}
 
 
 
