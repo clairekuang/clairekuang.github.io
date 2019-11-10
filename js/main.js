@@ -39,7 +39,6 @@
   };
 
 
-
   // If on desktop, the user clicks outside the main content body (and isn't clicking a
   // link in the left column), collapse all collapsible elements.
   document.addEventListener('click', function (event) {
@@ -64,55 +63,62 @@
     });
   });
 
+  var isMobile = function () {
+    return window.innerWidth <= 900;
+  };
 
+  var rangeStart = function (elem) {
+    return $(elem).offset().top - (window.innerHeight / 2) + 70;
+  };
 
-  // Begin code for changing the section text based on scroll.
-
-  var elementToUpdateSelector = '#scroll-varied-section-description'
-  var scrollElementText = null;
-
+  // Helper code used for the scroll-varied sidebar text and the
+  // next project button.
   // Requires jQuery, expects it to be defined as $.
-  // Accesses elementToUpdateSelector and scrollElementsToText via closure.
-  var onScroll = function () {
-    var viewportHeight = window.innerHeight;
+  var currentScrollProjects = function () {
+    var scrollElements = $(
+      isMobile() ? '.mobile-scroll-varied-sidebar-text' : '.desktop-scroll-varied-sidebar-text'
+    ).map(function (index, elem) {
+      return {
+        elem: elem,
+        text: $(elem).text().trim(),
+      };
+    }).toArray();
 
-    if (scrollElementText === null) {
-      scrollElementText = $('.scroll-varied-sidebar-text').map(function (index, elem) {
-        return {
-          elem: elem,
-          text: $(elem).text().trim(),
-        };
-      }).toArray();
-    }
-
-    scrollElementText.forEach(function (elemObject) {
+    scrollElements.forEach(function (elemObject) {
       // The range at which to start displaying the text is when the element is scrolled
       // to at least the midpoint of the page.
       //
       // The 75 is just a fudge factor to correct for the fact that the actual section
       // headings lie below the ID'd spans we're targeting.
-      elemObject.rangeStart = $(elemObject.elem).offset().top - (viewportHeight / 2) + 70
+      elemObject.rangeStart = rangeStart(elemObject.elem);
     });
 
     // Elements further down the page appear later in the array.
-    scrollElementText.sort(function (a, b) {
-      return a.rangeStart - b.rangeStart;
-    });
+    scrollElements.sort(function (a, b) { return a.rangeStart - b.rangeStart; });
 
-    var currentScrollY = window.scrollY;
-    scrollElementText[0].rangeStart = -1;
+    scrollElements[0].rangeStart = -1;
+    return scrollElements;
+  };
 
-    // Actually set the inner text of the target element based on the current
-    // scroll position.
-    //
-    // Javascript doesn't have a built-in way to break out of loops early, so
-    // do that in a hacky way by returning true from Array#some.
+  // Returns an object of the form:
+  // {
+  //    elem:
+  //    text: "..."
+  // }
+  //
+  // Where the value of 'elem' is an element with the scroll-varied-sidebar-text
+  // CSS class, used as an anchor for that feature.
+  var currentlyScrolledProject = function () {
     var last = null;
+    var found = null;
+    var currentScrollY = window.scrollY;
 
     // If we don't add this dummy element at the end, the text won't update on
     // the last time through the loop, and won't work for the last project on
     // the page.
-    (scrollElementText.concat({
+    // Javascript doesn't have a built-in way to break out of loops early, so
+    // do that in a hacky way by returning true from Array#some.
+    (currentScrollProjects().concat({
       rangeStart: Number.POSITIVE_INFINITY,
     })).some(function (elem) {
       // On the first loop, just set up last as the first element:
@@ -122,13 +128,7 @@
       }
 
       if (last.rangeStart < currentScrollY && currentScrollY < elem.rangeStart) {
-
-        var $target = $(elementToUpdateSelector)
-        if ($target.length !== 1) {
-          alert('Error: expected exactly 1 result for selector: ' + elementToUpdateSelector);
-        }
-
-        $target.text(last.text);
+        found = last;
         return true;
       }
 
@@ -136,12 +136,28 @@
       return false;
     });
 
-    // Remove the rangeStart property set on scrollElementText elements.
-    // This isn't necessary unless the elements change position on the page,
-    // but it's better to recalculate their offsets each time to be safe.
-    scrollElementText.forEach(function (elem) {
-      delete elem.rangeStart;
-    });
+    if (found === null) {
+      // console.log();
+      throw("Error: didn't find a scroll-varied-sidebar-text element on the page.");
+    }
+    return found;
+  };
+
+
+
+
+  // Actually set the inner text of the target element based on the current
+  // scroll position.
+  var onScroll = function () {
+    var elementToUpdateSelector = '#scroll-varied-section-description'
+
+    var currentProject = currentlyScrolledProject();
+    var $target = $(elementToUpdateSelector)
+    if ($target.length !== 1) {
+      alert('Error: expected exactly 1 result for selector: ' + elementToUpdateSelector);
+    }
+
+    $target.text(currentProject.text);
   }
 
   // Run the debounced onScroll when the document scrolls.
@@ -150,6 +166,21 @@
   // Run the function for the first time so the content looks good before any
   // scrolling has occurred.
   onScroll();
+
+
+  $('#scroll-to-next-project').click(function () {
+    var projects = currentScrollProjects();
+    var currentProject = currentlyScrolledProject();
+
+    for (i = 0; i < projects.length; i++) {
+      if (currentProject.rangeStart === projects[i].rangeStart && i !== (projects.length - 1)) {
+        $([document.documentElement, document.body]).animate({
+          scrollTop: rangeStart(projects[i + 1].elem) + 150
+        }, 0);
+        break;
+      }
+    }
+  });
 
 })();
 
