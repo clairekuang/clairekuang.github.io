@@ -45,10 +45,10 @@
       href='#{{ carousel_id }}'
     >
       {% if include.mobile %}
-        <span>
-      {% else %}
         <!-- This class isn't used for styling. See main.js  -->
-        <span class='scroll-varied-sidebar-text'>
+        <span class='mobile-scroll-varied-sidebar-text'>
+      {% else %}
+        <span class='desktop-scroll-varied-sidebar-text'>
       {% endif %}
         {{ project.title }}
       </span>: {{ project.subtitle }}
