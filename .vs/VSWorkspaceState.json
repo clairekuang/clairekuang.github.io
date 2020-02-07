@@ -6,11 +6,11 @@
     "\\images\\about",
     "\\images\\about\\bio",
     "\\images\\about\\contact",
-    "\\images\\prose",
-    "\\images\\work",
-    "\\images\\work\\architecture",
-    "\\_projects"
+    "\\images\\graphic",
+    "\\images\\graphic\\art",
+    "\\images\\graphic\\tbi",
+    "\\_includes"
   ],
-  "SelectedNode": "\\_projects\\terraform-theater.html",
+  "SelectedNode": "\\_includes\\projects.html",
   "PreviewInSolutionExplorer": false
 }
