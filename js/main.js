@@ -168,7 +168,7 @@
   onScroll();
 
 
-  $('#scroll-to-next-project').click(function () {
+  $('#scroll-to-next-project, #next-arrow-desktop').click(function () {
     var projects = currentScrollProjects();
     var currentProject = currentlyScrolledProject();
 
