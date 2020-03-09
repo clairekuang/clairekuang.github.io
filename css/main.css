@@ -448,7 +448,7 @@ nav {
 
   /* Without setting this, the background will be transparent and the
      text will overlap. */
-  background-color: rgb(231, 76, 60);
+  background-color: rgba(0, 0, 0, 1);
 
   border-radius: 2px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
