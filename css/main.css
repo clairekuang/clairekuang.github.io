@@ -157,6 +157,7 @@ nav {
 
 #topnav_mobile {
     height: 6rem;
+    background-image: linear-gradient(#f2f8ff, transparent);
 }
 
 #togglenav {
