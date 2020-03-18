@@ -176,7 +176,7 @@
       if (currentProject.rangeStart === projects[i].rangeStart && i !== (projects.length - 1)) {
         $([document.documentElement, document.body]).animate({
             scrollTop: rangeStart(projects[i + 1].elem) + 200,
-            beahvior: 'smooth'
+            behavior: 'smooth'
         }, 0);
         break;
       }
