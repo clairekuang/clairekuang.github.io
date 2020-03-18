@@ -2,8 +2,6 @@
   "ExpandedNodes": [
     "",
     "\\css",
-    "\\images",
-    "\\images\\about",
     "\\images\\about\\bio",
     "\\images\\about\\contact",
     "\\images\\graphic",
@@ -11,6 +9,6 @@
     "\\images\\graphic\\tbi",
     "\\_includes"
   ],
-  "SelectedNode": "\\_includes\\projects.html",
+  "SelectedNode": "\\index.html",
   "PreviewInSolutionExplorer": false
 }

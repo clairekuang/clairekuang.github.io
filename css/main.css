@@ -84,11 +84,11 @@ body {
 }
 
 nav {
-    background-image: linear-gradient(white, transparent);
+    background-image: linear-gradient(#f2f8ff, transparent);
     cursor: crosshair;
     height: 6rem;
-    padding:0 !important;
-    margin:0;
+    padding: 0 !important;
+    margin: 0;
 }
 
 .navbar {
@@ -156,7 +156,7 @@ nav {
 }
 
 #topnav_mobile {
-    height: 4.5rem;
+    height: 6rem;
 }
 
 #togglenav {
@@ -255,7 +255,7 @@ nav {
 }
 
 #next-arrow-desktop{
-    padding-top:80%;
+    padding-top:95%;
 }
 #next-arrow-desktop:hover{
     cursor:crosshair;
@@ -282,10 +282,11 @@ nav {
 
 .section_title {
     font-size: x-large;
+    color: moccasin;
     font-weight: 600;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.2rem;
     vertical-align: bottom;
-    padding: 1.5rem 0;
+    padding: 0.5rem 0;
     font-style:italic;
 }
 
@@ -379,7 +380,7 @@ nav {
 }
 
 .divider {
-    background-color: black;
+    background-color: moccasin;
     height: 2px;
     border: 0;
     padding: 0;
