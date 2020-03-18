@@ -148,17 +148,17 @@
 
   // Actually set the inner text of the target element based on the current
   // scroll position.
-  var onScroll = function () {
-    var elementToUpdateSelector = '#scroll-varied-section-description'
+    var onScroll = function () {
+        var elementToUpdateSelector = '#scroll-varied-section-description'
 
-    var currentProject = currentlyScrolledProject();
-    var $target = $(elementToUpdateSelector)
-    if ($target.length !== 1) {
-      alert('Error: expected exactly 1 result for selector: ' + elementToUpdateSelector);
-    }
+        var currentProject = currentlyScrolledProject();
+        var $target = $(elementToUpdateSelector)
+        if ($target.length !== 1) {
+            alert('Error: expected exactly 1 result for selector: ' + elementToUpdateSelector);
+        }
 
-    $target.text(currentProject.text);
-  }
+        $target.text(currentProject.text);
+    };
 
   // Run the debounced onScroll when the document scrolls.
   document.addEventListener('scroll', debounce(onScroll), { passive: true });
