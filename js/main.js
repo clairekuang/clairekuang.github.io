@@ -1,3 +1,7 @@
+//smooth scroll support for safari, internet explorer, microsoft edge, and opera next
+//import smoothscroll from 'smoothscroll-polyfill';
+//smoothscroll.polyfill();
+
 // Use an IIFE to avoid adding or affecting variables in the global scope.
 (function() {
 
@@ -175,7 +179,7 @@
     for (i = 0; i < projects.length; i++) {
       if (currentProject.rangeStart === projects[i].rangeStart && i !== (projects.length - 1)) {
         $([document.documentElement, document.body]).animate({
-            scrollTop: rangeStart(projects[i + 1].elem) + 200,
+            scrollTop: rangeStart(projects[i + 1].elem) + 135,
             behavior: 'smooth'
         }, 0);
         break;
