@@ -84,7 +84,7 @@ body {
 }
 
 nav {
-    background-image: linear-gradient(#f2f8ff, transparent);
+    background-image: linear-gradient(#f2f8ff, rgba(255, 255, 255, 0));
     cursor: crosshair;
     height: 6rem;
     padding: 0 !important;
@@ -157,7 +157,6 @@ nav {
 
 #topnav_mobile {
     height: 6rem;
-    background-image: linear-gradient(#f2f8ff, transparent);
 }
 
 #togglenav {
