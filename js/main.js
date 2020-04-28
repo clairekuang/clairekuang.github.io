@@ -169,17 +169,44 @@
 
   // Run the function for the first time so the content looks good before any
   // scrolling has occurred.
-  onScroll();
+    onScroll();
+
+    //functions for calculating distnace between centerpoints of two elements
+    function getPositionAtCenter(element) {
+        const { top, left, width, height } = element.getBoundingClientRect();
+        return {
+            x: left + width / 2,
+            y: top + height / 2
+        };
+    }
+
+    function getDistanceBetweenElements(a, b) {
+        const aPosition = getPositionAtCenter(a);
+        const bPosition = getPositionAtCenter(b);
+
+        return Math.hypot(aPosition.x - bPosition.x, aPosition.y - bPosition.y);
+    }
 
 
   $('#scroll-to-next-project, #next-arrow-desktop').click(function () {
     var projects = currentScrollProjects();
     var currentProject = currentlyScrolledProject();
 
-    for (i = 0; i < projects.length; i++) {
+      for (i = 0; i < projects.length; i++) {
+
+          //get distnace between the next project and the header bar,  set default to 155
+          const distance = 155;
+          var nextProjectDividerElement = projects[i + 1].elem.getElementsByClassName("divider")
+          if (nextProjectDividerElement && nextProjectDividerElement.length > 0) {
+              distance = getDistanceBetweenElements(
+                  document.getElementsByClassName("navbar-hr")[0],
+                  nextProjectDividerElement[0]
+              );
+          }
+
       if (currentProject.rangeStart === projects[i].rangeStart && i !== (projects.length - 1)) {
         $([document.documentElement, document.body]).animate({
-            scrollTop: rangeStart(projects[i + 1].elem) + 135,
+            scrollTop: rangeStart(projects[i + 1].elem)+ distance,
             behavior: 'smooth'
         }, 0);
         break;
@@ -188,6 +215,7 @@
   });
 
 })();
+
 
 
 

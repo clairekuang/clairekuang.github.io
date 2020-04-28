@@ -85,7 +85,7 @@ body {
 
 nav {
     /*background-image: linear-gradient(#f2f8ff, rgba(255, 255, 255, 0));*/
-    background-image: linear-gradient(#e8e8e8, rgba(255, 255, 255, 0));
+    background-image: linear-gradient(rgba(100, 100, 100, 0.90), rgba(100, 100, 100, 0.1), rgba(255, 255, 255, 0));
     cursor: crosshair;
     height: 6rem;
     padding: 0 !important;
