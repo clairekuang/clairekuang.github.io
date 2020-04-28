@@ -67,13 +67,14 @@
     });
   });
 
+
   var isMobile = function () {
     return window.innerWidth <= 900;
-  };
+    };
 
   var rangeStart = function (elem) {
-    return $(elem).offset().top - (window.innerHeight / 2) + 70;
-  };
+    return $(elem).offset().top - 125; //125 is height of navbar, fudge factor for rangestart
+    };
 
   // Helper code used for the scroll-varied sidebar text and the
   // next project button.
@@ -90,10 +91,7 @@
 
     scrollElements.forEach(function (elemObject) {
       // The range at which to start displaying the text is when the element is scrolled
-      // to at least the midpoint of the page.
-      //
-      // The 75 is just a fudge factor to correct for the fact that the actual section
-      // headings lie below the ID'd spans we're targeting.
+      // to the bottom of the nav bar
       elemObject.rangeStart = rangeStart(elemObject.elem);
     });
 
@@ -148,8 +146,6 @@
   };
 
 
-
-
   // Actually set the inner text of the target element based on the current
   // scroll position.
     var onScroll = function () {
@@ -171,22 +167,6 @@
   // scrolling has occurred.
     onScroll();
 
-    //functions for calculating distnace between centerpoints of two elements
-    function getPositionAtCenter(element) {
-        const { top, left, width, height } = element.getBoundingClientRect();
-        return {
-            x: left + width / 2,
-            y: top + height / 2
-        };
-    }
-
-    function getDistanceBetweenElements(a, b) {
-        const aPosition = getPositionAtCenter(a);
-        const bPosition = getPositionAtCenter(b);
-
-        return Math.hypot(aPosition.x - bPosition.x, aPosition.y - bPosition.y);
-    }
-
 
   $('#scroll-to-next-project, #next-arrow-desktop').click(function () {
     var projects = currentScrollProjects();
@@ -194,19 +174,9 @@
 
       for (i = 0; i < projects.length; i++) {
 
-          //get distnace between the next project and the header bar,  set default to 155
-          const distance = 155;
-          var nextProjectDividerElement = projects[i + 1].elem.getElementsByClassName("divider")
-          if (nextProjectDividerElement && nextProjectDividerElement.length > 0) {
-              distance = getDistanceBetweenElements(
-                  document.getElementsByClassName("navbar-hr")[0],
-                  nextProjectDividerElement[0]
-              );
-          }
-
       if (currentProject.rangeStart === projects[i].rangeStart && i !== (projects.length - 1)) {
         $([document.documentElement, document.body]).animate({
-            scrollTop: rangeStart(projects[i + 1].elem)+ distance,
+            scrollTop: rangeStart(projects[i + 1].elem) + 2, // 2 is height of the divider bar essentially, fudge factor based on rangestart
             behavior: 'smooth'
         }, 0);
         break;

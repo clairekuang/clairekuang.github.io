@@ -60,7 +60,7 @@ body {
     margin:0;
 }
 
-#content {
+#mobile_navdivider {
     margin:0;
     padding:0;
 }
@@ -109,7 +109,7 @@ nav {
     padding-right: 1.8rem;
 }
 
-#nav-centerwidth {
+#desktop_navdivider {
     background-color: transparent;
 
     /* Because of the existing col-sm-12 and col-md-8 classes on this
@@ -207,7 +207,7 @@ nav {
     display: block;
 }
 
-#content aside {
+#mobile_navdivider aside {
     padding-left: 1.8rem;
     padding-right: 1.8rem;
     letter-spacing: 0.1rem;
@@ -380,7 +380,7 @@ nav {
     opacity: 1;
 }
 
-.divider {
+.divider, .divider_project {
     /*background-color: moccasin;*/
     background-color: black;
     height: 2px;
