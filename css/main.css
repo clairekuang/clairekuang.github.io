@@ -60,7 +60,7 @@ body {
     margin:0;
 }
 
-#mobile_navdivider {
+#content, #mobile_navdivider {
     margin:0;
     padding:0;
 }
