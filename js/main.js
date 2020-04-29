@@ -61,7 +61,10 @@
       if ($target.closest('#main-centerwidth').length !== 0) { return; }
 
       // Don't do anything if the click was in the list of links in the left column.
-      if ($target.closest('#sidenav-link-list').length !== 0) { return; }
+        if ($target.closest('#sidenav-link-list').length !== 0) { return; }
+
+        //don't do anything if the click is on the next button
+        if ($target.closest('#next-arrow-desktop').length !== 0) { return;}
 
       $('.collapse').collapse('hide');
     });
