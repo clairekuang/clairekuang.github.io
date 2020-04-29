@@ -37,12 +37,12 @@
     </div>
 
     <nav class="navbar sticky-top" id="topnav_mobile">
-        <div class="container-fluid mt-2 no-margin">
+        <div class="container-fluid mt-2 no-margin" id="topnav_mobile_above_divider">
             <div class="navbar-header-right col">
-                <a href="#topnav_mobile" class="navbar-link">C L R</a>
+                <a href="" class="navbar-link">C L R</a>
             </div>
             <div class="navbar-header-left col">
-                <a href="#topnav_mobile" class="navbar-link">K N G</a>
+                <a href="" class="navbar-link">K N G</a>
             </div>
         </div>
 
@@ -69,7 +69,6 @@
 
     <main class="mobile-main">
 
-        <span class="anchor" id="work_mobile"></span>
         <br>
         <br>
         <p id="quote_main">
@@ -77,10 +76,11 @@
             This compedium is an archive of projects that bring together context, research, form, and effect as a synthetic narrative - drawing tools and technologies as needed,
             irreverent to discipline, exuberantly wip.
         </p>
-        <hr class="divider">
+        <hr class="divider_topmost">
+
+        <span class="anchor"></span>
 
         <!-- PRODUCT ----------------------------------------------------------------->
-
         {% include projects.html
         mobile=true
         section_id='work'
@@ -89,20 +89,18 @@
 
 
         <!-- ARCHITECTURE ------------------------------------------------------------->
-
         {% include projects.html
-          mobile=true
-          section_id='work'
-          category_id='architecture'
+        mobile=true
+        section_id='work'
+        category_id='architecture'
         %}
 
 
         <!-- GRAPHIC ------------------------------------------------------------------>
-
         {% include projects.html
-          mobile=true
-          section_id='work'
-          category_id='graphic'
+        mobile=true
+        section_id='work'
+        category_id='graphic'
         %}
 
 
@@ -140,15 +138,15 @@
     <div class="container-fluid h-10" id="content">
 
         <!-- Top nav -->
-        <nav class="navbar sticky-top navbar-inverse" id="topnav">
+        <nav class="navbar sticky-top navbar-inverse" id="topnav_desktop">
             <div class="navbar-header-left col-md-2">
-                <a href="#work" class="navbar-link">C L R</a>
+                <a href="" class="navbar-link">C L R</a>
             </div>
             <div class="col-sm-12 col-md-8 p-0" id="desktop_navdivider">
                 <hr class="navbar-hr">
             </div>
             <div class="navbar-header-right col-md-2">
-                <a href="#work" class="navbar-link">K N G</a>
+                <a href="" class="navbar-link">K N G</a>
             </div>
         </nav>
 
@@ -181,7 +179,7 @@
                             This compedium is an archive of projects that bring together context, research, form, and effect as a synthetic narrative - drawing tools and technologies as needed,
                             irreverent to discipline, exuberantly wip.
                         </p>
-                        <hr class="divider">
+                        <hr class="divider_topmost">
 
                         <span class="anchor" id="work"></span>
 

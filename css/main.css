@@ -79,7 +79,7 @@ body {
 
 /*--- navigation bars ---*/
 
-#topnav {
+#topnav_desktop {
     justify-content: center;
 }
 
@@ -380,7 +380,7 @@ nav {
     opacity: 1;
 }
 
-.divider, .divider_project {
+.divider, .divider_topmost, .divider_project {
     /*background-color: moccasin;*/
     background-color: black;
     height: 2px;

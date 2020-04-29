@@ -43,32 +43,30 @@
   };
 
 
-  // If on desktop, the user clicks outside the main content body (and isn't clicking a
-  // link in the left column), collapse all collapsible elements.
-  document.addEventListener('click', function (event) {
-    // For performance, re-queue this at the end of the JS event loop's
-    // current execution queue so it doesn't slow down rendering any immediate
-    // responses to the click.
-    setTimeout(function () {
-      var $target = $(event.target);
+    // If on desktop, the user clicks outside the main content body (and isn't clicking a
+    // link in the left column), collapse all collapsible elements.
+    document.addEventListener('click', function (event) {
+        // For performance, re-queue this at the end of the JS event loop's
+        // current execution queue so it doesn't slow down rendering any immediate
+        // responses to the click.
+        setTimeout(function () {
+            var $target = $(event.target);
 
-      // Don't do anything if the user's using the mobile version. The
-      // 1000 here should be the same as the breakpoint defined in the
-      // @media queries in main.css.
-      if (window.innerWidth < 1000) { return; }
+            // if the click was anywhere on the topnav
+            if ($target.closest('#topnav_mobile_above_divider').length !== 0 ||
+                $target.closest('#topnav_desktop').length !== 0) {
+                $('.collapse').collapse('hide');
 
-      // Don't do anything if the click was in the main column.
-      if ($target.closest('#main-centerwidth').length !== 0) { return; }
-
-      // Don't do anything if the click was in the list of links in the left column.
-        if ($target.closest('#sidenav-link-list').length !== 0) { return; }
-
-        //don't do anything if the click is on the next button
-        if ($target.closest('#next-arrow-desktop').length !== 0) { return;}
-
-      $('.collapse').collapse('hide');
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: 0,
+                    behavior: 'smooth'
+                }, 0);
+            }
+            else {
+                return;
+            }
+        });
     });
-  });
 
 
   var isMobile = function () {
