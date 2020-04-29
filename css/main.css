@@ -231,10 +231,12 @@ nav {
     color: black;
 }
 
-#sidenav .nav-link.active,
-#sidenav .nav-link:focus,
 #sidenav .nav-link:hover {
-    transition: all 0.2s ease;
+    color: rgba(0, 0, 0, 0.20) ;
+}
+
+#sidenav .nav-link.active,
+#sidenav .nav-link:focus{
     font-size: small;
     font-weight:800;
 }
