@@ -2,9 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\css",
+    "\\images",
+    "\\images\\product",
+    "\\images\\product\\rhx",
     "\\js",
-    "\\_includes"
+    "\\_includes",
+    "\\_projects"
   ],
-  "SelectedNode": "\\js\\main.js",
+  "SelectedNode": "\\images\\product\\rhx\\video.mp4",
   "PreviewInSolutionExplorer": false
 }
