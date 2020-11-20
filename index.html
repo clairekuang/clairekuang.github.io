@@ -64,6 +64,7 @@
             <div class="col" id="navbarToggle_content">
                 <ul id="togglenav">
                     <li class="nav-item-lg"><a href="#product_mobile" class="nav-link">PRODUCT</a></li>
+                    <li class="nav-item-lg"><a href="#computation_mobile" class="nav-link">COMPUTATION</a></li>
                     <li class="nav-item-lg"><a href="#architecture_mobile" class="nav-link">ARCH</a></li>
                     <li class="nav-item-lg"><a href="#graphic_mobile" class="nav-link">GRAPHIC</a></li>
                     <li class="nav-item-lg"><a href="#prose_mobile" class="nav-link">PROSE</a></li>
@@ -97,6 +98,12 @@
         category_id='product'
         %}
 
+        <!-- COMPUTATION -------------------------------------------------------------->
+        {% include projects.html
+        mobile=true
+        section_id='work'
+        category_id='computation'
+        %}
 
         <!-- ARCHITECTURE ------------------------------------------------------------->
         {% include projects.html
@@ -167,6 +174,7 @@
                 <div class="sticky-top" id="sidenav">
                     <ul id="sidenav-link-list" class="nav flex-md-column flex-row justify-content-between">
                         <li class="nav-item"><a href="#product" class="nav-link active">PRODUCT</a></li>
+                        <li class="nav-item"><a href="#computation" class="nav-link">COMPUTATION</a></li>
                         <li class="nav-item"><a href="#architecture" class="nav-link">ARCH</a></li>
                         <li class="nav-item"><a href="#graphic" class="nav-link">GRAPHIC</a></li>
                         <li class="nav-item"><a href="#prose" class="nav-link">PROSE</a></li>
@@ -202,6 +210,13 @@
                         category_id='product'
                         %}
 
+                        <!-- COMPUTATION --------------------------------------------------------------->
+                        {% include projects.html
+                        mobile=false
+                        section_id='work'
+                        category_id='computation'
+                        %}
+
 
                         <!-- ARCHITECTURE -------------------------------------------------------------->
                         {% include projects.html
@@ -234,7 +249,7 @@
                             <span class='desktop-scroll-varied-sidebar-text'>ABOUT</span>
                         </p>
                         <p>
-                            Two parts creative and one part technologist, trained in math and architecture.
+                            Two parts creative and one part technical, trained in math and architecture.
                             Browse some neat places and spaces I've been on <a class="about-link" href="https://www.instagram.com/clrkng">INSTAGRAM</a>,
                             verify my existence on <a class="about-link" href="https://www.facebook.com/claire.kuang">FACEBOOK</a>,
                             peek my curriculum vitae on <a class="about-link" href="https://www.linkedin.com/in/clairekuang">LINKEDIN</a>,

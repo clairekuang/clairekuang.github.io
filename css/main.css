@@ -274,8 +274,9 @@ nav {
 #content_body {
     max-width: 100%;
     padding-top:0.7em;
-    font-size: small;
-    text-align: justify;
+    font-size: 14px;
+    letter-spacing: 0.05rem;
+    text-align: left;
 }
 
 
@@ -371,7 +372,7 @@ nav {
 .carousel-caption {
     opacity: 0;
     color: white;
-    font-size: x-small;
+    font-size: small;
     transition: 200ms ease-in-out;
     height: 1.8rem;
     left: 0;
@@ -434,6 +435,8 @@ nav {
 }
 .collapse_arrow:hover{
     cursor:crosshair;
+    background: black;
+    color: white;
 }
 
 .collapse_arrow.collapsed:before
