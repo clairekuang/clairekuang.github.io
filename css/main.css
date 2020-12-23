@@ -421,7 +421,7 @@ nav {
     padding:0.5em;
     letter-spacing:2px;
     font-size:medium;
-    background-color: moccasin;
+    background-color: moccasin !important;
 }
 .about-link:hover{
     text-decoration:line-through;
