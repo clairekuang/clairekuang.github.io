@@ -48,6 +48,7 @@ body, html {
     height:auto;
     min-height:100%;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -415,7 +416,7 @@ nav {
     margin-right: 5%;
 }
 .about-link {
-    color:black;
+    color:moccasin;
     font-weight:500;
     padding:0.5em;
     letter-spacing:2px;
