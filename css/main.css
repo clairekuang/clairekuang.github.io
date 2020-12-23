@@ -416,11 +416,12 @@ nav {
     margin-right: 5%;
 }
 .about-link {
-    color:moccasin;
+    color: black;
     font-weight:500;
     padding:0.5em;
     letter-spacing:2px;
     font-size:medium;
+    background-color: moccasin;
 }
 .about-link:hover{
     text-decoration:line-through;
