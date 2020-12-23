@@ -417,9 +417,10 @@ nav {
 .about-link {
     color: black;
     font-weight:500;
-    padding:0.5em;
+    padding:0.4em;
     letter-spacing:2px;
     font-size:medium;
+    background-clip: content-box !important;
     background-color: moccasin !important;
 }
 .about-link:hover{
