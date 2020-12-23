@@ -41,6 +41,7 @@ title, h1 {
 .mobile-main {
   margin-left: 2rem;
   margin-right: 2rem;
+  font-weight: 100;
 }
 
 
@@ -419,7 +420,6 @@ nav {
     padding:0.5em;
     letter-spacing:2px;
     font-size:medium;
-    background-clip: content-box !important;
     background-color: moccasin !important;
 }
 .about-link:hover{
