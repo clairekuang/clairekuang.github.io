@@ -13,11 +13,6 @@
   }
 
   updateDateTime();
-  
-  // collapse mobile navbar on link click
-  $('#navbarToggle a').click(function(){
-  $("#navbarToggle").collapse('hide');
-  });
 
   // From: https://pqina.nl/blog/applying-styles-based-on-the-user-scroll-position-with-smart-css/
   // This is not the original debounce code: I ran it through https://babeljs.io/repl for
